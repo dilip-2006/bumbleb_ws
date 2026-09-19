@@ -1,0 +1,283 @@
+[0.083s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.083s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7da734759000>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7da73485e6e0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7da73485e6e0>>)
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.212s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/dk/bumbleb_ws'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['ignore', 'ignore_ament_install']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ignore'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ignore_ament_install'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['colcon_pkg']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'colcon_pkg'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['colcon_meta']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'colcon_meta'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['ros']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ros'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['cmake', 'python']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'cmake'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'python'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['python_setup_py']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'python_setup_py'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extensions ['ignore', 'ignore_ament_install']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extension 'ignore'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extension 'ignore_ament_install'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extensions ['colcon_pkg']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extension 'colcon_pkg'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extensions ['colcon_meta']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extension 'colcon_meta'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extensions ['ros']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extension 'ros'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extensions ['cmake', 'python']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extension 'cmake'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extension 'python'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extensions ['python_setup_py']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extension 'python_setup_py'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extension 'ignore'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extension 'ignore_ament_install'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extensions ['colcon_pkg']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extension 'colcon_pkg'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extensions ['colcon_meta']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extension 'colcon_meta'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extensions ['ros']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extension 'ros'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extensions ['cmake', 'python']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extension 'cmake'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extension 'python'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extensions ['python_setup_py']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extension 'python_setup_py'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extensions ['ignore', 'ignore_ament_install']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extension 'ignore'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extension 'ignore_ament_install'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extensions ['colcon_pkg']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extension 'colcon_pkg'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extensions ['colcon_meta']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extension 'colcon_meta'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extensions ['ros']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extension 'ros'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extensions ['cmake', 'python']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extension 'cmake'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extension 'python'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extensions ['python_setup_py']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extension 'python_setup_py'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extensions ['ignore', 'ignore_ament_install']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extension 'ignore'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extension 'ignore_ament_install'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extensions ['colcon_pkg']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extension 'colcon_pkg'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extensions ['colcon_meta']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extension 'colcon_meta'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extensions ['ros']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extension 'ros'
+[0.227s] DEBUG:colcon.colcon_core.package_identification:Package 'src/bumbleb_bot' with type 'ros.ament_cmake' and name 'bumbleb_bot'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extensions ['ignore', 'ignore_ament_install']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extension 'ignore'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extension 'ignore_ament_install'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extensions ['colcon_pkg']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extension 'colcon_pkg'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extensions ['colcon_meta']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extension 'colcon_meta'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extensions ['ros']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extension 'ros'
+[0.228s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zlac_drive' with type 'ros.ament_cmake' and name 'zlac_drive'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['ignore', 'ignore_ament_install']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'ignore'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'ignore_ament_install'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['colcon_pkg']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'colcon_pkg'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['colcon_meta']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'colcon_meta'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['ros']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'ros'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['cmake', 'python']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'cmake'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'python'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['python_setup_py']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'python_setup_py'
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.252s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.252s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.254s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/dk/bumbleb_ws/install
+[0.255s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 435 installed packages in /opt/ros/humble
+[0.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'zlac_drive' build argument 'cmake_args' from command line to 'None'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'zlac_drive' build argument 'cmake_target' from command line to 'None'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'zlac_drive' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'zlac_drive' build argument 'cmake_clean_cache' from command line to 'False'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'zlac_drive' build argument 'cmake_clean_first' from command line to 'False'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'zlac_drive' build argument 'cmake_force_configure' from command line to 'False'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'zlac_drive' build argument 'ament_cmake_args' from command line to 'None'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'zlac_drive' build argument 'catkin_cmake_args' from command line to 'None'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'zlac_drive' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.295s] DEBUG:colcon.colcon_core.verb:Building package 'zlac_drive' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dk/bumbleb_ws/build/zlac_drive', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dk/bumbleb_ws/install/zlac_drive', 'merge_install': False, 'path': '/home/dk/bumbleb_ws/src/zlac_drive', 'symlink_install': True, 'test_result_base': None}
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'bumbleb_bot' build argument 'cmake_args' from command line to 'None'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'bumbleb_bot' build argument 'cmake_target' from command line to 'None'
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'bumbleb_bot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'bumbleb_bot' build argument 'cmake_clean_cache' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'bumbleb_bot' build argument 'cmake_clean_first' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'bumbleb_bot' build argument 'cmake_force_configure' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'bumbleb_bot' build argument 'ament_cmake_args' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'bumbleb_bot' build argument 'catkin_cmake_args' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'bumbleb_bot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.296s] DEBUG:colcon.colcon_core.verb:Building package 'bumbleb_bot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dk/bumbleb_ws/build/bumbleb_bot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dk/bumbleb_ws/install/bumbleb_bot', 'merge_install': False, 'path': '/home/dk/bumbleb_ws/src/bumbleb_bot', 'symlink_install': True, 'test_result_base': None}
+[0.296s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.297s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.297s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dk/bumbleb_ws/src/zlac_drive' with build type 'ament_cmake'
+[0.297s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dk/bumbleb_ws/src/zlac_drive'
+[0.298s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.298s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.299s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.306s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/zlac_drive': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dk/bumbleb_ws/build/zlac_drive -- -j16 -l16
+[0.387s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/zlac_drive' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dk/bumbleb_ws/build/zlac_drive -- -j16 -l16
+[0.396s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/zlac_drive': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dk/bumbleb_ws/build/zlac_drive
+[0.414s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zlac_drive)
+[0.414s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/zlac_drive' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dk/bumbleb_ws/build/zlac_drive
+[0.417s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/zlac_drive' for CMake module files
+[0.417s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/zlac_drive' for CMake config files
+[0.417s] Level 1:colcon.colcon_core.shell:create_environment_hook('zlac_drive', 'cmake_prefix_path')
+[0.417s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/hook/cmake_prefix_path.ps1'
+[0.418s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/hook/cmake_prefix_path.dsv'
+[0.418s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/hook/cmake_prefix_path.sh'
+[0.419s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/zlac_drive/lib'
+[0.419s] Level 1:colcon.colcon_core.shell:create_environment_hook('zlac_drive', 'ld_library_path_lib')
+[0.419s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/hook/ld_library_path_lib.ps1'
+[0.419s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/hook/ld_library_path_lib.dsv'
+[0.420s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/hook/ld_library_path_lib.sh'
+[0.420s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/zlac_drive/bin'
+[0.420s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/zlac_drive/lib/pkgconfig/zlac_drive.pc'
+[0.420s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/zlac_drive/lib/python3.10/site-packages'
+[0.420s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/zlac_drive/bin'
+[0.421s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/package.ps1'
+[0.422s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/package.dsv'
+[0.422s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/package.sh'
+[0.422s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/package.bash'
+[0.423s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/package.zsh'
+[0.423s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dk/bumbleb_ws/install/zlac_drive/share/colcon-core/packages/zlac_drive)
+[0.424s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(zlac_drive)
+[0.424s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/zlac_drive' for CMake module files
+[0.424s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/zlac_drive' for CMake config files
+[0.425s] Level 1:colcon.colcon_core.shell:create_environment_hook('zlac_drive', 'cmake_prefix_path')
+[0.425s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/hook/cmake_prefix_path.ps1'
+[0.426s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/hook/cmake_prefix_path.dsv'
+[0.427s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/hook/cmake_prefix_path.sh'
+[0.427s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/zlac_drive/lib'
+[0.427s] Level 1:colcon.colcon_core.shell:create_environment_hook('zlac_drive', 'ld_library_path_lib')
+[0.427s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/hook/ld_library_path_lib.ps1'
+[0.428s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/hook/ld_library_path_lib.dsv'
+[0.428s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/hook/ld_library_path_lib.sh'
+[0.428s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/zlac_drive/bin'
+[0.428s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/zlac_drive/lib/pkgconfig/zlac_drive.pc'
+[0.429s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/zlac_drive/lib/python3.10/site-packages'
+[0.429s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/zlac_drive/bin'
+[0.429s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/package.ps1'
+[0.430s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/package.dsv'
+[0.430s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/package.sh'
+[0.430s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/package.bash'
+[0.430s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/package.zsh'
+[0.431s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dk/bumbleb_ws/install/zlac_drive/share/colcon-core/packages/zlac_drive)
+[0.431s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dk/bumbleb_ws/src/bumbleb_bot' with build type 'ament_cmake'
+[0.431s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dk/bumbleb_ws/src/bumbleb_bot'
+[0.431s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.431s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.439s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/bumbleb_bot': CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/bumbleb_ws/install/bumbleb_bot:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/zlac_drive/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake --build /home/dk/bumbleb_ws/build/bumbleb_bot -- -j16 -l16
+[0.496s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/bumbleb_bot' returned '0': CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/bumbleb_ws/install/bumbleb_bot:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/zlac_drive/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake --build /home/dk/bumbleb_ws/build/bumbleb_bot -- -j16 -l16
+[0.497s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/bumbleb_bot': CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/bumbleb_ws/install/bumbleb_bot:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/zlac_drive/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake --install /home/dk/bumbleb_ws/build/bumbleb_bot
+[0.516s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bumbleb_bot)
+[0.516s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/bumbleb_bot' for CMake module files
+[0.516s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/bumbleb_bot' returned '0': CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/bumbleb_ws/install/bumbleb_bot:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/zlac_drive/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake --install /home/dk/bumbleb_ws/build/bumbleb_bot
+[0.517s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/bumbleb_bot' for CMake config files
+[0.517s] Level 1:colcon.colcon_core.shell:create_environment_hook('bumbleb_bot', 'cmake_prefix_path')
+[0.518s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/hook/cmake_prefix_path.ps1'
+[0.518s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/hook/cmake_prefix_path.dsv'
+[0.518s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/hook/cmake_prefix_path.sh'
+[0.519s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/bumbleb_bot/lib'
+[0.519s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/bumbleb_bot/bin'
+[0.519s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/bumbleb_bot/lib/pkgconfig/bumbleb_bot.pc'
+[0.519s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/bumbleb_bot/lib/python3.10/site-packages'
+[0.520s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/bumbleb_bot/bin'
+[0.520s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/package.ps1'
+[0.520s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/package.dsv'
+[0.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/package.sh'
+[0.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/package.bash'
+[0.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/package.zsh'
+[0.522s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dk/bumbleb_ws/install/bumbleb_bot/share/colcon-core/packages/bumbleb_bot)
+[0.522s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bumbleb_bot)
+[0.522s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/bumbleb_bot' for CMake module files
+[0.522s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/bumbleb_bot' for CMake config files
+[0.523s] Level 1:colcon.colcon_core.shell:create_environment_hook('bumbleb_bot', 'cmake_prefix_path')
+[0.523s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/hook/cmake_prefix_path.ps1'
+[0.523s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/hook/cmake_prefix_path.dsv'
+[0.523s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/hook/cmake_prefix_path.sh'
+[0.524s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/bumbleb_bot/lib'
+[0.524s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/bumbleb_bot/bin'
+[0.524s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/bumbleb_bot/lib/pkgconfig/bumbleb_bot.pc'
+[0.524s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/bumbleb_bot/lib/python3.10/site-packages'
+[0.524s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/bumbleb_bot/bin'
+[0.524s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/package.ps1'
+[0.525s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/package.dsv'
+[0.525s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/package.sh'
+[0.526s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/package.bash'
+[0.526s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/package.zsh'
+[0.526s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dk/bumbleb_ws/install/bumbleb_bot/share/colcon-core/packages/bumbleb_bot)
+[0.526s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[0.526s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[0.526s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[0.526s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.530s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.531s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.531s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[0.540s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.540s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dk/bumbleb_ws/install/local_setup.ps1'
+[0.541s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dk/bumbleb_ws/install/_local_setup_util_ps1.py'
+[0.542s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dk/bumbleb_ws/install/setup.ps1'
+[0.543s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dk/bumbleb_ws/install/local_setup.sh'
+[0.543s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dk/bumbleb_ws/install/_local_setup_util_sh.py'
+[0.544s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dk/bumbleb_ws/install/setup.sh'
+[0.544s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dk/bumbleb_ws/install/local_setup.bash'
+[0.545s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dk/bumbleb_ws/install/setup.bash'
+[0.546s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dk/bumbleb_ws/install/local_setup.zsh'
+[0.546s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dk/bumbleb_ws/install/setup.zsh'

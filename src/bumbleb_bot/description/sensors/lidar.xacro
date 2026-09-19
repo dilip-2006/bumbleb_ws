@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!--
+    LiDAR frame.
+
+    The exact mounting position should be measured from the
+    physical BumbleB robot.
+  -->
+
+  <xacro:property
+    name="lidar_x"
+    value="0.22"/>
+
+  <xacro:property
+    name="lidar_y"
+    value="0.0"/>
+
+  <xacro:property
+    name="lidar_z"
+    value="0.18"/>
+
+
+  <joint
+    name="lidar_joint"
+    type="fixed">
+
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+
+    <origin
+      xyz="${lidar_x} ${lidar_y} ${lidar_z}"
+      rpy="0 0 0"/>
+
+  </joint>
+
+
+  <link name="lidar_link">
+
+    <!-- Temporary visualization geometry -->
+    <visual>
+
+      <geometry>
+        <cylinder
+          radius="0.05"
+          length="0.05"/>
+      </geometry>
+
+      <material name="blue"/>
+
+    </visual>
+
+    <!-- Small marker showing the sensor's +X (forward / scan-zero) axis. -->
+    <visual>
+      <origin xyz="0.055 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.025 0.020 0.020"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+
+
+    <!-- Temporary collision geometry -->
+    <collision>
+
+      <geometry>
+        <cylinder
+          radius="0.05"
+          length="0.05"/>
+      </geometry>
+
+    </collision>
+
+  </link>
+
+
+  <gazebo reference="lidar_link">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+</robot>

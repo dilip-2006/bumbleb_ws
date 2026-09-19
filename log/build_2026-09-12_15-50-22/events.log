@@ -1,0 +1,17 @@
+[0.000000] (-) TimerEvent: {}
+[0.000423] (-) JobUnselected: {'identifier': 'bumbleb_bot'}
+[0.000445] (-) JobUnselected: {'identifier': 'rosapi_msgs'}
+[0.000459] (-) JobUnselected: {'identifier': 'rosbridge_suite'}
+[0.000470] (-) JobUnselected: {'identifier': 'rosbridge_test_msgs'}
+[0.000481] (-) JobUnselected: {'identifier': 'zlac_drive'}
+[0.000494] (rosbridge_msgs) JobQueued: {'identifier': 'rosbridge_msgs', 'dependencies': OrderedDict()}
+[0.000508] (rosbridge_library) JobQueued: {'identifier': 'rosbridge_library', 'dependencies': OrderedDict([('rosbridge_test_msgs', '/home/dk/bumbleb_ws/install/rosbridge_test_msgs')])}
+[0.000523] (rosapi) JobQueued: {'identifier': 'rosapi', 'dependencies': OrderedDict([('rosapi_msgs', '/home/dk/bumbleb_ws/install/rosapi_msgs'), ('rosbridge_test_msgs', '/home/dk/bumbleb_ws/install/rosbridge_test_msgs'), ('rosbridge_library', '/home/dk/bumbleb_ws/install/rosbridge_library')])}
+[0.000537] (rosbridge_server) JobQueued: {'identifier': 'rosbridge_server', 'dependencies': OrderedDict([('rosapi_msgs', '/home/dk/bumbleb_ws/install/rosapi_msgs'), ('rosbridge_msgs', '/home/dk/bumbleb_ws/install/rosbridge_msgs'), ('rosbridge_test_msgs', '/home/dk/bumbleb_ws/install/rosbridge_test_msgs'), ('rosbridge_library', '/home/dk/bumbleb_ws/install/rosbridge_library'), ('rosapi', '/home/dk/bumbleb_ws/install/rosapi')])}
+[0.000977] (rosbridge_library) JobStarted: {'identifier': 'rosbridge_library'}
+[0.018437] (rosbridge_library) JobEnded: {'identifier': 'rosbridge_library', 'rc': 1}
+[0.019072] (rosbridge_msgs) JobStarted: {'identifier': 'rosbridge_msgs'}
+[0.022780] (rosbridge_msgs) JobEnded: {'identifier': 'rosbridge_msgs', 'rc': 'SIGINT'}
+[0.023605] (rosapi) JobSkipped: {'identifier': 'rosapi'}
+[0.023654] (rosbridge_server) JobSkipped: {'identifier': 'rosbridge_server'}
+[0.023677] (-) EventReactorShutdown: {}

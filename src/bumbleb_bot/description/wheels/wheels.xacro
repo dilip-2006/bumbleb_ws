@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ========================================================= -->
+  <!-- WHEEL GEOMETRY PARAMETERS                                 -->
+  <!-- ========================================================= -->
+
+  <!--
+    Single source of truth: bumbleb_bot/config/drivetrain.yaml.
+
+    launch/*.launch.py read that file and pass wheel_radius and
+    wheel_separation on the xacro command line
+    (e.g. "xacro bumbleb.urdf.xacro wheel_radius:=0.0655
+    wheel_separation:=0.65") so the URDF never disagrees with
+    bumbleb_drivetrain_node's kinematics/odometry. The defaults below
+    exist only so this xacro remains valid when processed standalone
+    (e.g. by test_urdf.py) and MUST match drivetrain.yaml.
+
+    wheel_radius: DERIVED from the ZLLG50ASM200 V2.0 wheel diameter
+    (131 +/-2 mm, SOURCE_VERIFIED) / 2.
+
+    wheel_separation: CALIBRATION_REQUIRED - not yet confirmed against
+    the physical BumbleB chassis. See drivetrain.yaml.
+  -->
+  <xacro:arg name="wheel_radius" default="0.0655"/>
+  <xacro:arg name="wheel_separation" default="0.45"/>
+
+  <xacro:property
+    name="wheel_radius"
+    value="$(arg wheel_radius)"/>
+
+  <xacro:property
+    name="wheel_width"
+    value="0.05"/>
+
+  <xacro:property
+    name="wheel_separation"
+    value="$(arg wheel_separation)"/>
+
+  <!-- Temporary mass until physical values are available -->
+  <xacro:property
+    name="wheel_mass"
+    value="0.1"/>
+
+  <!-- ========================================================= -->
+  <!-- LEFT DRIVE WHEEL                                         -->
+  <!-- ========================================================= -->
+
+  <joint
+    name="left_joint"
+    type="continuous">
+
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+
+    <origin
+      xyz="0 -0.225 0"
+      rpy="1.57079632679 0 0"/>
+
+    <axis xyz="0 0 1"/>
+
+  </joint>
+
+
+  <link name="left_wheel">
+
+    <visual>
+      <geometry>
+        <cylinder
+          radius="${wheel_radius}"
+          length="${wheel_width}"/>
+      </geometry>
+
+      <material name="dark_gray"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <cylinder
+          radius="${wheel_radius}"
+          length="${wheel_width}"/>
+      </geometry>
+    </collision>
+
+    <xacro:inertial_cylinder
+      mass="${wheel_mass}"
+      length="${wheel_width}"
+      radius="${wheel_radius}">
+
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0"/>
+
+    </xacro:inertial_cylinder>
+
+  </link>
+
+
+  <!-- ========================================================= -->
+  <!-- RIGHT DRIVE WHEEL                                        -->
+  <!-- ========================================================= -->
+
+  <joint
+    name="right_joint"
+    type="continuous">
+
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+
+    <origin
+      xyz="0 0.225 0"
+      rpy="1.57079632679 0 0"/>
+
+    <axis xyz="0 0 1"/>
+
+  </joint>
+
+
+  <link name="right_wheel">
+
+    <visual>
+      <geometry>
+        <cylinder
+          radius="${wheel_radius}"
+          length="${wheel_width}"/>
+      </geometry>
+
+      <material name="dark_gray"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <cylinder
+          radius="${wheel_radius}"
+          length="${wheel_width}"/>
+      </geometry>
+      
+    </collision>
+
+    <xacro:inertial_cylinder
+      mass="${wheel_mass}"
+      length="${wheel_width}"
+      radius="${wheel_radius}">
+
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0"/>
+
+    </xacro:inertial_cylinder>
+
+  </link>
+
+
+  <!-- ========================================================= -->
+  <!-- CASTERS                                                  -->
+  <!-- ========================================================= -->
+
+  <xacro:property
+    name="caster_radius"
+    value="0.03"/>
+
+  <xacro:property
+    name="caster_mass"
+    value="0.1"/>
+
+  <!--
+    Keep each caster centre one caster radius above the ground plane,
+    matching the drive-wheel contact plane.  The lateral locations place
+    the balls just outside the 0.40 m-wide chassis so they remain visible.
+  -->
+
+  <!-- FRONT LEFT -->
+
+  <joint
+    name="front_left_caster_joint"
+    type="fixed">
+
+    <parent link="base_link"/>
+    <child link="front_left_caster"/>
+
+    <origin
+      xyz="0.25 0.175 -${caster_radius}"
+      rpy="0 0 0"/>
+
+  </joint>
+
+  <link name="front_left_caster">
+
+    <visual>
+      <geometry>
+        <sphere radius="${caster_radius}"/>
+      </geometry>
+
+      <material name="yellow"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <sphere radius="${caster_radius}"/>
+      </geometry>
+    </collision>
+
+    <xacro:inertial_sphere
+      mass="${caster_mass}"
+      radius="${caster_radius}">
+
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+
+    </xacro:inertial_sphere>
+
+  </link>
+
+  <gazebo reference="front_left_caster">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+
+  <!-- FRONT RIGHT -->
+
+  <joint
+    name="front_right_caster_joint"
+    type="fixed">
+
+    <parent link="base_link"/>
+    <child link="front_right_caster"/>
+
+    <origin
+      xyz="0.25 -0.175 -${caster_radius}"
+      rpy="0 0 0"/>
+
+  </joint>
+
+  <link name="front_right_caster">
+
+    <visual>
+      <geometry>
+        <sphere radius="${caster_radius}"/>
+      </geometry>
+
+      <material name="yellow"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <sphere radius="${caster_radius}"/>
+      </geometry>
+    </collision>
+
+    <xacro:inertial_sphere
+      mass="${caster_mass}"
+      radius="${caster_radius}">
+
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+
+    </xacro:inertial_sphere>
+
+  </link>
+
+  <gazebo reference="front_right_caster">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+
+  <!-- REAR LEFT -->
+
+  <joint
+    name="rear_left_caster_joint"
+    type="fixed">
+
+    <parent link="base_link"/>
+    <child link="rear_left_caster"/>
+
+    <origin
+      xyz="-0.25 0.175 -${caster_radius}"
+      rpy="0 0 0"/>
+
+  </joint>
+
+  <link name="rear_left_caster">
+
+    <visual>
+      <geometry>
+        <sphere radius="${caster_radius}"/>
+      </geometry>
+
+      <material name="yellow"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <sphere radius="${caster_radius}"/>
+      </geometry>
+    </collision>
+
+    <xacro:inertial_sphere
+      mass="${caster_mass}"
+      radius="${caster_radius}">
+
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+
+    </xacro:inertial_sphere>
+
+  </link>
+
+  <gazebo reference="rear_left_caster">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+
+  <!-- REAR RIGHT -->
+
+  <joint
+    name="rear_right_caster_joint"
+    type="fixed">
+
+    <parent link="base_link"/>
+    <child link="rear_right_caster"/>
+
+    <origin
+      xyz="-0.25 -0.175 -${caster_radius}"
+      rpy="0 0 0"/>
+
+  </joint>
+
+  <link name="rear_right_caster">
+
+    <visual>
+      <geometry>
+        <sphere radius="${caster_radius}"/>
+      </geometry>
+
+      <material name="yellow"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <sphere radius="${caster_radius}"/>
+      </geometry>
+    </collision>
+
+    <xacro:inertial_sphere
+      mass="${caster_mass}"
+      radius="${caster_radius}">
+
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+
+    </xacro:inertial_sphere>
+
+  </link>
+
+  <gazebo reference="rear_right_caster">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+</robot>

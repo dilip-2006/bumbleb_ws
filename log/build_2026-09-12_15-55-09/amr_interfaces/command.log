@@ -1,0 +1,6 @@
+Invoking command in '/home/dk/bumbleb_ws/build/amr_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/dk/bumbleb_ws/src/amr_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/amr_interfaces
+Invoked command in '/home/dk/bumbleb_ws/build/amr_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/dk/bumbleb_ws/src/amr_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/amr_interfaces
+Invoking command in '/home/dk/bumbleb_ws/build/amr_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dk/bumbleb_ws/build/amr_interfaces -- -j16 -l16
+Invoked command in '/home/dk/bumbleb_ws/build/amr_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dk/bumbleb_ws/build/amr_interfaces -- -j16 -l16
+Invoking command in '/home/dk/bumbleb_ws/build/amr_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dk/bumbleb_ws/build/amr_interfaces
+Invoked command in '/home/dk/bumbleb_ws/build/amr_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dk/bumbleb_ws/build/amr_interfaces

@@ -1,0 +1,6 @@
+/**:
+  ros__parameters:
+    joints:
+      - left_joint
+      - right_joint
+    interface_name: velocity

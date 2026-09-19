@@ -1,0 +1,61 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/dk/bumbleb_ws/build/rosbridge_server
+Built target ament_cmake_python_symlink_rosbridge_server
+running egg_info
+creating rosbridge_server.egg-info
+writing rosbridge_server.egg-info/PKG-INFO
+writing dependency_links to rosbridge_server.egg-info/dependency_links.txt
+writing top-level names to rosbridge_server.egg-info/top_level.txt
+writing manifest file 'rosbridge_server.egg-info/SOURCES.txt'
+reading manifest file 'rosbridge_server.egg-info/SOURCES.txt'
+writing manifest file 'rosbridge_server.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_rosbridge_server_egg
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/environment/pythonpath.sh
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/environment/pythonpath.dsv
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server-2.0.8-py3.10.egg-info/PKG-INFO
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server-2.0.8-py3.10.egg-info/SOURCES.txt
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server-2.0.8-py3.10.egg-info/dependency_links.txt
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server-2.0.8-py3.10.egg-info/top_level.txt
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server/__init__.py
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server/client_manager.py
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server/websocket_handler.py
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/ament_index/resource_index/package_run_dependencies/rosbridge_server
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/ament_index/resource_index/parent_prefix_path/rosbridge_server
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/environment/ament_prefix_path.sh
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/environment/ament_prefix_path.dsv
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/environment/path.sh
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/environment/path.dsv
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/local_setup.bash
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/local_setup.sh
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/local_setup.zsh
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/local_setup.dsv
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/package.dsv
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/ament_index/resource_index/packages/rosbridge_server
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/cmake/rosbridge_serverConfig.cmake
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/cmake/rosbridge_serverConfig-version.cmake
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/package.xml
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/lib/rosbridge_server/rosbridge_websocket.py
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/lib/rosbridge_server/rosbridge_websocket
+-- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/launch/rosbridge_websocket_launch.xml
+Listing '/home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server'...
+Compiling '/home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server/__init__.py'...
+Compiling '/home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server/client_manager.py'...
+Compiling '/home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server/websocket_handler.py'...

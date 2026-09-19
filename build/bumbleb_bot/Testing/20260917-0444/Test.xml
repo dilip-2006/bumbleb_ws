@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20260917-0444-Experimental"
+	Name="dk-LOQ-15IRX9"
+	Generator="ctest-3.22.1"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="11.4.0"
+	OSName="Linux"
+	Hostname="dk-LOQ-15IRX9"
+	OSRelease="6.8.0-138-generic"
+	OSVersion="#138~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Aug  7 13:43:15 UTC "
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="183"
+	ProcessorCacheSize="20480"
+	NumberOfLogicalCPU="16"
+	NumberOfPhysicalCPU="10"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="23806"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="1100"
+	>
+	<Testing>
+		<StartDateTime>Sep 17 10:14 IST</StartDateTime>
+		<StartTestTime>1789620284</StartTestTime>
+		<TestList>
+			<Test>./test_urdf</Test>
+			<Test>./test_launch</Test>
+			<Test>./copyright</Test>
+			<Test>./cppcheck</Test>
+			<Test>./cpplint</Test>
+			<Test>./flake8</Test>
+			<Test>./lint_cmake</Test>
+			<Test>./pep257</Test>
+			<Test>./uncrustify</Test>
+			<Test>./xmllint</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>test_urdf</Name>
+			<Path>.</Path>
+			<FullName>./test_urdf</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/test_urdf.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_pytest/test_urdf.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/dk/bumbleb_ws/src/bumbleb_bot/test/test_urdf.py" "-o" "cache_dir=/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_pytest/test_urdf/.cache" "--junit-xml=/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/test_urdf.xunit.xml" "--junit-prefix=bumbleb_bot"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.835342</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/test_urdf.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_pytest/test_urdf.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/dk/bumbleb_ws/src/bumbleb_bot/test/test_urdf.py" "-o" "cache_dir=/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_pytest/test_urdf/.cache" "--junit-xml=/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/test_urdf.xunit.xml" "--junit-prefix=bumbleb_bot"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/build/bumbleb_bot':
+ - /usr/bin/python3 -u -m pytest /home/dk/bumbleb_ws/src/bumbleb_bot/test/test_urdf.py -o cache_dir=/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_pytest/test_urdf/.cache --junit-xml=/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/test_urdf.xunit.xml --junit-prefix=bumbleb_bot
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+cachedir: build/bumbleb_bot/ament_cmake_pytest/test_urdf/.cache
+rootdir: /home/dk/bumbleb_ws
+plugins: ament-xmllint-0.12.15, ament-flake8-0.12.15, launch-testing-1.0.14, ament-pep257-0.12.15, ament-copyright-0.12.15, launch-testing-ros-0.19.14, ament-lint-0.12.15, cov-3.0.0, colcon-core-0.21.1
+collected 4 items
+
+../../src/bumbleb_bot/test/test_urdf.py ....                             [100%]
+
+=============================== warnings summary ===============================
+../../../../../opt/ros/humble/local/lib/python3.10/dist-packages/xacro/__init__.py:115
+  Warning: private variables, such as '_ConstructUnits__ConstructUnitsValue', will be normal attributes in 3.11
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+- generated xml file: /home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/test_urdf.xunit.xml -
+========================= 4 passed, 1 warning in 0.15s =========================
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/test_urdf.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>pytest</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>test_launch</Name>
+			<Path>.</Path>
+			<FullName>./test_launch</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/test_launch.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_pytest/test_launch.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/dk/bumbleb_ws/src/bumbleb_bot/test/test_launch.py" "-o" "cache_dir=/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_pytest/test_launch/.cache" "--junit-xml=/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/test_launch.xunit.xml" "--junit-prefix=bumbleb_bot"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.769551</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/test_launch.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_pytest/test_launch.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/dk/bumbleb_ws/src/bumbleb_bot/test/test_launch.py" "-o" "cache_dir=/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_pytest/test_launch/.cache" "--junit-xml=/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/test_launch.xunit.xml" "--junit-prefix=bumbleb_bot"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/build/bumbleb_bot':
+ - /usr/bin/python3 -u -m pytest /home/dk/bumbleb_ws/src/bumbleb_bot/test/test_launch.py -o cache_dir=/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_pytest/test_launch/.cache --junit-xml=/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/test_launch.xunit.xml --junit-prefix=bumbleb_bot
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+cachedir: build/bumbleb_bot/ament_cmake_pytest/test_launch/.cache
+rootdir: /home/dk/bumbleb_ws
+plugins: ament-xmllint-0.12.15, ament-flake8-0.12.15, launch-testing-1.0.14, ament-pep257-0.12.15, ament-copyright-0.12.15, launch-testing-ros-0.19.14, ament-lint-0.12.15, cov-3.0.0, colcon-core-0.21.1
+collected 3 items
+
+../../src/bumbleb_bot/test/test_launch.py ...                            [100%]
+
+- generated xml file: /home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/test_launch.xunit.xml -
+============================== 3 passed in 0.03s ===============================
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/test_launch.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>pytest</Label>
+			</Labels>
+		</Test>
+		<Test Status="failed">
+			<Name>copyright</Name>
+			<Path>.</Path>
+			<FullName>./copyright</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/copyright.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_copyright/copyright.txt" "--command" "/opt/ros/humble/bin/ament_copyright" "--xunit-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/copyright.xunit.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.369558</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/copyright.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_copyright/copyright.txt" "--command" "/opt/ros/humble/bin/ament_copyright" "--xunit-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/copyright.xunit.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/src/bumbleb_bot':
+ - /opt/ros/humble/bin/ament_copyright --xunit-file /home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/copyright.xunit.xml
+include/bumbleb_bot/drivetrain_node.hpp: could not find copyright notice
+launch/bringup.launch.py: could not find copyright notice
+launch/lidar.launch.py: could not find copyright notice
+launch/localization.launch.py: could not find copyright notice
+launch/mapping.launch.py: could not find copyright notice
+launch/navigation.launch.py: could not find copyright notice
+launch/real_robot.launch.py: could not find copyright notice
+launch/rosbridge.launch.py: could not find copyright notice
+launch/rsp.launch.py: could not find copyright notice
+launch/simulation.launch.py: could not find copyright notice
+launch/slam.launch.py: could not find copyright notice
+launch/teleop.launch.py: could not find copyright notice
+scripts/location_manager_node.py: could not find copyright notice
+scripts/system_manager_node.py: could not find copyright notice
+src/drivetrain_node.cpp: could not find copyright notice
+test/test_launch.py: could not find copyright notice
+test/test_urdf.py: could not find copyright notice
+17 errors, checked 17 files
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/copyright.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>copyright</Label>
+				<Label>linter</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>cppcheck</Name>
+			<Path>.</Path>
+			<FullName>./cppcheck</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/cppcheck.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cppcheck/cppcheck.txt" "--command" "/opt/ros/humble/bin/ament_cppcheck" "--xunit-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/cppcheck.xunit.xml" "--include_dirs" "/home/dk/bumbleb_ws/src/bumbleb_bot/include"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.338611</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/cppcheck.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cppcheck/cppcheck.txt" "--command" "/opt/ros/humble/bin/ament_cppcheck" "--xunit-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/cppcheck.xunit.xml" "--include_dirs" "/home/dk/bumbleb_ws/src/bumbleb_bot/include"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/src/bumbleb_bot':
+ - /opt/ros/humble/bin/ament_cppcheck --xunit-file /home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/cppcheck.xunit.xml --include_dirs /home/dk/bumbleb_ws/src/bumbleb_bot/include
+cppcheck 2.7 has known performance issues and therefore will not be used, set the AMENT_CPPCHECK_ALLOW_SLOW_VERSIONS environment variable to override this.
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/cppcheck.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>cppcheck</Label>
+				<Label>linter</Label>
+			</Labels>
+		</Test>
+		<Test Status="failed">
+			<Name>cpplint</Name>
+			<Path>.</Path>
+			<FullName>./cpplint</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/cpplint.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cpplint/cpplint.txt" "--command" "/opt/ros/humble/bin/ament_cpplint" "--xunit-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/cpplint.xunit.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.466249</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/cpplint.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cpplint/cpplint.txt" "--command" "/opt/ros/humble/bin/ament_cpplint" "--xunit-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/cpplint.xunit.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/src/bumbleb_bot':
+ - /opt/ros/humble/bin/ament_cpplint --xunit-file /home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/cpplint.xunit.xml
+/home/dk/bumbleb_ws/src/bumbleb_bot/include/bumbleb_bot/drivetrain_node.hpp:0:  No copyright message found.  You should have a line: "Copyright [year] &lt;Copyright Owner&gt;"  [legal/copyright] [5]
+/home/dk/bumbleb_ws/src/bumbleb_bot/src/drivetrain_node.cpp:0:  No copyright message found.  You should have a line: "Copyright [year] &lt;Copyright Owner&gt;"  [legal/copyright] [5]
+Category 'legal/copyright' errors found: 2
+Total errors found: 2
+Using '--root=/home/dk/bumbleb_ws/src/bumbleb_bot/include' argument
+
+Done processing /home/dk/bumbleb_ws/src/bumbleb_bot/include/bumbleb_bot/drivetrain_node.hpp
+
+Using '--root=/home/dk/bumbleb_ws/src/bumbleb_bot/src' argument
+
+Done processing /home/dk/bumbleb_ws/src/bumbleb_bot/src/drivetrain_node.cpp
+
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/cpplint.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>cpplint</Label>
+				<Label>linter</Label>
+			</Labels>
+		</Test>
+		<Test Status="failed">
+			<Name>flake8</Name>
+			<Path>.</Path>
+			<FullName>./flake8</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/flake8.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_flake8/flake8.txt" "--command" "/opt/ros/humble/bin/ament_flake8" "--xunit-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/flake8.xunit.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.883109</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/flake8.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_flake8/flake8.txt" "--command" "/opt/ros/humble/bin/ament_flake8" "--xunit-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/flake8.xunit.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/src/bumbleb_bot':
+ - /opt/ros/humble/bin/ament_flake8 --xunit-file /home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/flake8.xunit.xml
+        AMRState.OFF: [AMRState.BOOTING, AMRState.READY, AMRState.MAPPING, AMRState.LOCALIZATION, AMRState.EMERGENCY_STOP],
+                                                                                                   ^
+        AMRState.READY: [AMRState.MAPPING, AMRState.LOCALIZATION, AMRState.NAVIGATION, AMRState.OFF, AMRState.ERROR, AMRState.EMERGENCY_STOP],
+                                                                                                   ^
+        AMRState.MAPPING: [AMRState.MAP_SAVING, AMRState.READY, AMRState.OFF, AMRState.ERROR, AMRState.EMERGENCY_STOP],
+                                                                                                   ^
+        AMRState.MAP_SAVING: [AMRState.MAPPING, AMRState.READY, AMRState.OFF, AMRState.ERROR, AMRState.EMERGENCY_STOP],
+                                                                                                   ^
+        AMRState.LOCALIZATION: [AMRState.NAVIGATION, AMRState.MAPPING, AMRState.READY, AMRState.OFF, AMRState.ERROR, AMRState.EMERGENCY_STOP],
+                                                                                                   ^
+        AMRState.NAVIGATION: [AMRState.LOCALIZATION, AMRState.MAPPING, AMRState.READY, AMRState.OFF, AMRState.ERROR, AMRState.EMERGENCY_STOP],
+                                                                                                   ^
+                   f"Allowed targets: {[s.value for s in self.VALID_TRANSITIONS.get(self._current_state, [])]}")
+                                                                                                   ^
+        return True, f"Transitioned from {self._previous_state.value} to {self._current_state.value}"
+                                                                                                   ^
+    def trigger_emergency_stop(self, reason: str = "Operator Triggered Emergency Stop") -&gt; tuple[bool, str]:
+                                                                                                   ^
+        self.get_logger().info(f"AMR System Manager starting (use_sim_time={self.use_sim_time}, maps_dir={self.maps_dir})")
+                                                                                                   ^
+        self.sub_scan = self.create_subscription(LaserScan, "/scan", self._scan_cb, rclpy.qos.qos_profile_sensor_data)
+                                                                                                   ^
+        self.sub_map = self.create_subscription(OccupancyGrid, "/map", self._map_cb, rclpy.qos.qos_profile_sensor_data)
+                                                                                                   ^
+        self.srv_start_robot = self.create_service(Trigger, '/amr/start_robot', self._srv_start_robot)
+                                                                                                   ^
+        self.srv_start_mapping = self.create_service(Trigger, '/amr/start_mapping', self._srv_start_mapping)
+                                                                                                   ^
+        self.srv_stop_mapping = self.create_service(Trigger, '/amr/stop_mapping', self._srv_stop_mapping)
+                                                                                                   ^
+        self.srv_start_localization = self.create_service(Trigger, '/amr/start_localization', self._srv_start_localization)
+                                                                                                   ^
+        self.srv_stop_localization = self.create_service(Trigger, '/amr/stop_localization', self._srv_stop_localization)
+                                                                                                   ^
+        self.srv_start_navigation = self.create_service(Trigger, '/amr/start_navigation', self._srv_start_navigation)
+                                                                                                   ^
+        self.srv_stop_navigation = self.create_service(Trigger, '/amr/stop_navigation', self._srv_stop_navigation)
+                                                                                                   ^
+        self.srv_estop = self.create_service(Trigger, '/amr/emergency_stop', self._srv_emergency_stop)
+                                                                                                   ^
+        self.srv_reset_estop = self.create_service(Trigger, '/amr/reset_emergency_stop', self._srv_reset_emergency_stop)
+                                                                                                   ^
+        self.srv_system_reset = self.create_service(Trigger, '/amr/system_reset', self._srv_system_reset)
+                                                                                                   ^
+            can_tf = self.tf_buffer.can_transform(target_frame, source_frame, Time(), timeout=Duration(seconds=0.1))
+                                                                                                   ^
+            return False, "Invalid map name. Only letters, numbers, underscores, and hyphens are allowed."
+                                                                                                   ^
+                err_msg = proc.stderr.strip() or proc.stdout.strip() or "map_saver_cli returned non-zero code"
+                                                                                                   ^
+            "status": HealthStatus.OK if lidar_dt &lt; 1.5 else (HealthStatus.WARNING if lidar_dt &lt; 5.0 else HealthStatus.ERROR),
+                                                                                                   ^
+            "message": "LiDAR publishing normally (~10Hz)" if lidar_dt &lt; 1.5 else f"Delayed ({lidar_dt:.1f}s ago)",
+                                                                                                   ^
+            "status": HealthStatus.OK if odom_dt &lt; 1.0 else (HealthStatus.WARNING if odom_dt &lt; 4.0 else HealthStatus.ERROR),
+                                                                                                   ^
+            "message": "Odometry publishing normally" if odom_dt &lt; 1.0 else f"Delayed ({odom_dt:.1f}s ago)",
+                                                                                                   ^
+            "message": "Base TF tree valid" if (tf_odom_base and tf_base_lidar) else (msg_odom_base if not tf_odom_base else msg_base_lidar),
+                                                                                                   ^
+                HealthStatus.WARNING if self.state_machine.current_state in (AMRState.MAPPING, AMRState.LOCALIZATION) else HealthStatus.OK
+                                                                                                   ^
+            "message": "Occupancy grid available" if (self.map_received and map_dt &lt; 5.0) else "Idle",
+                                                                                                   ^
+            "status": HealthStatus.OK if self.supervisor.is_running("localization") else HealthStatus.OK,
+                                                                                                   ^
+            "status": HealthStatus.OK if self.supervisor.is_running("localization") else HealthStatus.OK,
+                                                                                                   ^
+            "status": HealthStatus.OK if self.supervisor.is_running("navigation") else HealthStatus.OK,
+                                                                                                   ^
+        has_error = any(v.get("status") == HealthStatus.ERROR for k, v in components.items() if k in ("lidar", "odometry", "tf"))
+                                                                                                   ^
+            "overall": HealthStatus.ERROR if has_error else (HealthStatus.WARNING if has_warn else HealthStatus.OK),
+                                                                                                   ^
+            elif action == "load_map" or action == "set_mode" and data.get("mode") == "LOCALIZATION":
+                                                                                                   ^
+        if self.state_machine.current_state == AMRState.EMERGENCY_STOP and target != "EMERGENCY_STOP":
+                                                                                                   ^
+                if isinstance(data, dict) and "locations" in data and isinstance(data["locations"], dict):
+                                                                                                   ^
+    def save_location(self, name: str, loc_type: str, x: float, y: float, yaw: float, map_name: str = "") -&gt; tuple[bool, str]:
+                                                                                                   ^
+        self.sub_amcl = self.create_subscription(PoseWithCovarianceStamped, '/amcl_pose', self._amcl_cb, 10)
+                                                                                                   ^
+        self.sub_cmd = self.create_subscription(String, '/amr/location_command', self._command_cb, 10)
+                                                                                                   ^
+        self.sub_state = self.create_subscription(String, '/amr/system_state', self._system_state_cb, 10)
+                                                                                                   ^
+        self.srv_cancel_nav = self.create_service(Trigger, '/amr/cancel_navigation', self._handle_cancel_nav)
+                                                                                                   ^
+            return False, "Nav2 action server /navigate_to_pose unavailable. Verify Navigation mode is running."
+                                                                                                   ^
+        send_future = self.nav_action_client.send_goal_async(goal_msg, feedback_callback=self._nav_feedback_cb)
+                                                                                                   ^
+def generate_launch_description():
+^
+        DeclareLaunchArgument("use_sim_time", default_value="true", description="Use simulation clock"),
+                                                                                                   ^
+            PythonLaunchDescriptionSource(os.path.join(nav2_share, "launch", "navigation_launch.py")),
+                                                                                                   ^
+            launch_arguments={"use_sim_time": LaunchConfiguration("use_sim_time"), "params_file": params}.items(),
+                                                                                                   ^
+def generate_launch_description():
+^
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, RegisterEventHandler, TimerAction
+                                                                                                   ^
+def generate_launch_description():
+^
+                PythonLaunchDescriptionSource(os.path.join(pkg_bumbleb, "launch", "real_robot.launch.py"))
+                                                                                                   ^
+                PythonLaunchDescriptionSource(os.path.join(pkg_bumbleb, "launch", "lidar.launch.py"))
+                                                                                                   ^
+def generate_launch_description():
+^
+def generate_launch_description():
+^
+        DeclareLaunchArgument("use_sim_time", default_value="true", description="Use simulation clock"),
+                                                                                                   ^
+def generate_launch_description():
+^
+    
+^
+            parameters=[{"autostart": True, "node_names": ["map_server", "amcl"], "use_sim_time": use_sim_time}]
+                                                                                                   ^
+    ])      ^
+6     E302 expected 2 blank lines, found 1
+55    E501 line too long (106 &gt; 99 characters)
+1     W292 no newline at end of file
+1     W293 blank line contains whitespace
+
+./scripts/system_manager_node.py:49:100: E501 line too long (123 &gt; 99 characters)
+
+./scripts/system_manager_node.py:51:100: E501 line too long (142 &gt; 99 characters)
+
+./scripts/system_manager_node.py:52:100: E501 line too long (119 &gt; 99 characters)
+
+./scripts/system_manager_node.py:53:100: E501 line too long (119 &gt; 99 characters)
+
+./scripts/system_manager_node.py:54:100: E501 line too long (142 &gt; 99 characters)
+
+./scripts/system_manager_node.py:55:100: E501 line too long (142 &gt; 99 characters)
+
+./scripts/system_manager_node.py:95:100: E501 line too long (112 &gt; 99 characters)
+
+./scripts/system_manager_node.py:105:100: E501 line too long (101 &gt; 99 characters)
+
+./scripts/system_manager_node.py:107:100: E501 line too long (108 &gt; 99 characters)
+
+./scripts/system_manager_node.py:277:100: E501 line too long (123 &gt; 99 characters)
+
+./scripts/system_manager_node.py:297:100: E501 line too long (118 &gt; 99 characters)
+
+./scripts/system_manager_node.py:300:100: E501 line too long (119 &gt; 99 characters)
+
+./scripts/system_manager_node.py:311:100: E501 line too long (102 &gt; 99 characters)
+
+./scripts/system_manager_node.py:313:100: E501 line too long (108 &gt; 99 characters)
+
+./scripts/system_manager_node.py:314:100: E501 line too long (105 &gt; 99 characters)
+
+./scripts/system_manager_node.py:315:100: E501 line too long (123 &gt; 99 characters)
+
+./scripts/system_manager_node.py:316:100: E501 line too long (120 &gt; 99 characters)
+
+./scripts/system_manager_node.py:317:100: E501 line too long (117 &gt; 99 characters)
+
+./scripts/system_manager_node.py:318:100: E501 line too long (114 &gt; 99 characters)
+
+./scripts/system_manager_node.py:319:100: E501 line too long (102 &gt; 99 characters)
+
+./scripts/system_manager_node.py:320:100: E501 line too long (120 &gt; 99 characters)
+
+./scripts/system_manager_node.py:321:100: E501 line too long (105 &gt; 99 characters)
+
+./scripts/system_manager_node.py:355:100: E501 line too long (116 &gt; 99 characters)
+
+./scripts/system_manager_node.py:398:100: E501 line too long (106 &gt; 99 characters)
+
+./scripts/system_manager_node.py:422:100: E501 line too long (110 &gt; 99 characters)
+
+./scripts/system_manager_node.py:454:100: E501 line too long (126 &gt; 99 characters)
+
+./scripts/system_manager_node.py:455:100: E501 line too long (115 &gt; 99 characters)
+
+./scripts/system_manager_node.py:462:100: E501 line too long (124 &gt; 99 characters)
+
+./scripts/system_manager_node.py:463:100: E501 line too long (108 &gt; 99 characters)
+
+./scripts/system_manager_node.py:480:100: E501 line too long (141 &gt; 99 characters)
+
+./scripts/system_manager_node.py:488:100: E501 line too long (138 &gt; 99 characters)
+
+./scripts/system_manager_node.py:490:100: E501 line too long (102 &gt; 99 characters)
+
+./scripts/system_manager_node.py:501:100: E501 line too long (105 &gt; 99 characters)
+
+./scripts/system_manager_node.py:506:100: E501 line too long (105 &gt; 99 characters)
+
+./scripts/system_manager_node.py:511:100: E501 line too long (103 &gt; 99 characters)
+
+./scripts/system_manager_node.py:516:100: E501 line too long (129 &gt; 99 characters)
+
+./scripts/system_manager_node.py:520:100: E501 line too long (116 &gt; 99 characters)
+
+./scripts/system_manager_node.py:564:100: E501 line too long (101 &gt; 99 characters)
+
+./scripts/system_manager_node.py:591:100: E501 line too long (102 &gt; 99 characters)
+
+./scripts/location_manager_node.py:77:100: E501 line too long (106 &gt; 99 characters)
+
+./scripts/location_manager_node.py:114:100: E501 line too long (126 &gt; 99 characters)
+
+./scripts/location_manager_node.py:198:100: E501 line too long (108 &gt; 99 characters)
+
+./scripts/location_manager_node.py:199:100: E501 line too long (102 &gt; 99 characters)
+
+./scripts/location_manager_node.py:200:100: E501 line too long (105 &gt; 99 characters)
+
+./scripts/location_manager_node.py:208:100: E501 line too long (109 &gt; 99 characters)
+
+./scripts/location_manager_node.py:339:100: E501 line too long (112 &gt; 99 characters)
+
+./scripts/location_manager_node.py:358:100: E501 line too long (111 &gt; 99 characters)
+
+./launch/navigation.launch.py:8:1: E302 expected 2 blank lines, found 1
+
+./launch/navigation.launch.py:13:100: E501 line too long (104 &gt; 99 characters)
+
+./launch/navigation.launch.py:15:100: E501 line too long (102 &gt; 99 characters)
+
+./launch/navigation.launch.py:16:100: E501 line too long (114 &gt; 99 characters)
+
+./launch/rosbridge.launch.py:6:1: E302 expected 2 blank lines, found 1
+
+./launch/simulation.launch.py:6:100: E501 line too long (109 &gt; 99 characters)
+
+./launch/bringup.launch.py:10:1: E302 expected 2 blank lines, found 1
+
+./launch/bringup.launch.py:73:100: E501 line too long (106 &gt; 99 characters)
+
+./launch/bringup.launch.py:76:100: E501 line too long (101 &gt; 99 characters)
+
+./launch/mapping.launch.py:8:1: E302 expected 2 blank lines, found 1
+
+./launch/slam.launch.py:8:1: E302 expected 2 blank lines, found 1
+
+./launch/slam.launch.py:12:100: E501 line too long (104 &gt; 99 characters)
+
+./launch/localization.launch.py:8:1: E302 expected 2 blank lines, found 1
+
+./launch/localization.launch.py:11:1: W293 blank line contains whitespace
+
+./launch/localization.launch.py:47:100: E501 line too long (112 &gt; 99 characters)
+
+./launch/rsp.launch.py:99:7: W292 no newline at end of file
+
+
+15 files checked
+63 errors
+
+'E'-type errors: 61
+'W'-type errors: 2
+
+Checked files:
+
+* ./scripts/system_manager_node.py
+* ./scripts/location_manager_node.py
+* ./test/test_launch.py
+* ./test/test_urdf.py
+* ./launch/navigation.launch.py
+* ./launch/rosbridge.launch.py
+* ./launch/lidar.launch.py
+* ./launch/simulation.launch.py
+* ./launch/bringup.launch.py
+* ./launch/mapping.launch.py
+* ./launch/slam.launch.py
+* ./launch/teleop.launch.py
+* ./launch/localization.launch.py
+* ./launch/real_robot.launch.py
+* ./launch/rsp.launch.py
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/flake8.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>flake8</Label>
+				<Label>linter</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>lint_cmake</Name>
+			<Path>.</Path>
+			<FullName>./lint_cmake</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/lint_cmake.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/humble/bin/ament_lint_cmake" "--xunit-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/lint_cmake.xunit.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.329177</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/lint_cmake.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/humble/bin/ament_lint_cmake" "--xunit-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/lint_cmake.xunit.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/src/bumbleb_bot':
+ - /opt/ros/humble/bin/ament_lint_cmake --xunit-file /home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/lint_cmake.xunit.xml
+
+No problems found
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/lint_cmake.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>lint_cmake</Label>
+				<Label>linter</Label>
+			</Labels>
+		</Test>
+		<Test Status="failed">
+			<Name>pep257</Name>
+			<Path>.</Path>
+			<FullName>./pep257</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/pep257.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_pep257/pep257.txt" "--command" "/opt/ros/humble/bin/ament_pep257" "--xunit-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/pep257.xunit.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.553956</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/pep257.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_pep257/pep257.txt" "--command" "/opt/ros/humble/bin/ament_pep257" "--xunit-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/pep257.xunit.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/src/bumbleb_bot':
+ - /opt/ros/humble/bin/ament_pep257 --xunit-file /home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/pep257.xunit.xml
+checking ./launch/bringup.launch.py
+checking ./launch/lidar.launch.py
+./launch/lidar.launch.py:8 in public function `generate_launch_description`: D202: No blank lines allowed after function docstring (found 1)
+./launch/lidar.launch.py:8 in public function `generate_launch_description`: D205: 1 blank line required between summary line and description (found 0)
+./launch/lidar.launch.py:8 in public function `generate_launch_description`: D209: Multi-line docstring closing quotes should be on a separate line
+./launch/lidar.launch.py:8 in public function `generate_launch_description`: D213: Multi-line docstring summary should start at the second line
+./launch/lidar.launch.py:8 in public function `generate_launch_description`: D400: First line should end with a period (not 'n')
+./launch/lidar.launch.py:8 in public function `generate_launch_description`: D415: First line should end with a period, question mark, or exclamation point (not 'n')
+checking ./launch/localization.launch.py
+checking ./launch/mapping.launch.py
+checking ./launch/navigation.launch.py
+checking ./launch/real_robot.launch.py
+./launch/real_robot.launch.py:15 in private function `_load_drivetrain_geometry`: D202: No blank lines allowed after function docstring (found 1)
+./launch/real_robot.launch.py:15 in private function `_load_drivetrain_geometry`: D205: 1 blank line required between summary line and description (found 0)
+./launch/real_robot.launch.py:15 in private function `_load_drivetrain_geometry`: D209: Multi-line docstring closing quotes should be on a separate line
+./launch/real_robot.launch.py:15 in private function `_load_drivetrain_geometry`: D213: Multi-line docstring summary should start at the second line
+./launch/real_robot.launch.py:15 in private function `_load_drivetrain_geometry`: D400: First line should end with a period (not 'e')
+./launch/real_robot.launch.py:15 in private function `_load_drivetrain_geometry`: D415: First line should end with a period, question mark, or exclamation point (not 'e')
+checking ./launch/rosbridge.launch.py
+checking ./launch/rsp.launch.py
+./launch/rsp.launch.py:14 in private function `_load_drivetrain_geometry`: D202: No blank lines allowed after function docstring (found 1)
+./launch/rsp.launch.py:14 in private function `_load_drivetrain_geometry`: D205: 1 blank line required between summary line and description (found 0)
+./launch/rsp.launch.py:14 in private function `_load_drivetrain_geometry`: D209: Multi-line docstring closing quotes should be on a separate line
+./launch/rsp.launch.py:14 in private function `_load_drivetrain_geometry`: D213: Multi-line docstring summary should start at the second line
+./launch/rsp.launch.py:14 in private function `_load_drivetrain_geometry`: D400: First line should end with a period (not 'F')
+./launch/rsp.launch.py:14 in private function `_load_drivetrain_geometry`: D415: First line should end with a period, question mark, or exclamation point (not 'F')
+checking ./launch/simulation.launch.py
+./launch/simulation.launch.py:18 in private function `_load_drivetrain_geometry`: D202: No blank lines allowed after function docstring (found 1)
+./launch/simulation.launch.py:18 in private function `_load_drivetrain_geometry`: D205: 1 blank line required between summary line and description (found 0)
+./launch/simulation.launch.py:18 in private function `_load_drivetrain_geometry`: D209: Multi-line docstring closing quotes should be on a separate line
+./launch/simulation.launch.py:18 in private function `_load_drivetrain_geometry`: D213: Multi-line docstring summary should start at the second line
+./launch/simulation.launch.py:18 in private function `_load_drivetrain_geometry`: D400: First line should end with a period (not 'e')
+./launch/simulation.launch.py:18 in private function `_load_drivetrain_geometry`: D415: First line should end with a period, question mark, or exclamation point (not 'e')
+checking ./launch/slam.launch.py
+checking ./launch/teleop.launch.py
+checking ./scripts/location_manager_node.py
+./scripts/location_manager_node.py:2 at module level: D205: 1 blank line required between summary line and description (found 0)
+./scripts/location_manager_node.py:2 at module level: D400: First line should end with a period (not 'e')
+./scripts/location_manager_node.py:2 at module level: D415: First line should end with a period, question mark, or exclamation point (not 'e')
+checking ./scripts/system_manager_node.py
+./scripts/system_manager_node.py:2 at module level: D205: 1 blank line required between summary line and description (found 0)
+./scripts/system_manager_node.py:2 at module level: D400: First line should end with a period (not 'e')
+./scripts/system_manager_node.py:2 at module level: D415: First line should end with a period, question mark, or exclamation point (not 'e')
+checking ./test/test_launch.py
+./test/test_launch.py:20 in public function `test_no_articubot_package_dependency`: D205: 1 blank line required between summary line and description (found 0)
+./test/test_launch.py:20 in public function `test_no_articubot_package_dependency`: D209: Multi-line docstring closing quotes should be on a separate line
+./test/test_launch.py:20 in public function `test_no_articubot_package_dependency`: D213: Multi-line docstring summary should start at the second line
+./test/test_launch.py:20 in public function `test_no_articubot_package_dependency`: D400: First line should end with a period (not 'l')
+./test/test_launch.py:20 in public function `test_no_articubot_package_dependency`: D415: First line should end with a period, question mark, or exclamation point (not 'l')
+./test/test_launch.py:39 in public function `test_no_diff_drive_controller_dependency`: D205: 1 blank line required between summary line and description (found 0)
+./test/test_launch.py:39 in public function `test_no_diff_drive_controller_dependency`: D209: Multi-line docstring closing quotes should be on a separate line
+./test/test_launch.py:39 in public function `test_no_diff_drive_controller_dependency`: D213: Multi-line docstring summary should start at the second line
+./test/test_launch.py:39 in public function `test_no_diff_drive_controller_dependency`: D400: First line should end with a period (not 'e')
+./test/test_launch.py:39 in public function `test_no_diff_drive_controller_dependency`: D415: First line should end with a period, question mark, or exclamation point (not 'e')
+checking ./test/test_urdf.py
+40 errors
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/pep257.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>linter</Label>
+				<Label>pep257</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>uncrustify</Name>
+			<Path>.</Path>
+			<FullName>./uncrustify</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/uncrustify.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_uncrustify/uncrustify.txt" "--command" "/opt/ros/humble/bin/ament_uncrustify" "--xunit-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/uncrustify.xunit.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.337892</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/uncrustify.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_uncrustify/uncrustify.txt" "--command" "/opt/ros/humble/bin/ament_uncrustify" "--xunit-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/uncrustify.xunit.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/src/bumbleb_bot':
+ - /opt/ros/humble/bin/ament_uncrustify --xunit-file /home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/uncrustify.xunit.xml
+No code style divergence in file 'include/bumbleb_bot/drivetrain_node.hpp'
+
+No code style divergence in file 'src/drivetrain_node.cpp'
+
+No problems found
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/uncrustify.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>linter</Label>
+				<Label>uncrustify</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>xmllint</Name>
+			<Path>.</Path>
+			<FullName>./xmllint</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/xmllint.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_xmllint/xmllint.txt" "--command" "/opt/ros/humble/bin/ament_xmllint" "--xunit-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/xmllint.xunit.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.306136</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/xmllint.xunit.xml" "--package-name" "bumbleb_bot" "--output-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_xmllint/xmllint.txt" "--command" "/opt/ros/humble/bin/ament_xmllint" "--xunit-file" "/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/xmllint.xunit.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/src/bumbleb_bot':
+ - /opt/ros/humble/bin/ament_xmllint --xunit-file /home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/xmllint.xunit.xml
+File 'package.xml' is valid
+
+No problems found
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/xmllint.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>linter</Label>
+				<Label>xmllint</Label>
+			</Labels>
+		</Test>
+		<EndDateTime>Sep 17 10:14 IST</EndDateTime>
+		<EndTestTime>1789620289</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

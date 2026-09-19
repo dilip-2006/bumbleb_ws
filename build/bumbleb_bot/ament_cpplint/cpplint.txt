@@ -1,0 +1,19 @@
+-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/src/bumbleb_bot':
+ - /opt/ros/humble/bin/ament_cpplint --xunit-file /home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/cpplint.xunit.xml
+
+/home/dk/bumbleb_ws/src/bumbleb_bot/include/bumbleb_bot/drivetrain_node.hpp:0:  No copyright message found.  You should have a line: "Copyright [year] <Copyright Owner>"  [legal/copyright] [5]
+/home/dk/bumbleb_ws/src/bumbleb_bot/src/drivetrain_node.cpp:0:  No copyright message found.  You should have a line: "Copyright [year] <Copyright Owner>"  [legal/copyright] [5]
+Category 'legal/copyright' errors found: 2
+Total errors found: 2
+Using '--root=/home/dk/bumbleb_ws/src/bumbleb_bot/include' argument
+
+Done processing /home/dk/bumbleb_ws/src/bumbleb_bot/include/bumbleb_bot/drivetrain_node.hpp
+
+Using '--root=/home/dk/bumbleb_ws/src/bumbleb_bot/src' argument
+
+Done processing /home/dk/bumbleb_ws/src/bumbleb_bot/src/drivetrain_node.cpp
+
+
+
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/cpplint.xunit.xml'

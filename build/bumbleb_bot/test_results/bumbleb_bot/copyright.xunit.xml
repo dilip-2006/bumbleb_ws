@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite
+  name="bumbleb_bot.copyright"
+  tests="17"
+  errors="0"
+  failures="17"
+  time="0.005"
+>
+  <testcase
+    name="include/bumbleb_bot/drivetrain_node.hpp"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <testcase
+    name="launch/bringup.launch.py"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <testcase
+    name="launch/lidar.launch.py"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <testcase
+    name="launch/localization.launch.py"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <testcase
+    name="launch/mapping.launch.py"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <testcase
+    name="launch/navigation.launch.py"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <testcase
+    name="launch/real_robot.launch.py"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <testcase
+    name="launch/rosbridge.launch.py"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <testcase
+    name="launch/rsp.launch.py"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <testcase
+    name="launch/simulation.launch.py"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <testcase
+    name="launch/slam.launch.py"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <testcase
+    name="launch/teleop.launch.py"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <testcase
+    name="scripts/location_manager_node.py"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <testcase
+    name="scripts/system_manager_node.py"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <testcase
+    name="src/drivetrain_node.cpp"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <testcase
+    name="test/test_launch.py"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <testcase
+    name="test/test_urdf.py"
+    classname="bumbleb_bot.copyright"
+  >
+      <failure message="could not find copyright notice"/>
+  </testcase>
+  <system-out>Checked files:
+* include/bumbleb_bot/drivetrain_node.hpp
+* launch/bringup.launch.py
+* launch/lidar.launch.py
+* launch/localization.launch.py
+* launch/mapping.launch.py
+* launch/navigation.launch.py
+* launch/real_robot.launch.py
+* launch/rosbridge.launch.py
+* launch/rsp.launch.py
+* launch/simulation.launch.py
+* launch/slam.launch.py
+* launch/teleop.launch.py
+* scripts/location_manager_node.py
+* scripts/system_manager_node.py
+* src/drivetrain_node.cpp
+* test/test_launch.py
+* test/test_urdf.py</system-out>
+</testsuite>

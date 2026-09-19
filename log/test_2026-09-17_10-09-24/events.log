@@ -1,0 +1,9 @@
+[0.000000] (-) TimerEvent: {}
+[0.000315] (zlac_drive) JobQueued: {'identifier': 'zlac_drive', 'dependencies': OrderedDict([('zlac_drive', '/home/dk/bumbleb_ws/install/zlac_drive')])}
+[0.000398] (bumbleb_bot) JobQueued: {'identifier': 'bumbleb_bot', 'dependencies': OrderedDict([('zlac_drive', '/home/dk/bumbleb_ws/install/zlac_drive'), ('bumbleb_bot', '/home/dk/bumbleb_ws/install/bumbleb_bot')])}
+[0.000447] (zlac_drive) JobStarted: {'identifier': 'zlac_drive'}
+[0.082226] (zlac_drive) JobEnded: {'identifier': 'zlac_drive', 'rc': 0}
+[0.084471] (bumbleb_bot) JobStarted: {'identifier': 'bumbleb_bot'}
+[0.097924] (-) TimerEvent: {}
+[0.130160] (bumbleb_bot) JobEnded: {'identifier': 'bumbleb_bot', 'rc': 0}
+[0.131389] (-) EventReactorShutdown: {}

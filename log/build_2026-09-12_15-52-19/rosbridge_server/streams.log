@@ -1,0 +1,42 @@
+[0.017s] Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_server': CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosapi:/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosbridge_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/bumbleb_ws/install/rosbridge_server:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosbridge_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/home/dk/bumbleb_ws/install/zlac_drive/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake --build /home/dk/bumbleb_ws/build/rosbridge_server -- -j16 -l16
+[0.066s] Built target ament_cmake_python_symlink_rosbridge_server
+[0.297s] running egg_info
+[0.297s] writing rosbridge_server.egg-info/PKG-INFO
+[0.297s] writing dependency_links to rosbridge_server.egg-info/dependency_links.txt
+[0.297s] writing top-level names to rosbridge_server.egg-info/top_level.txt
+[0.299s] reading manifest file 'rosbridge_server.egg-info/SOURCES.txt'
+[0.300s] writing manifest file 'rosbridge_server.egg-info/SOURCES.txt'
+[0.323s] Built target ament_cmake_python_build_rosbridge_server_egg
+[0.333s] Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_server' returned '0': CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosapi:/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosbridge_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/bumbleb_ws/install/rosbridge_server:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosbridge_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/home/dk/bumbleb_ws/install/zlac_drive/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake --build /home/dk/bumbleb_ws/build/rosbridge_server -- -j16 -l16
+[0.335s] Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_server': CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosapi:/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosbridge_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/bumbleb_ws/install/rosbridge_server:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosbridge_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/home/dk/bumbleb_ws/install/zlac_drive/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake --install /home/dk/bumbleb_ws/build/rosbridge_server
+[0.341s] -- Install configuration: ""
+[0.341s] -- Execute custom install script
+[0.341s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/environment/pythonpath.sh
+[0.341s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/environment/pythonpath.dsv
+[0.341s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server-2.0.8-py3.10.egg-info/PKG-INFO
+[0.342s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server-2.0.8-py3.10.egg-info/SOURCES.txt
+[0.342s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server-2.0.8-py3.10.egg-info/dependency_links.txt
+[0.342s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server-2.0.8-py3.10.egg-info/top_level.txt
+[0.342s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server/__init__.py
+[0.342s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server/client_manager.py
+[0.342s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server/websocket_handler.py
+[0.342s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/ament_index/resource_index/package_run_dependencies/rosbridge_server
+[0.342s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/ament_index/resource_index/parent_prefix_path/rosbridge_server
+[0.342s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/environment/ament_prefix_path.sh
+[0.342s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/environment/ament_prefix_path.dsv
+[0.342s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/environment/path.sh
+[0.343s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/environment/path.dsv
+[0.343s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/local_setup.bash
+[0.343s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/local_setup.sh
+[0.343s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/local_setup.zsh
+[0.343s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/local_setup.dsv
+[0.343s] -- Symlinking: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/package.dsv
+[0.351s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/ament_index/resource_index/packages/rosbridge_server
+[0.351s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/cmake/rosbridge_serverConfig.cmake
+[0.351s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/cmake/rosbridge_serverConfig-version.cmake
+[0.351s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/package.xml
+[0.351s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/lib/rosbridge_server/rosbridge_websocket.py
+[0.351s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/lib/rosbridge_server/rosbridge_websocket
+[0.351s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/launch/rosbridge_websocket_launch.xml
+[0.382s] Listing '/home/dk/bumbleb_ws/install/rosbridge_server/local/lib/python3.10/dist-packages/rosbridge_server'...
+[0.387s] Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_server' returned '0': CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosapi:/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosbridge_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/bumbleb_ws/install/rosbridge_server:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosbridge_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/home/dk/bumbleb_ws/install/zlac_drive/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake --install /home/dk/bumbleb_ws/build/rosbridge_server

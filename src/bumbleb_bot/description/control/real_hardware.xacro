@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!--
+    Real BumbleB hardware configuration.
+
+    This file provides hardware-specific parameters to
+    bumbleb.ros2_control.xacro.
+  -->
+
+  <!-- Verified Linux serial device -->
+  <xacro:property
+    name="serial_port"
+    value="/dev/ttyACM0"/>
+
+  <!-- Controller communication setting.
+       Keep this consistent with the actual ZLAC8015D configuration.
+  -->
+  <xacro:property
+    name="baud_rate"
+    value="115200"/>
+
+  <!--
+    Modbus slave ID.
+
+    Set this to the verified ID configured on your controller.
+  -->
+  <xacro:property
+    name="slave_id"
+    value="1"/>
+
+  <!--
+    Encoder line count.
+
+    SOURCE_VERIFIED: the ZLLG50ASM200 V2.0 motor parameter sheet
+    specifies 4096 encoder lines per motor.
+
+    This is NOT the same thing as a verified counts-per-wheel-revolution
+    scale for the position registers (quadrature decoding, gearing, and
+    firmware scaling are unknown) - see the CRITICAL ENCODER RULE in
+    zlac_drive/README.md. encoder_cpr_verified below intentionally
+    defaults to "false" (CALIBRATION_REQUIRED) so that supplying this
+    value alone can never silently enable unverified position feedback.
+  -->
+  <xacro:property
+    name="encoder_cpr"
+    value="16427"/>
+
+  <!--
+    CALIBRATION_REQUIRED: set to "true" only after the effective
+    counts-per-wheel-revolution scale has been physically measured on
+    BumbleB (e.g. by commanding N known wheel revolutions and comparing
+    against the raw encoder-count delta).
+  -->
+  <xacro:property
+    name="encoder_cpr_verified"
+    value="true"/>
+
+  <xacro:property
+    name="gear_ratio"
+    value="1.0"/>
+
+  <!-- Modbus RTU communication timeout, milliseconds -->
+  <xacro:property
+    name="timeout_ms"
+    value="500"/>
+
+  <!--
+    Enforced safety ceiling on commanded motor speed, RPM.
+
+    SOURCE_VERIFIED default: the ZLLG50ASM200 V2.0 motor parameter sheet
+    peak speed (350 RPM). Lower this for a conservative indoor bring-up
+    speed limit; it must never exceed the motor's peak RPM.
+  -->
+  <xacro:property
+    name="max_velocity_rpm"
+    value="350.0"/>
+
+  <!--
+    Explicit left/right motor direction mapping.
+
+    CALIBRATION_REQUIRED: confirm physical wheel rotation direction
+    matches ROS conventions (positive velocity command -> forward wheel
+    roll) on real hardware before relying on these defaults.
+  -->
+  <xacro:property
+    name="left_motor_inverted"
+    value="1"/>
+
+  <xacro:property
+    name="right_motor_inverted"
+    value="1"/>
+
+  <!-- Load the common ros2_control definition -->
+  <xacro:include
+    filename="bumbleb.ros2_control.xacro"/>
+
+</robot>

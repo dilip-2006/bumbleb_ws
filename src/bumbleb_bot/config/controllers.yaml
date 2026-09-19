@@ -1,0 +1,33 @@
+# BumbleB ros2_control controller configuration.
+#
+# The drivetrain deliberately does NOT use
+# diff_drive_controller/DiffDriveController. Differential-drive
+# kinematics (cmd_vel -> per-wheel rad/s) and odometry
+# (joint_states -> odom, TF) are implemented by BumbleB's own
+# bumbleb_drivetrain_node (see src/drivetrain_node.cpp and
+# config/drivetrain.yaml - the single source of truth for wheel
+# geometry). ros2_control only forwards the resulting per-wheel
+# velocity commands to the hardware, via forward_command_controller.
+
+controller_manager:
+  ros__parameters:
+    update_rate: 50
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    bumbleb_wheel_velocity_controller:
+      type: forward_command_controller/ForwardCommandController
+
+joint_state_broadcaster:
+  ros__parameters: {}
+
+bumbleb_wheel_velocity_controller:
+  ros__parameters:
+    # Order matters: bumbleb_drivetrain_node publishes
+    # [left_wheel_radps, right_wheel_radps] in this same order to
+    # /bumbleb_wheel_velocity_controller/commands.
+    joints:
+      - left_joint
+      - right_joint
+    interface_name: velocity

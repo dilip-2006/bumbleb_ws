@@ -1,0 +1,47 @@
+[0.009s] Invoking command in '/home/dk/bumbleb_ws/build/zlac_drive': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dk/bumbleb_ws/build/zlac_drive -- -j16 -l16
+[0.055s] [ 38%] Built target gtest
+[0.055s] [ 44%] Built target zlac_drive
+[0.055s] [ 55%] Built target gtest_main
+[0.075s] [ 77%] Built target test_motor
+[0.075s] [ 77%] Built target test_modbus_client
+[0.076s] [ 88%] Built target test_driver
+[0.076s] [100%] Built target test_hardware_interface
+[0.086s] Invoked command in '/home/dk/bumbleb_ws/build/zlac_drive' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dk/bumbleb_ws/build/zlac_drive -- -j16 -l16
+[0.095s] Invoking command in '/home/dk/bumbleb_ws/build/zlac_drive': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dk/bumbleb_ws/build/zlac_drive
+[0.102s] -- Install configuration: ""
+[0.102s] -- Execute custom install script
+[0.102s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive//zlac_drive_hardware_plugin.xml
+[0.102s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/lib/libzlac_drive.so
+[0.103s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/config/hardware_parameters.hpp
+[0.103s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/diagnostics/driver_diagnostics.hpp
+[0.103s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/driver/driver_state.hpp
+[0.103s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/driver/motor.hpp
+[0.103s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/driver/zlac_drive_driver.hpp
+[0.103s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/hardware/zlac_system_hardware.hpp
+[0.103s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/modbus/modbus_client.hpp
+[0.103s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/modbus/modbus_exception.hpp
+[0.103s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/modbus/modbus_types.hpp
+[0.103s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/registers.hpp
+[0.103s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/zlac_drive_hardware_plugin.xml
+[0.103s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/environment/library_path.sh
+[0.103s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/environment/library_path.dsv
+[0.103s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/ament_index/resource_index/package_run_dependencies/zlac_drive
+[0.104s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/ament_index/resource_index/parent_prefix_path/zlac_drive
+[0.104s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/environment/ament_prefix_path.sh
+[0.104s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/environment/ament_prefix_path.dsv
+[0.104s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/environment/path.sh
+[0.104s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/environment/path.dsv
+[0.104s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/local_setup.bash
+[0.104s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/local_setup.sh
+[0.104s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/local_setup.zsh
+[0.104s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/local_setup.dsv
+[0.104s] -- Symlinking: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/package.dsv
+[0.112s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/ament_index/resource_index/packages/zlac_drive
+[0.112s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/zlac_drive
+[0.112s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.112s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/cmake/ament_cmake_export_libraries-extras.cmake
+[0.113s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.113s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/cmake/zlac_driveConfig.cmake
+[0.113s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/cmake/zlac_driveConfig-version.cmake
+[0.113s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/package.xml
+[0.115s] Invoked command in '/home/dk/bumbleb_ws/build/zlac_drive' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dk/bumbleb_ws/build/zlac_drive

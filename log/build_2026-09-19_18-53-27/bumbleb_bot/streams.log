@@ -1,0 +1,95 @@
+[30.017s] Invoking command in '/home/dk/bumbleb_ws/build/bumbleb_bot': CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/zlac_drive/lib:/home/dk/rosbridge_ws/install/rosbridge_test_msgs/lib:/home/dk/rosbridge_ws/install/rosbridge_msgs/lib:/home/dk/rosbridge_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake /home/dk/bumbleb_ws/src/bumbleb_bot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/bumbleb_bot
+[30.090s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[30.206s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[30.218s] -- Found rclcpp: 16.0.21 (/opt/ros/humble/share/rclcpp/cmake)
+[30.248s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[30.250s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[30.256s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[30.264s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[30.274s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[30.301s] -- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[30.303s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[30.386s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[30.443s] -- Found geometry_msgs: 4.9.2 (/opt/ros/humble/share/geometry_msgs/cmake)
+[30.453s] -- Found nav_msgs: 4.9.2 (/opt/ros/humble/share/nav_msgs/cmake)
+[30.465s] -- Found sensor_msgs: 4.9.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+[30.477s] -- Found tf2: 0.25.23 (/opt/ros/humble/share/tf2/cmake)
+[30.482s] -- Found tf2_ros: 0.25.23 (/opt/ros/humble/share/tf2_ros/cmake)
+[30.545s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[31.109s] -- Added test 'copyright' to check source files copyright and LICENSE
+[31.114s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[31.114s] -- Configured cppcheck include dirs: /home/dk/bumbleb_ws/src/bumbleb_bot/include
+[31.114s] -- Configured cppcheck exclude dirs and/or files: 
+[31.116s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[31.116s] -- Configured cpplint exclude dirs and/or files: 
+[31.116s] -- Added test 'flake8' to check Python code syntax and style conventions
+[31.117s] -- Added test 'lint_cmake' to check CMake code style
+[31.117s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[31.119s] -- Added test 'uncrustify' to check C / C++ code style
+[31.119s] -- Configured uncrustify additional arguments: 
+[31.120s] -- Added test 'xmllint' to check XML markup files
+[31.121s] -- Configuring done
+[31.159s] -- Generating done
+[31.162s] -- Build files have been written to: /home/dk/bumbleb_ws/build/bumbleb_bot
+[60.011s] Invoked command in '/home/dk/bumbleb_ws/build/bumbleb_bot' returned '0': CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/zlac_drive/lib:/home/dk/rosbridge_ws/install/rosbridge_test_msgs/lib:/home/dk/rosbridge_ws/install/rosbridge_msgs/lib:/home/dk/rosbridge_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake /home/dk/bumbleb_ws/src/bumbleb_bot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/bumbleb_bot
+[60.014s] Invoking command in '/home/dk/bumbleb_ws/build/bumbleb_bot': CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/zlac_drive/lib:/home/dk/rosbridge_ws/install/rosbridge_test_msgs/lib:/home/dk/rosbridge_ws/install/rosbridge_msgs/lib:/home/dk/rosbridge_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake --build /home/dk/bumbleb_ws/build/bumbleb_bot -- -j16 -l16
+[60.081s] Consolidate compiler generated dependencies of target bumbleb_drivetrain_node
+[60.124s] [100%] Built target bumbleb_drivetrain_node
+[90.043s] Invoked command in '/home/dk/bumbleb_ws/build/bumbleb_bot' returned '0': CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/zlac_drive/lib:/home/dk/rosbridge_ws/install/rosbridge_test_msgs/lib:/home/dk/rosbridge_ws/install/rosbridge_msgs/lib:/home/dk/rosbridge_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake --build /home/dk/bumbleb_ws/build/bumbleb_bot -- -j16 -l16
+[90.071s] Invoking command in '/home/dk/bumbleb_ws/build/bumbleb_bot': CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/zlac_drive/lib:/home/dk/rosbridge_ws/install/rosbridge_test_msgs/lib:/home/dk/rosbridge_ws/install/rosbridge_msgs/lib:/home/dk/rosbridge_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake --install /home/dk/bumbleb_ws/build/bumbleb_bot
+[90.085s] -- Install configuration: ""
+[90.086s] -- Execute custom install script
+[90.136s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/lib/bumbleb_bot/bumbleb_drivetrain_node
+[90.138s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/base/base.xacro
+[90.139s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/bumbleb.urdf.xacro
+[90.139s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/common/inertial_macros.xacro
+[90.139s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/common/materials.xacro
+[90.140s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/control/bumbleb.ros2_control.xacro
+[90.141s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/control/real_hardware.xacro
+[90.141s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/control/simulation.xacro
+[90.141s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/sensors/lidar.xacro
+[90.141s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/wheels/wheels.xacro
+[90.141s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/bringup.launch.py
+[90.141s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/lidar.launch.py
+[90.142s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/localization.launch.py
+[90.142s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/mapping.launch.py
+[90.142s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/navigation.launch.py
+[90.142s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/real_robot.launch.py
+[90.142s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/rosbridge.launch.py
+[90.142s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/rsp.launch.py
+[90.143s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/simulation.launch.py
+[90.143s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/slam.launch.py
+[90.143s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/teleop.launch.py
+[90.145s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/config/controllers.yaml
+[90.145s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/config/drivetrain.yaml
+[90.145s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/config/lidar.yaml
+[90.146s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/config/localization.yaml
+[90.146s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/config/nav2.yaml
+[90.146s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/config/slam.yaml
+[90.147s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/config/wheel_velocity_controller.yaml
+[90.148s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/rviz/navigation.rviz
+[90.148s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/rviz/robot.rviz
+[90.152s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/rviz/simulation.rviz
+[90.153s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/rviz/slam.rviz
+[90.153s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/worlds/obstacle.world
+[90.154s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/maps/.gitkeep
+[90.154s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/maps/warehouse_main.pgm
+[90.154s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/maps/warehouse_main.yaml
+[90.155s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/lib/bumbleb_bot/system_manager_node.py
+[90.155s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/lib/bumbleb_bot/location_manager_node.py
+[90.156s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/ament_index/resource_index/package_run_dependencies/bumbleb_bot
+[90.156s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/ament_index/resource_index/parent_prefix_path/bumbleb_bot
+[90.157s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/environment/ament_prefix_path.sh
+[90.157s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/environment/ament_prefix_path.dsv
+[90.157s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/environment/path.sh
+[90.157s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/environment/path.dsv
+[90.158s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/local_setup.bash
+[90.158s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/local_setup.sh
+[90.158s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/local_setup.zsh
+[90.159s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/local_setup.dsv
+[90.159s] -- Symlinking: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/package.dsv
+[90.172s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/ament_index/resource_index/packages/bumbleb_bot
+[90.172s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/cmake/bumbleb_botConfig.cmake
+[90.173s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/cmake/bumbleb_botConfig-version.cmake
+[90.173s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/package.xml
+[90.174s] Invoked command in '/home/dk/bumbleb_ws/build/bumbleb_bot' returned '0': CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/zlac_drive/lib:/home/dk/rosbridge_ws/install/rosbridge_test_msgs/lib:/home/dk/rosbridge_ws/install/rosbridge_msgs/lib:/home/dk/rosbridge_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake --install /home/dk/bumbleb_ws/build/bumbleb_bot

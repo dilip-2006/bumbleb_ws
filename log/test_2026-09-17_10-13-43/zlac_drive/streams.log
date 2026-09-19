@@ -1,0 +1,181 @@
+[30.034s] Invoking command in '/home/dk/bumbleb_ws/build/zlac_drive': CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/zlac_drive/lib:/home/dk/rosbridge_ws/install/rosbridge_test_msgs/lib:/home/dk/rosbridge_ws/install/rosbridge_msgs/lib:/home/dk/rosbridge_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process
+[30.047s] UpdateCTestConfiguration  from :/home/dk/bumbleb_ws/build/zlac_drive/CTestConfiguration.ini
+[30.047s] Parse Config file:/home/dk/bumbleb_ws/build/zlac_drive/CTestConfiguration.ini
+[30.047s]    Site: dk-LOQ-15IRX9
+[30.047s]    Build name: (empty)
+[30.047s]  Add coverage exclude regular expressions.
+[30.048s] Create new tag: 20260917-0444 - Experimental
+[30.048s] UpdateCTestConfiguration  from :/home/dk/bumbleb_ws/build/zlac_drive/CTestConfiguration.ini
+[30.048s] Parse Config file:/home/dk/bumbleb_ws/build/zlac_drive/CTestConfiguration.ini
+[30.048s] Test project /home/dk/bumbleb_ws/build/zlac_drive
+[30.048s] Constructing a list of tests
+[30.049s] Done constructing a list of tests
+[30.049s] Updating test list for fixtures
+[30.049s] Added 0 tests to meet fixture requirements
+[30.049s] Checking test dependency graph...
+[30.049s] Checking test dependency graph end
+[30.049s] test 1
+[30.049s]     Start 1: test_modbus_client
+[30.049s] 
+[30.049s] 1: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_modbus_client.gtest.xml" "--package-name" "zlac_drive" "--output-file" "/home/dk/bumbleb_ws/build/zlac_drive/ament_cmake_gtest/test_modbus_client.txt" "--command" "/home/dk/bumbleb_ws/build/zlac_drive/test_modbus_client" "--gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_modbus_client.gtest.xml"
+[30.049s] 1: Test timeout computed to be: 60
+[30.176s] 1: -- run_test.py: invoking following command in '/home/dk/bumbleb_ws/build/zlac_drive':
+[30.177s] 1:  - /home/dk/bumbleb_ws/build/zlac_drive/test_modbus_client --gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_modbus_client.gtest.xml
+[30.195s] 1: Running main() from /opt/ros/humble/src/gtest_vendor/src/gtest_main.cc
+[30.195s] 1: [==========] Running 7 tests from 2 test suites.
+[30.196s] 1: [----------] Global test environment set-up.
+[30.196s] 1: [----------] 6 tests from ModbusClientTest
+[30.196s] 1: [ RUN      ] ModbusClientTest.CalculatesKnownModbusCrc
+[30.196s] 1: [       OK ] ModbusClientTest.CalculatesKnownModbusCrc (0 ms)
+[30.196s] 1: [ RUN      ] ModbusClientTest.StartsDisconnected
+[30.197s] 1: [       OK ] ModbusClientTest.StartsDisconnected (0 ms)
+[30.197s] 1: [ RUN      ] ModbusClientTest.RejectsEmptySerialDevice
+[30.197s] 1: [       OK ] ModbusClientTest.RejectsEmptySerialDevice (0 ms)
+[30.197s] 1: [ RUN      ] ModbusClientTest.RejectsZeroRegisterRead
+[30.197s] 1: [       OK ] ModbusClientTest.RejectsZeroRegisterRead (0 ms)
+[30.197s] 1: [ RUN      ] ModbusClientTest.RejectsEmptyMultipleRegisterWrite
+[30.197s] 1: [       OK ] ModbusClientTest.RejectsEmptyMultipleRegisterWrite (0 ms)
+[30.197s] 1: [ RUN      ] ModbusClientTest.RejectsTooManyRegisters
+[30.197s] 1: [       OK ] ModbusClientTest.RejectsTooManyRegisters (0 ms)
+[30.197s] 1: [----------] 6 tests from ModbusClientTest (0 ms total)
+[30.198s] 1: 
+[30.198s] 1: [----------] 1 test from ModbusTypesTest
+[30.198s] 1: [ RUN      ] ModbusTypesTest.DefaultSerialConfig
+[30.198s] 1: [       OK ] ModbusTypesTest.DefaultSerialConfig (0 ms)
+[30.198s] 1: [----------] 1 test from ModbusTypesTest (0 ms total)
+[30.198s] 1: 
+[30.198s] 1: [----------] Global test environment tear-down
+[30.198s] 1: [==========] 7 tests from 2 test suites ran. (0 ms total)
+[30.198s] 1: [  PASSED  ] 7 tests.
+[30.198s] 1: -- run_test.py: return code 0
+[30.198s] 1: -- run_test.py: inject classname prefix into gtest result file '/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_modbus_client.gtest.xml'
+[30.198s] 1: -- run_test.py: verify result file '/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_modbus_client.gtest.xml'
+[30.213s] 1/4 Test #1: test_modbus_client ...............   Passed    0.16 sec
+[30.213s] test 2
+[30.214s]     Start 2: test_motor
+[30.214s] 
+[30.214s] 2: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_motor.gtest.xml" "--package-name" "zlac_drive" "--output-file" "/home/dk/bumbleb_ws/build/zlac_drive/ament_cmake_gtest/test_motor.txt" "--command" "/home/dk/bumbleb_ws/build/zlac_drive/test_motor" "--gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_motor.gtest.xml"
+[30.214s] 2: Test timeout computed to be: 60
+[30.330s] 2: -- run_test.py: invoking following command in '/home/dk/bumbleb_ws/build/zlac_drive':
+[30.330s] 2:  - /home/dk/bumbleb_ws/build/zlac_drive/test_motor --gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_motor.gtest.xml
+[30.355s] 2: Running main() from /opt/ros/humble/src/gtest_vendor/src/gtest_main.cc
+[30.355s] 2: [==========] Running 9 tests from 1 test suite.
+[30.356s] 2: [----------] Global test environment set-up.
+[30.356s] 2: [----------] 9 tests from MotorTest
+[30.356s] 2: [ RUN      ] MotorTest.ConvertsRpmToRadiansPerSecond
+[30.357s] 2: [       OK ] MotorTest.ConvertsRpmToRadiansPerSecond (0 ms)
+[30.357s] 2: [ RUN      ] MotorTest.ConvertsRadiansPerSecondToRpm
+[30.357s] 2: [       OK ] MotorTest.ConvertsRadiansPerSecondToRpm (0 ms)
+[30.357s] 2: [ RUN      ] MotorTest.RejectsInvalidGearRatio
+[30.357s] 2: [       OK ] MotorTest.RejectsInvalidGearRatio (0 ms)
+[30.357s] 2: [ RUN      ] MotorTest.RejectsNegativeGearRatio
+[30.358s] 2: [       OK ] MotorTest.RejectsNegativeGearRatio (0 ms)
+[30.358s] 2: [ RUN      ] MotorTest.RejectsEncoderConversionWhenUnverified
+[30.358s] 2: [       OK ] MotorTest.RejectsEncoderConversionWhenUnverified (0 ms)
+[30.358s] 2: [ RUN      ] MotorTest.RejectsVerifiedZeroEncoderResolution
+[30.358s] 2: [       OK ] MotorTest.RejectsVerifiedZeroEncoderResolution (0 ms)
+[30.358s] 2: [ RUN      ] MotorTest.ConvertsEncoderCountsToRadians
+[30.358s] 2: [       OK ] MotorTest.ConvertsEncoderCountsToRadians (0 ms)
+[30.359s] 2: [ RUN      ] MotorTest.ConvertsRadiansToEncoderCounts
+[30.359s] 2: [       OK ] MotorTest.ConvertsRadiansToEncoderCounts (0 ms)
+[30.359s] 2: [ RUN      ] MotorTest.RpmConversionRoundTrip
+[30.359s] 2: [       OK ] MotorTest.RpmConversionRoundTrip (0 ms)
+[30.359s] 2: [----------] 9 tests from MotorTest (0 ms total)
+[30.360s] 2: 
+[30.360s] 2: [----------] Global test environment tear-down
+[30.360s] 2: [==========] 9 tests from 1 test suite ran. (0 ms total)
+[30.360s] 2: [  PASSED  ] 9 tests.
+[30.360s] 2: -- run_test.py: return code 0
+[30.360s] 2: -- run_test.py: inject classname prefix into gtest result file '/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_motor.gtest.xml'
+[30.360s] 2: -- run_test.py: verify result file '/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_motor.gtest.xml'
+[30.376s] 2/4 Test #2: test_motor .......................   Passed    0.16 sec
+[30.376s] test 3
+[30.376s]     Start 3: test_driver
+[30.377s] 
+[30.377s] 3: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_driver.gtest.xml" "--package-name" "zlac_drive" "--output-file" "/home/dk/bumbleb_ws/build/zlac_drive/ament_cmake_gtest/test_driver.txt" "--command" "/home/dk/bumbleb_ws/build/zlac_drive/test_driver" "--gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_driver.gtest.xml"
+[30.377s] 3: Test timeout computed to be: 60
+[30.510s] 3: -- run_test.py: invoking following command in '/home/dk/bumbleb_ws/build/zlac_drive':
+[30.511s] 3:  - /home/dk/bumbleb_ws/build/zlac_drive/test_driver --gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_driver.gtest.xml
+[30.523s] 3: Running main() from /opt/ros/humble/src/gtest_vendor/src/gtest_main.cc
+[30.523s] 3: [==========] Running 14 tests from 4 test suites.
+[30.523s] 3: [----------] Global test environment set-up.
+[30.523s] 3: [----------] 2 tests from ZlacDriveConfigTest
+[30.523s] 3: [ RUN      ] ZlacDriveConfigTest.DefaultsRequireExplicitSlaveVerification
+[30.524s] 3: [       OK ] ZlacDriveConfigTest.DefaultsRequireExplicitSlaveVerification (0 ms)
+[30.524s] 3: [ RUN      ] ZlacDriveConfigTest.DefaultsToPeakRpmAndNoInversion
+[30.524s] 3: [       OK ] ZlacDriveConfigTest.DefaultsToPeakRpmAndNoInversion (0 ms)
+[30.524s] 3: [----------] 2 tests from ZlacDriveConfigTest (0 ms total)
+[30.524s] 3: 
+[30.524s] 3: [----------] 4 tests from ZlacDriveDriverTest
+[30.525s] 3: [ RUN      ] ZlacDriveDriverTest.IsNonCopyable
+[30.525s] 3: [       OK ] ZlacDriveDriverTest.IsNonCopyable (0 ms)
+[30.525s] 3: [ RUN      ] ZlacDriveDriverTest.RejectsMaxVelocityAboveMotorPeak
+[30.525s] 3: [       OK ] ZlacDriveDriverTest.RejectsMaxVelocityAboveMotorPeak (0 ms)
+[30.525s] 3: [ RUN      ] ZlacDriveDriverTest.RejectsNonPositiveMaxVelocity
+[30.525s] 3: [       OK ] ZlacDriveDriverTest.RejectsNonPositiveMaxVelocity (0 ms)
+[30.525s] 3: [ RUN      ] ZlacDriveDriverTest.StartsDisconnected
+[30.525s] 3: [       OK ] ZlacDriveDriverTest.StartsDisconnected (0 ms)
+[30.526s] 3: [----------] 4 tests from ZlacDriveDriverTest (0 ms total)
+[30.526s] 3: 
+[30.526s] 3: [----------] 5 tests from ClampVelocityRpmTest
+[30.526s] 3: [ RUN      ] ClampVelocityRpmTest.PassesValuesWithinRange
+[30.526s] 3: [       OK ] ClampVelocityRpmTest.PassesValuesWithinRange (0 ms)
+[30.526s] 3: [ RUN      ] ClampVelocityRpmTest.ClampsPositiveOverLimit
+[30.526s] 3: [       OK ] ClampVelocityRpmTest.ClampsPositiveOverLimit (0 ms)
+[30.526s] 3: [ RUN      ] ClampVelocityRpmTest.ClampsNegativeOverLimit
+[30.526s] 3: [       OK ] ClampVelocityRpmTest.ClampsNegativeOverLimit (0 ms)
+[30.526s] 3: [ RUN      ] ClampVelocityRpmTest.ClampsAtExactLimit
+[30.527s] 3: [       OK ] ClampVelocityRpmTest.ClampsAtExactLimit (0 ms)
+[30.527s] 3: [ RUN      ] ClampVelocityRpmTest.TreatsNonFiniteInputAsZero
+[30.527s] 3: [       OK ] ClampVelocityRpmTest.TreatsNonFiniteInputAsZero (0 ms)
+[30.527s] 3: [----------] 5 tests from ClampVelocityRpmTest (0 ms total)
+[30.527s] 3: 
+[30.527s] 3: [----------] 3 tests from ToVelocityRegisterValueTest
+[30.527s] 3: [ RUN      ] ToVelocityRegisterValueTest.RoundsToNearestInteger
+[30.527s] 3: [       OK ] ToVelocityRegisterValueTest.RoundsToNearestInteger (0 ms)
+[30.527s] 3: [ RUN      ] ToVelocityRegisterValueTest.HandlesMaxMotorPeakRpm
+[30.527s] 3: [       OK ] ToVelocityRegisterValueTest.HandlesMaxMotorPeakRpm (0 ms)
+[30.528s] 3: [ RUN      ] ToVelocityRegisterValueTest.RejectsValueOutsideInt16Range
+[30.528s] 3: [       OK ] ToVelocityRegisterValueTest.RejectsValueOutsideInt16Range (0 ms)
+[30.528s] 3: [----------] 3 tests from ToVelocityRegisterValueTest (0 ms total)
+[30.528s] 3: 
+[30.528s] 3: [----------] Global test environment tear-down
+[30.528s] 3: [==========] 14 tests from 4 test suites ran. (0 ms total)
+[30.528s] 3: [  PASSED  ] 14 tests.
+[30.528s] 3: -- run_test.py: return code 0
+[30.528s] 3: -- run_test.py: inject classname prefix into gtest result file '/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_driver.gtest.xml'
+[30.528s] 3: -- run_test.py: verify result file '/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_driver.gtest.xml'
+[30.548s] 3/4 Test #3: test_driver ......................   Passed    0.17 sec
+[30.548s] test 4
+[30.548s]     Start 4: test_hardware_interface
+[30.548s] 
+[30.548s] 4: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_hardware_interface.gtest.xml" "--package-name" "zlac_drive" "--output-file" "/home/dk/bumbleb_ws/build/zlac_drive/ament_cmake_gtest/test_hardware_interface.txt" "--command" "/home/dk/bumbleb_ws/build/zlac_drive/test_hardware_interface" "--gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_hardware_interface.gtest.xml"
+[30.548s] 4: Test timeout computed to be: 60
+[30.682s] 4: -- run_test.py: invoking following command in '/home/dk/bumbleb_ws/build/zlac_drive':
+[30.683s] 4:  - /home/dk/bumbleb_ws/build/zlac_drive/test_hardware_interface --gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_hardware_interface.gtest.xml
+[30.703s] 4: Running main() from /opt/ros/humble/src/gtest_vendor/src/gtest_main.cc
+[30.704s] 4: [==========] Running 2 tests from 1 test suite.
+[30.704s] 4: [----------] Global test environment set-up.
+[30.704s] 4: [----------] 2 tests from ZlacSystemHardwareTest
+[30.704s] 4: [ RUN      ] ZlacSystemHardwareTest.IsDefaultConstructible
+[30.704s] 4: [       OK ] ZlacSystemHardwareTest.IsDefaultConstructible (0 ms)
+[30.705s] 4: [ RUN      ] ZlacSystemHardwareTest.RejectsHardwareInfoWithoutTwoJoints
+[30.705s] 4: [ERROR] [1789620254.989545745] [ZlacSystemHardware]: Expected exactly 2 wheel joints, got 0
+[30.705s] 4: [       OK ] ZlacSystemHardwareTest.RejectsHardwareInfoWithoutTwoJoints (0 ms)
+[30.705s] 4: [----------] 2 tests from ZlacSystemHardwareTest (0 ms total)
+[30.705s] 4: 
+[30.705s] 4: [----------] Global test environment tear-down
+[30.706s] 4: [==========] 2 tests from 1 test suite ran. (0 ms total)
+[30.706s] 4: [  PASSED  ] 2 tests.
+[30.706s] 4: -- run_test.py: return code 0
+[30.706s] 4: -- run_test.py: inject classname prefix into gtest result file '/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_hardware_interface.gtest.xml'
+[30.706s] 4: -- run_test.py: verify result file '/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_hardware_interface.gtest.xml'
+[30.721s] 4/4 Test #4: test_hardware_interface ..........   Passed    0.17 sec
+[30.721s] 
+[30.721s] 100% tests passed, 0 tests failed out of 4
+[30.722s] 
+[30.722s] Label Time Summary:
+[30.722s] gtest    =   0.67 sec*proc (4 tests)
+[30.722s] 
+[30.722s] Total Test time (real) =   0.67 sec
+[60.063s] Invoked command in '/home/dk/bumbleb_ws/build/zlac_drive' returned '0': CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/zlac_drive/lib:/home/dk/rosbridge_ws/install/rosbridge_test_msgs/lib:/home/dk/rosbridge_ws/install/rosbridge_msgs/lib:/home/dk/rosbridge_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process

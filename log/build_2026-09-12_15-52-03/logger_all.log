@@ -1,0 +1,611 @@
+[0.097s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--cmake-args', '-DBUILD_TESTING=OFF', '--packages-up-to', 'rosbridge_server']
+[0.097s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=['rosbridge_server'], packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=['-DBUILD_TESTING=OFF'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x766bdc561090>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x766bdc6dde40>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x766bdc6dde40>>)
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.254s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/dk/bumbleb_ws'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['ignore', 'ignore_ament_install']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ignore'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ignore_ament_install'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['colcon_pkg']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'colcon_pkg'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['colcon_meta']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'colcon_meta'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['ros']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ros'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['cmake', 'python']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'cmake'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'python'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['python_setup_py']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'python_setup_py'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extensions ['ignore', 'ignore_ament_install']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extension 'ignore'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extension 'ignore_ament_install'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extensions ['colcon_pkg']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extension 'colcon_pkg'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extensions ['colcon_meta']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extension 'colcon_meta'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extensions ['ros']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extension 'ros'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extensions ['cmake', 'python']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extension 'cmake'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extension 'python'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extensions ['python_setup_py']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/architecture) by extension 'python_setup_py'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extension 'ignore'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extension 'ignore_ament_install'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extensions ['colcon_pkg']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extension 'colcon_pkg'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extensions ['colcon_meta']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extension 'colcon_meta'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extensions ['ros']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extension 'ros'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extensions ['cmake', 'python']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extension 'cmake'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extension 'python'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extensions ['python_setup_py']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(docs/hardware) by extension 'python_setup_py'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extensions ['ignore', 'ignore_ament_install']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extension 'ignore'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extension 'ignore_ament_install'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extensions ['colcon_pkg']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extension 'colcon_pkg'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extensions ['colcon_meta']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extension 'colcon_meta'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extensions ['ros']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extension 'ros'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extensions ['cmake', 'python']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extension 'cmake'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extension 'python'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extensions ['python_setup_py']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(docs/testing) by extension 'python_setup_py'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extensions ['ignore', 'ignore_ament_install']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extension 'ignore'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extension 'ignore_ament_install'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extensions ['colcon_pkg']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extension 'colcon_pkg'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extensions ['colcon_meta']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extension 'colcon_meta'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extensions ['ros']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/bumbleb_bot) by extension 'ros'
+[0.272s] DEBUG:colcon.colcon_core.package_identification:Package 'src/bumbleb_bot' with type 'ros.ament_cmake' and name 'bumbleb_bot'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite) by extensions ['ignore', 'ignore_ament_install']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite) by extension 'ignore_ament_install'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite) by extensions ['colcon_pkg']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite) by extension 'colcon_pkg'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite) by extensions ['colcon_meta']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite) by extension 'colcon_meta'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite) by extensions ['ros']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite) by extension 'ros'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite) by extensions ['cmake', 'python']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite) by extension 'cmake'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite) by extension 'python'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite) by extensions ['python_setup_py']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite) by extension 'python_setup_py'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi) by extensions ['ignore', 'ignore_ament_install']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi) by extension 'ignore'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi) by extension 'ignore_ament_install'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi) by extensions ['colcon_pkg']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi) by extension 'colcon_pkg'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi) by extensions ['colcon_meta']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi) by extension 'colcon_meta'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi) by extensions ['ros']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi) by extension 'ros'
+[0.274s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rosbridge_suite/rosapi' with type 'ros.ament_cmake' and name 'rosapi'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi_msgs) by extension 'ignore'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi_msgs) by extension 'ignore_ament_install'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi_msgs) by extensions ['colcon_pkg']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi_msgs) by extension 'colcon_pkg'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi_msgs) by extensions ['colcon_meta']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi_msgs) by extension 'colcon_meta'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi_msgs) by extensions ['ros']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosapi_msgs) by extension 'ros'
+[0.275s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rosbridge_suite/rosapi_msgs' with type 'ros.ament_cmake' and name 'rosapi_msgs'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_library) by extensions ['ignore', 'ignore_ament_install']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_library) by extension 'ignore'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_library) by extension 'ignore_ament_install'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_library) by extensions ['colcon_pkg']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_library) by extension 'colcon_pkg'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_library) by extensions ['colcon_meta']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_library) by extension 'colcon_meta'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_library) by extensions ['ros']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_library) by extension 'ros'
+[0.276s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rosbridge_suite/rosbridge_library' with type 'ros.ament_cmake' and name 'rosbridge_library'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_msgs) by extension 'ignore'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_msgs) by extension 'ignore_ament_install'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_msgs) by extensions ['colcon_pkg']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_msgs) by extension 'colcon_pkg'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_msgs) by extensions ['colcon_meta']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_msgs) by extension 'colcon_meta'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_msgs) by extensions ['ros']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_msgs) by extension 'ros'
+[0.277s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rosbridge_suite/rosbridge_msgs' with type 'ros.ament_cmake' and name 'rosbridge_msgs'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_server) by extensions ['ignore', 'ignore_ament_install']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_server) by extension 'ignore'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_server) by extension 'ignore_ament_install'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_server) by extensions ['colcon_pkg']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_server) by extension 'colcon_pkg'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_server) by extensions ['colcon_meta']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_server) by extension 'colcon_meta'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_server) by extensions ['ros']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_server) by extension 'ros'
+[0.278s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rosbridge_suite/rosbridge_server' with type 'ros.ament_cmake' and name 'rosbridge_server'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_suite) by extensions ['ignore', 'ignore_ament_install']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_suite) by extension 'ignore'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_suite) by extension 'ignore_ament_install'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_suite) by extensions ['colcon_pkg']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_suite) by extension 'colcon_pkg'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_suite) by extensions ['colcon_meta']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_suite) by extension 'colcon_meta'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_suite) by extensions ['ros']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_suite) by extension 'ros'
+[0.279s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rosbridge_suite/rosbridge_suite' with type 'ros.ament_cmake' and name 'rosbridge_suite'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_test_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_test_msgs) by extension 'ignore'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_test_msgs) by extension 'ignore_ament_install'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_test_msgs) by extensions ['colcon_pkg']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_test_msgs) by extension 'colcon_pkg'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_test_msgs) by extensions ['colcon_meta']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_test_msgs) by extension 'colcon_meta'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_test_msgs) by extensions ['ros']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbridge_suite/rosbridge_test_msgs) by extension 'ros'
+[0.281s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rosbridge_suite/rosbridge_test_msgs' with type 'ros.ament_cmake' and name 'rosbridge_test_msgs'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extensions ['ignore', 'ignore_ament_install']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extension 'ignore'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extension 'ignore_ament_install'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extensions ['colcon_pkg']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extension 'colcon_pkg'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extensions ['colcon_meta']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extension 'colcon_meta'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extensions ['ros']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/zlac_drive) by extension 'ros'
+[0.282s] DEBUG:colcon.colcon_core.package_identification:Package 'src/zlac_drive' with type 'ros.ament_cmake' and name 'zlac_drive'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['ignore', 'ignore_ament_install']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'ignore'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'ignore_ament_install'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['colcon_pkg']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'colcon_pkg'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['colcon_meta']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'colcon_meta'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['ros']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'ros'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['cmake', 'python']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'cmake'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'python'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['python_setup_py']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'python_setup_py'
+[0.282s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.282s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.282s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.282s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.282s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.314s] INFO:colcon.colcon_core.package_selection:Skipping package 'rosbridge_suite' in 'src/rosbridge_suite/rosbridge_suite'
+[0.314s] INFO:colcon.colcon_core.package_selection:Skipping package 'bumbleb_bot' in 'src/bumbleb_bot'
+[0.314s] INFO:colcon.colcon_core.package_selection:Skipping package 'zlac_drive' in 'src/zlac_drive'
+[0.314s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.314s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.317s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 435 installed packages in /opt/ros/humble
+[0.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.365s] Level 5:colcon.colcon_core.verb:set package 'rosapi_msgs' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.365s] Level 5:colcon.colcon_core.verb:set package 'rosapi_msgs' build argument 'cmake_target' from command line to 'None'
+[0.365s] Level 5:colcon.colcon_core.verb:set package 'rosapi_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.365s] Level 5:colcon.colcon_core.verb:set package 'rosapi_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.365s] Level 5:colcon.colcon_core.verb:set package 'rosapi_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.365s] Level 5:colcon.colcon_core.verb:set package 'rosapi_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.365s] Level 5:colcon.colcon_core.verb:set package 'rosapi_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.365s] Level 5:colcon.colcon_core.verb:set package 'rosapi_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.365s] Level 5:colcon.colcon_core.verb:set package 'rosapi_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.365s] DEBUG:colcon.colcon_core.verb:Building package 'rosapi_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dk/bumbleb_ws/build/rosapi_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dk/bumbleb_ws/install/rosapi_msgs', 'merge_install': False, 'path': '/home/dk/bumbleb_ws/src/rosbridge_suite/rosapi_msgs', 'symlink_install': True, 'test_result_base': None}
+[0.365s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_msgs' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_msgs' build argument 'cmake_target' from command line to 'None'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.366s] DEBUG:colcon.colcon_core.verb:Building package 'rosbridge_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dk/bumbleb_ws/build/rosbridge_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dk/bumbleb_ws/install/rosbridge_msgs', 'merge_install': False, 'path': '/home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_msgs', 'symlink_install': True, 'test_result_base': None}
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_test_msgs' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_test_msgs' build argument 'cmake_target' from command line to 'None'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_test_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_test_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_test_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_test_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_test_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_test_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_test_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.366s] DEBUG:colcon.colcon_core.verb:Building package 'rosbridge_test_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dk/bumbleb_ws/build/rosbridge_test_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dk/bumbleb_ws/install/rosbridge_test_msgs', 'merge_install': False, 'path': '/home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_test_msgs', 'symlink_install': True, 'test_result_base': None}
+[0.366s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_library' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_library' build argument 'cmake_target' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_library' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_library' build argument 'cmake_clean_cache' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_library' build argument 'cmake_clean_first' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_library' build argument 'cmake_force_configure' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_library' build argument 'ament_cmake_args' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_library' build argument 'catkin_cmake_args' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_library' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.367s] DEBUG:colcon.colcon_core.verb:Building package 'rosbridge_library' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dk/bumbleb_ws/build/rosbridge_library', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dk/bumbleb_ws/install/rosbridge_library', 'merge_install': False, 'path': '/home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_library', 'symlink_install': True, 'test_result_base': None}
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosapi' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosapi' build argument 'cmake_target' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosapi' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosapi' build argument 'cmake_clean_cache' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosapi' build argument 'cmake_clean_first' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosapi' build argument 'cmake_force_configure' from command line to 'False'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosapi' build argument 'ament_cmake_args' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosapi' build argument 'catkin_cmake_args' from command line to 'None'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosapi' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.367s] DEBUG:colcon.colcon_core.verb:Building package 'rosapi' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dk/bumbleb_ws/build/rosapi', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dk/bumbleb_ws/install/rosapi', 'merge_install': False, 'path': '/home/dk/bumbleb_ws/src/rosbridge_suite/rosapi', 'symlink_install': True, 'test_result_base': None}
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_server' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.367s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_server' build argument 'cmake_target' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_server' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_server' build argument 'cmake_clean_cache' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_server' build argument 'cmake_clean_first' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_server' build argument 'cmake_force_configure' from command line to 'False'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_server' build argument 'ament_cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_server' build argument 'catkin_cmake_args' from command line to 'None'
+[0.368s] Level 5:colcon.colcon_core.verb:set package 'rosbridge_server' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.368s] DEBUG:colcon.colcon_core.verb:Building package 'rosbridge_server' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dk/bumbleb_ws/build/rosbridge_server', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dk/bumbleb_ws/install/rosbridge_server', 'merge_install': False, 'path': '/home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_server', 'symlink_install': True, 'test_result_base': None}
+[0.368s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.369s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.369s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_test_msgs' with build type 'ament_cmake'
+[0.369s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_test_msgs'
+[0.371s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.371s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.371s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.376s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dk/bumbleb_ws/src/rosbridge_suite/rosapi_msgs' with build type 'ament_cmake'
+[0.376s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dk/bumbleb_ws/src/rosbridge_suite/rosapi_msgs'
+[0.376s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.377s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.380s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_msgs' with build type 'ament_cmake'
+[0.380s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_msgs'
+[0.380s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.380s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.387s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_test_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_test_msgs -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/rosbridge_test_msgs
+[0.390s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosapi_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dk/bumbleb_ws/src/rosbridge_suite/rosapi_msgs -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/rosapi_msgs
+[0.396s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_msgs -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/rosbridge_msgs
+[1.378s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_msgs -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/rosbridge_msgs
+[1.379s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dk/bumbleb_ws/build/rosbridge_msgs -- -j16 -l16
+[1.674s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosapi_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dk/bumbleb_ws/src/rosbridge_suite/rosapi_msgs -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/rosapi_msgs
+[1.676s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosapi_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dk/bumbleb_ws/build/rosapi_msgs -- -j16 -l16
+[1.677s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dk/bumbleb_ws/build/rosbridge_msgs -- -j16 -l16
+[1.688s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dk/bumbleb_ws/build/rosbridge_msgs
+[1.762s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rosbridge_msgs)
+[1.762s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dk/bumbleb_ws/build/rosbridge_msgs
+[1.765s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_msgs' for CMake module files
+[1.765s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_msgs' for CMake config files
+[1.766s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosbridge_msgs', 'cmake_prefix_path')
+[1.766s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/hook/cmake_prefix_path.ps1'
+[1.767s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/hook/cmake_prefix_path.dsv'
+[1.768s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/hook/cmake_prefix_path.sh'
+[1.769s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_msgs/lib'
+[1.769s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosbridge_msgs', 'ld_library_path_lib')
+[1.769s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/hook/ld_library_path_lib.ps1'
+[1.770s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/hook/ld_library_path_lib.dsv'
+[1.770s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/hook/ld_library_path_lib.sh'
+[1.771s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_msgs/bin'
+[1.771s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_msgs/lib/pkgconfig/rosbridge_msgs.pc'
+[1.771s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_msgs/lib/python3.10/site-packages'
+[1.772s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_msgs/bin'
+[1.772s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/package.ps1'
+[1.774s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/package.dsv'
+[1.775s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/package.sh'
+[1.776s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/package.bash'
+[1.777s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/package.zsh'
+[1.778s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dk/bumbleb_ws/install/rosbridge_msgs/share/colcon-core/packages/rosbridge_msgs)
+[1.779s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rosbridge_msgs)
+[1.779s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_msgs' for CMake module files
+[1.780s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_msgs' for CMake config files
+[1.781s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosbridge_msgs', 'cmake_prefix_path')
+[1.781s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/hook/cmake_prefix_path.ps1'
+[1.782s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/hook/cmake_prefix_path.dsv'
+[1.782s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/hook/cmake_prefix_path.sh'
+[1.783s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_msgs/lib'
+[1.783s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosbridge_msgs', 'ld_library_path_lib')
+[1.783s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/hook/ld_library_path_lib.ps1'
+[1.784s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/hook/ld_library_path_lib.dsv'
+[1.784s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/hook/ld_library_path_lib.sh'
+[1.785s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_msgs/bin'
+[1.785s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_msgs/lib/pkgconfig/rosbridge_msgs.pc'
+[1.785s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_msgs/lib/python3.10/site-packages'
+[1.786s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_msgs/bin'
+[1.786s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/package.ps1'
+[1.788s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/package.dsv'
+[1.789s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/package.sh'
+[1.789s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/package.bash'
+[1.790s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_msgs/share/rosbridge_msgs/package.zsh'
+[1.790s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dk/bumbleb_ws/install/rosbridge_msgs/share/colcon-core/packages/rosbridge_msgs)
+[1.954s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_test_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_test_msgs -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/rosbridge_test_msgs
+[1.955s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_test_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dk/bumbleb_ws/build/rosbridge_test_msgs -- -j16 -l16
+[1.997s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosapi_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dk/bumbleb_ws/build/rosapi_msgs -- -j16 -l16
+[1.999s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosapi_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dk/bumbleb_ws/build/rosapi_msgs
+[2.104s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rosapi_msgs)
+[2.104s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi_msgs' for CMake module files
+[2.105s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosapi_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dk/bumbleb_ws/build/rosapi_msgs
+[2.106s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi_msgs' for CMake config files
+[2.107s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosapi_msgs', 'cmake_prefix_path')
+[2.107s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/hook/cmake_prefix_path.ps1'
+[2.108s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/hook/cmake_prefix_path.dsv'
+[2.108s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/hook/cmake_prefix_path.sh'
+[2.109s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi_msgs/lib'
+[2.109s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosapi_msgs', 'ld_library_path_lib')
+[2.110s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/hook/ld_library_path_lib.ps1'
+[2.110s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/hook/ld_library_path_lib.dsv'
+[2.110s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/hook/ld_library_path_lib.sh'
+[2.111s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi_msgs/bin'
+[2.111s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi_msgs/lib/pkgconfig/rosapi_msgs.pc'
+[2.111s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi_msgs/lib/python3.10/site-packages'
+[2.112s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi_msgs/bin'
+[2.112s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/package.ps1'
+[2.113s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/package.dsv'
+[2.114s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/package.sh'
+[2.114s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/package.bash'
+[2.114s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/package.zsh'
+[2.115s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dk/bumbleb_ws/install/rosapi_msgs/share/colcon-core/packages/rosapi_msgs)
+[2.115s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rosapi_msgs)
+[2.116s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi_msgs' for CMake module files
+[2.116s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi_msgs' for CMake config files
+[2.118s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosapi_msgs', 'cmake_prefix_path')
+[2.118s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/hook/cmake_prefix_path.ps1'
+[2.118s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/hook/cmake_prefix_path.dsv'
+[2.119s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/hook/cmake_prefix_path.sh'
+[2.119s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi_msgs/lib'
+[2.119s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosapi_msgs', 'ld_library_path_lib')
+[2.120s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/hook/ld_library_path_lib.ps1'
+[2.120s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/hook/ld_library_path_lib.dsv'
+[2.120s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/hook/ld_library_path_lib.sh'
+[2.121s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi_msgs/bin'
+[2.121s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi_msgs/lib/pkgconfig/rosapi_msgs.pc'
+[2.121s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi_msgs/lib/python3.10/site-packages'
+[2.121s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi_msgs/bin'
+[2.121s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/package.ps1'
+[2.122s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/package.dsv'
+[2.122s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/package.sh'
+[2.122s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/package.bash'
+[2.123s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosapi_msgs/share/rosapi_msgs/package.zsh'
+[2.123s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dk/bumbleb_ws/install/rosapi_msgs/share/colcon-core/packages/rosapi_msgs)
+[2.281s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_test_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dk/bumbleb_ws/build/rosbridge_test_msgs -- -j16 -l16
+[2.283s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_test_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dk/bumbleb_ws/build/rosbridge_test_msgs
+[2.399s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rosbridge_test_msgs)
+[2.399s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_test_msgs' for CMake module files
+[2.399s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_test_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dk/bumbleb_ws/build/rosbridge_test_msgs
+[2.400s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_test_msgs' for CMake config files
+[2.401s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosbridge_test_msgs', 'cmake_prefix_path')
+[2.402s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/hook/cmake_prefix_path.ps1'
+[2.402s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/hook/cmake_prefix_path.dsv'
+[2.402s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/hook/cmake_prefix_path.sh'
+[2.403s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib'
+[2.403s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosbridge_test_msgs', 'ld_library_path_lib')
+[2.403s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/hook/ld_library_path_lib.ps1'
+[2.404s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/hook/ld_library_path_lib.dsv'
+[2.404s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/hook/ld_library_path_lib.sh'
+[2.404s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/bin'
+[2.405s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib/pkgconfig/rosbridge_test_msgs.pc'
+[2.405s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib/python3.10/site-packages'
+[2.405s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/bin'
+[2.405s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/package.ps1'
+[2.406s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/package.dsv'
+[2.406s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/package.sh'
+[2.406s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/package.bash'
+[2.407s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/package.zsh'
+[2.407s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/colcon-core/packages/rosbridge_test_msgs)
+[2.407s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rosbridge_test_msgs)
+[2.407s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_test_msgs' for CMake module files
+[2.408s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_test_msgs' for CMake config files
+[2.408s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosbridge_test_msgs', 'cmake_prefix_path')
+[2.409s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/hook/cmake_prefix_path.ps1'
+[2.409s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/hook/cmake_prefix_path.dsv'
+[2.409s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/hook/cmake_prefix_path.sh'
+[2.410s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib'
+[2.410s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosbridge_test_msgs', 'ld_library_path_lib')
+[2.410s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/hook/ld_library_path_lib.ps1'
+[2.410s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/hook/ld_library_path_lib.dsv'
+[2.410s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/hook/ld_library_path_lib.sh'
+[2.411s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/bin'
+[2.411s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib/pkgconfig/rosbridge_test_msgs.pc'
+[2.411s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib/python3.10/site-packages'
+[2.411s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/bin'
+[2.411s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/package.ps1'
+[2.412s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/package.dsv'
+[2.412s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/package.sh'
+[2.413s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/package.bash'
+[2.413s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/rosbridge_test_msgs/package.zsh'
+[2.413s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dk/bumbleb_ws/install/rosbridge_test_msgs/share/colcon-core/packages/rosbridge_test_msgs)
+[2.413s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_library' with build type 'ament_cmake'
+[2.414s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_library'
+[2.414s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.414s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.422s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_library': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_library -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/rosbridge_library
+[2.683s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_library' returned '0': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_library -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/rosbridge_library
+[2.684s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_library': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dk/bumbleb_ws/build/rosbridge_library -- -j16 -l16
+[2.970s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_library' returned '0': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dk/bumbleb_ws/build/rosbridge_library -- -j16 -l16
+[2.971s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_library': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/dk/bumbleb_ws/build/rosbridge_library
+[3.479s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rosbridge_library)
+[3.479s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_library' for CMake module files
+[3.480s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_library' returned '0': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/dk/bumbleb_ws/build/rosbridge_library
+[3.480s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_library' for CMake config files
+[3.481s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosbridge_library', 'cmake_prefix_path')
+[3.481s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_library/share/rosbridge_library/hook/cmake_prefix_path.ps1'
+[3.481s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosbridge_library/share/rosbridge_library/hook/cmake_prefix_path.dsv'
+[3.482s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_library/share/rosbridge_library/hook/cmake_prefix_path.sh'
+[3.482s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_library/bin'
+[3.482s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_library/lib/pkgconfig/rosbridge_library.pc'
+[3.482s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_library/lib/python3.10/site-packages'
+[3.483s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_library/bin'
+[3.483s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_library/share/rosbridge_library/package.ps1'
+[3.483s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dk/bumbleb_ws/install/rosbridge_library/share/rosbridge_library/package.dsv'
+[3.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_library/share/rosbridge_library/package.sh'
+[3.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_library/share/rosbridge_library/package.bash'
+[3.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_library/share/rosbridge_library/package.zsh'
+[3.485s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dk/bumbleb_ws/install/rosbridge_library/share/colcon-core/packages/rosbridge_library)
+[3.485s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rosbridge_library)
+[3.485s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_library' for CMake module files
+[3.486s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_library' for CMake config files
+[3.486s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosbridge_library', 'cmake_prefix_path')
+[3.487s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_library/share/rosbridge_library/hook/cmake_prefix_path.ps1'
+[3.487s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosbridge_library/share/rosbridge_library/hook/cmake_prefix_path.dsv'
+[3.487s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_library/share/rosbridge_library/hook/cmake_prefix_path.sh'
+[3.488s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_library/bin'
+[3.488s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_library/lib/pkgconfig/rosbridge_library.pc'
+[3.488s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_library/lib/python3.10/site-packages'
+[3.488s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_library/bin'
+[3.489s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_library/share/rosbridge_library/package.ps1'
+[3.492s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dk/bumbleb_ws/install/rosbridge_library/share/rosbridge_library/package.dsv'
+[3.493s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_library/share/rosbridge_library/package.sh'
+[3.493s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_library/share/rosbridge_library/package.bash'
+[3.494s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_library/share/rosbridge_library/package.zsh'
+[3.494s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dk/bumbleb_ws/install/rosbridge_library/share/colcon-core/packages/rosbridge_library)
+[3.494s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dk/bumbleb_ws/src/rosbridge_suite/rosapi' with build type 'ament_cmake'
+[3.495s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dk/bumbleb_ws/src/rosbridge_suite/rosapi'
+[3.495s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.495s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.507s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosapi': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/dk/bumbleb_ws/src/rosbridge_suite/rosapi -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/rosapi
+[4.126s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosapi' returned '0': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/dk/bumbleb_ws/src/rosbridge_suite/rosapi -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/rosapi
+[4.127s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosapi': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dk/bumbleb_ws/build/rosapi -- -j16 -l16
+[4.416s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosapi' returned '0': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dk/bumbleb_ws/build/rosapi -- -j16 -l16
+[4.417s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosapi': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/dk/bumbleb_ws/build/rosapi
+[4.686s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rosapi)
+[4.686s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi' for CMake module files
+[4.687s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosapi' returned '0': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/dk/bumbleb_ws/build/rosapi
+[4.687s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi' for CMake config files
+[4.687s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosapi', 'cmake_prefix_path')
+[4.688s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosapi/share/rosapi/hook/cmake_prefix_path.ps1'
+[4.688s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosapi/share/rosapi/hook/cmake_prefix_path.dsv'
+[4.688s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosapi/share/rosapi/hook/cmake_prefix_path.sh'
+[4.689s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi/lib'
+[4.689s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi/bin'
+[4.689s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi/lib/pkgconfig/rosapi.pc'
+[4.689s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi/lib/python3.10/site-packages'
+[4.690s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi/bin'
+[4.690s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosapi/share/rosapi/package.ps1'
+[4.690s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dk/bumbleb_ws/install/rosapi/share/rosapi/package.dsv'
+[4.691s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosapi/share/rosapi/package.sh'
+[4.691s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosapi/share/rosapi/package.bash'
+[4.691s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosapi/share/rosapi/package.zsh'
+[4.692s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dk/bumbleb_ws/install/rosapi/share/colcon-core/packages/rosapi)
+[4.692s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rosapi)
+[4.692s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi' for CMake module files
+[4.693s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi' for CMake config files
+[4.693s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosapi', 'cmake_prefix_path')
+[4.693s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosapi/share/rosapi/hook/cmake_prefix_path.ps1'
+[4.694s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosapi/share/rosapi/hook/cmake_prefix_path.dsv'
+[4.694s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosapi/share/rosapi/hook/cmake_prefix_path.sh'
+[4.694s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi/lib'
+[4.694s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi/bin'
+[4.694s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi/lib/pkgconfig/rosapi.pc'
+[4.695s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi/lib/python3.10/site-packages'
+[4.695s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosapi/bin'
+[4.695s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosapi/share/rosapi/package.ps1'
+[4.696s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dk/bumbleb_ws/install/rosapi/share/rosapi/package.dsv'
+[4.696s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosapi/share/rosapi/package.sh'
+[4.697s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosapi/share/rosapi/package.bash'
+[4.697s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosapi/share/rosapi/package.zsh'
+[4.697s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dk/bumbleb_ws/install/rosapi/share/colcon-core/packages/rosapi)
+[4.697s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_server' with build type 'ament_cmake'
+[4.698s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_server'
+[4.698s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.698s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.713s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_server': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosapi:/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosbridge_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosapi:/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosbridge_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosbridge_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosapi/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_server -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/rosbridge_server
+[5.337s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_server' returned '0': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosapi:/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosbridge_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosapi:/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosbridge_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosbridge_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosapi/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_server -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/rosbridge_server
+[5.338s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_server': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosapi:/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosbridge_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosapi:/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosbridge_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosbridge_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosapi/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dk/bumbleb_ws/build/rosbridge_server -- -j16 -l16
+[5.649s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_server' returned '0': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosapi:/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosbridge_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosapi:/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosbridge_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosbridge_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosapi/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dk/bumbleb_ws/build/rosbridge_server -- -j16 -l16
+[5.650s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_server': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosapi:/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosbridge_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosapi:/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosbridge_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosbridge_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosapi/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/dk/bumbleb_ws/build/rosbridge_server
+[5.905s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rosbridge_server)
+[5.905s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_server' for CMake module files
+[5.906s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_server' returned '0': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosapi:/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosbridge_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/rosapi:/home/dk/bumbleb_ws/install/rosbridge_library:/home/dk/bumbleb_ws/install/rosbridge_test_msgs:/home/dk/bumbleb_ws/install/rosbridge_msgs:/home/dk/bumbleb_ws/install/rosapi_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosbridge_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/install/rosapi/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosbridge_msgs/local/lib/python3.10/dist-packages:/home/dk/bumbleb_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/dk/bumbleb_ws/build/rosbridge_server
+[5.906s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_server' for CMake config files
+[5.906s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosbridge_server', 'cmake_prefix_path')
+[5.906s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/hook/cmake_prefix_path.ps1'
+[5.907s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/hook/cmake_prefix_path.dsv'
+[5.907s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/hook/cmake_prefix_path.sh'
+[5.907s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_server/lib'
+[5.907s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_server/bin'
+[5.907s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_server/lib/pkgconfig/rosbridge_server.pc'
+[5.908s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_server/lib/python3.10/site-packages'
+[5.908s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_server/bin'
+[5.908s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/package.ps1'
+[5.909s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/package.dsv'
+[5.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/package.sh'
+[5.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/package.bash'
+[5.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/package.zsh'
+[5.909s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dk/bumbleb_ws/install/rosbridge_server/share/colcon-core/packages/rosbridge_server)
+[5.910s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rosbridge_server)
+[5.910s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_server' for CMake module files
+[5.910s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_server' for CMake config files
+[5.911s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosbridge_server', 'cmake_prefix_path')
+[5.911s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/hook/cmake_prefix_path.ps1'
+[5.911s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/hook/cmake_prefix_path.dsv'
+[5.911s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/hook/cmake_prefix_path.sh'
+[5.912s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_server/lib'
+[5.912s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_server/bin'
+[5.912s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_server/lib/pkgconfig/rosbridge_server.pc'
+[5.912s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_server/lib/python3.10/site-packages'
+[5.912s] Level 1:colcon.colcon_core.environment:checking '/home/dk/bumbleb_ws/install/rosbridge_server/bin'
+[5.912s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/package.ps1'
+[5.913s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/package.dsv'
+[5.913s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/package.sh'
+[5.914s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/package.bash'
+[5.914s] INFO:colcon.colcon_core.shell:Creating package script '/home/dk/bumbleb_ws/install/rosbridge_server/share/rosbridge_server/package.zsh'
+[5.914s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dk/bumbleb_ws/install/rosbridge_server/share/colcon-core/packages/rosbridge_server)
+[5.914s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.914s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.915s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.915s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.919s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.919s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.919s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.929s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.930s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dk/bumbleb_ws/install/local_setup.ps1'
+[5.931s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dk/bumbleb_ws/install/_local_setup_util_ps1.py'
+[5.932s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dk/bumbleb_ws/install/setup.ps1'
+[5.933s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dk/bumbleb_ws/install/local_setup.sh'
+[5.933s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dk/bumbleb_ws/install/_local_setup_util_sh.py'
+[5.934s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dk/bumbleb_ws/install/setup.sh'
+[5.934s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dk/bumbleb_ws/install/local_setup.bash'
+[5.935s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dk/bumbleb_ws/install/setup.bash'
+[5.936s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dk/bumbleb_ws/install/local_setup.zsh'
+[5.936s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dk/bumbleb_ws/install/setup.zsh'

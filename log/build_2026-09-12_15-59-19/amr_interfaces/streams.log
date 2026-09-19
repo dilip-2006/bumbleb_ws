@@ -1,0 +1,294 @@
+[0.022s] Invoking command in '/home/dk/bumbleb_ws/build/amr_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/dk/bumbleb_ws/src/amr_interfaces -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/amr_interfaces
+[0.033s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.178s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.186s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.188s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.192s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.223s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.249s] -- Found geometry_msgs: 4.9.2 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.563s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.767s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.048s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.065s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.082s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.083s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.083s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.206s] -- Configuring done
+[1.234s] -- Generating done
+[1.243s] -- Build files have been written to: /home/dk/bumbleb_ws/build/amr_interfaces
+[1.248s] Invoked command in '/home/dk/bumbleb_ws/build/amr_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/dk/bumbleb_ws/src/amr_interfaces -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/amr_interfaces
+[1.249s] Invoking command in '/home/dk/bumbleb_ws/build/amr_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dk/bumbleb_ws/build/amr_interfaces -- -j16 -l16
+[1.288s] [35m[1mConsolidate compiler generated dependencies of target amr_interfaces__rosidl_generator_c[0m
+[1.296s] [  1%] Built target amr_interfaces__cpp
+[1.296s] [  2%] Built target amr_interfaces__rs
+[1.300s] [  2%] Built target ament_cmake_python_symlink_amr_interfaces
+[1.300s] [ 13%] Built target amr_interfaces__rosidl_generator_c
+[1.304s] [35m[1mConsolidate compiler generated dependencies of target amr_interfaces__rosidl_typesupport_cpp[0m
+[1.304s] [35m[1mConsolidate compiler generated dependencies of target amr_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[1.305s] [35m[1mConsolidate compiler generated dependencies of target amr_interfaces__rosidl_typesupport_introspection_cpp[0m
+[1.318s] [ 25%] Built target amr_interfaces__rosidl_typesupport_cpp
+[1.319s] [ 36%] Built target amr_interfaces__rosidl_typesupport_introspection_cpp
+[1.323s] [ 47%] Built target amr_interfaces__rosidl_typesupport_fastrtps_cpp
+[1.327s] [35m[1mConsolidate compiler generated dependencies of target amr_interfaces__rosidl_typesupport_c[0m
+[1.327s] [35m[1mConsolidate compiler generated dependencies of target amr_interfaces__rosidl_typesupport_introspection_c[0m
+[1.328s] [35m[1mConsolidate compiler generated dependencies of target amr_interfaces__rosidl_typesupport_fastrtps_c[0m
+[1.338s] [ 59%] Built target amr_interfaces__rosidl_typesupport_introspection_c
+[1.339s] [ 70%] Built target amr_interfaces__rosidl_typesupport_c
+[1.341s] [ 81%] Built target amr_interfaces__rosidl_typesupport_fastrtps_c
+[1.357s] [ 81%] Built target amr_interfaces
+[1.377s] [ 82%] Built target amr_interfaces__py
+[1.388s] [35m[1mConsolidate compiler generated dependencies of target amr_interfaces__rosidl_generator_py[0m
+[1.405s] [ 93%] Built target amr_interfaces__rosidl_generator_py
+[1.414s] [35m[1mConsolidate compiler generated dependencies of target amr_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[1.414s] [35m[1mConsolidate compiler generated dependencies of target amr_interfaces__rosidl_typesupport_c__pyext[0m
+[1.414s] [35m[1mConsolidate compiler generated dependencies of target amr_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[1.425s] [ 95%] Built target amr_interfaces__rosidl_typesupport_c__pyext
+[1.425s] [ 97%] Built target amr_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[1.425s] [100%] Built target amr_interfaces__rosidl_typesupport_introspection_c__pyext
+[1.471s] running egg_info
+[1.471s] writing amr_interfaces.egg-info/PKG-INFO
+[1.471s] writing dependency_links to amr_interfaces.egg-info/dependency_links.txt
+[1.471s] writing top-level names to amr_interfaces.egg-info/top_level.txt
+[1.473s] reading manifest file 'amr_interfaces.egg-info/SOURCES.txt'
+[1.473s] writing manifest file 'amr_interfaces.egg-info/SOURCES.txt'
+[1.492s] [100%] Built target ament_cmake_python_build_amr_interfaces_egg
+[1.513s] Invoked command in '/home/dk/bumbleb_ws/build/amr_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dk/bumbleb_ws/build/amr_interfaces -- -j16 -l16
+[1.514s] Invoking command in '/home/dk/bumbleb_ws/build/amr_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dk/bumbleb_ws/build/amr_interfaces
+[1.522s] -- Install configuration: ""
+[1.524s] -- Execute custom install script
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/ament_index/resource_index/rosidl_interfaces/amr_interfaces
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/msg/rosidl_generator_c__visibility_control.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/delete_location.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/delete_location__functions.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/delete_location__struct.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/delete_location__type_support.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_locations__functions.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_locations__struct.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_locations__type_support.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_maps__functions.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_maps__struct.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_maps__type_support.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/load_map__functions.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/load_map__struct.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/load_map__type_support.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/navigate_to_location__functions.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/navigate_to_location__struct.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/navigate_to_location__type_support.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_location__functions.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_location__struct.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_location__type_support.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_map__functions.h
+[1.524s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_map__struct.h
+[1.525s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_map__type_support.h
+[1.525s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/set_mode__functions.h
+[1.525s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/set_mode__struct.h
+[1.525s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/set_mode__type_support.h
+[1.525s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/get_locations.h
+[1.525s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/get_maps.h
+[1.525s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/load_map.h
+[1.525s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/navigate_to_location.h
+[1.525s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/save_location.h
+[1.525s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/save_map.h
+[1.525s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/set_mode.h
+[1.525s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/environment/library_path.sh
+[1.525s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/environment/library_path.dsv
+[1.526s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.526s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/delete_location__rosidl_typesupport_fastrtps_c.h
+[1.526s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_locations__rosidl_typesupport_fastrtps_c.h
+[1.526s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_maps__rosidl_typesupport_fastrtps_c.h
+[1.526s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/load_map__rosidl_typesupport_fastrtps_c.h
+[1.526s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/navigate_to_location__rosidl_typesupport_fastrtps_c.h
+[1.526s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_location__rosidl_typesupport_fastrtps_c.h
+[1.526s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_map__rosidl_typesupport_fastrtps_c.h
+[1.526s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/set_mode__rosidl_typesupport_fastrtps_c.h
+[1.527s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.527s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/delete_location__rosidl_typesupport_introspection_c.h
+[1.527s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_locations__rosidl_typesupport_introspection_c.h
+[1.527s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_maps__rosidl_typesupport_introspection_c.h
+[1.527s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/load_map__rosidl_typesupport_introspection_c.h
+[1.527s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/navigate_to_location__rosidl_typesupport_introspection_c.h
+[1.527s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_location__rosidl_typesupport_introspection_c.h
+[1.530s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_map__rosidl_typesupport_introspection_c.h
+[1.530s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/set_mode__rosidl_typesupport_introspection_c.h
+[1.530s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.530s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/delete_location.hpp
+[1.530s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/delete_location__builder.hpp
+[1.530s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/delete_location__struct.hpp
+[1.531s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/delete_location__traits.hpp
+[1.531s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/delete_location__type_support.hpp
+[1.531s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_locations__builder.hpp
+[1.531s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_locations__struct.hpp
+[1.531s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_locations__traits.hpp
+[1.531s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_locations__type_support.hpp
+[1.531s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_maps__builder.hpp
+[1.531s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_maps__struct.hpp
+[1.531s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_maps__traits.hpp
+[1.531s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_maps__type_support.hpp
+[1.531s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/load_map__builder.hpp
+[1.531s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/load_map__struct.hpp
+[1.532s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/load_map__traits.hpp
+[1.532s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/load_map__type_support.hpp
+[1.532s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/navigate_to_location__builder.hpp
+[1.532s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/navigate_to_location__struct.hpp
+[1.532s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/navigate_to_location__traits.hpp
+[1.532s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/navigate_to_location__type_support.hpp
+[1.532s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_location__builder.hpp
+[1.532s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_location__struct.hpp
+[1.532s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_location__traits.hpp
+[1.532s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_location__type_support.hpp
+[1.532s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_map__builder.hpp
+[1.532s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_map__struct.hpp
+[1.532s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_map__traits.hpp
+[1.533s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_map__type_support.hpp
+[1.533s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/set_mode__builder.hpp
+[1.533s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/set_mode__struct.hpp
+[1.533s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/set_mode__traits.hpp
+[1.533s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/set_mode__type_support.hpp
+[1.533s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/get_locations.hpp
+[1.533s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/get_maps.hpp
+[1.533s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/load_map.hpp
+[1.533s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/navigate_to_location.hpp
+[1.533s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/save_location.hpp
+[1.533s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/save_map.hpp
+[1.533s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/set_mode.hpp
+[1.533s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.534s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/delete_location__rosidl_typesupport_fastrtps_cpp.hpp
+[1.534s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_locations__rosidl_typesupport_fastrtps_cpp.hpp
+[1.534s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_maps__rosidl_typesupport_fastrtps_cpp.hpp
+[1.534s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/load_map__rosidl_typesupport_fastrtps_cpp.hpp
+[1.534s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/navigate_to_location__rosidl_typesupport_fastrtps_cpp.hpp
+[1.534s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_location__rosidl_typesupport_fastrtps_cpp.hpp
+[1.534s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_map__rosidl_typesupport_fastrtps_cpp.hpp
+[1.534s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/set_mode__rosidl_typesupport_fastrtps_cpp.hpp
+[1.534s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/delete_location__rosidl_typesupport_introspection_cpp.hpp
+[1.534s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_locations__rosidl_typesupport_introspection_cpp.hpp
+[1.534s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/get_maps__rosidl_typesupport_introspection_cpp.hpp
+[1.534s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/load_map__rosidl_typesupport_introspection_cpp.hpp
+[1.534s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/navigate_to_location__rosidl_typesupport_introspection_cpp.hpp
+[1.534s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_location__rosidl_typesupport_introspection_cpp.hpp
+[1.534s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/save_map__rosidl_typesupport_introspection_cpp.hpp
+[1.535s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/include/amr_interfaces/amr_interfaces/srv/detail/set_mode__rosidl_typesupport_introspection_cpp.hpp
+[1.535s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/environment/pythonpath.sh
+[1.535s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/environment/pythonpath.dsv
+[1.535s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces-1.0.0-py3.10.egg-info/PKG-INFO
+[1.535s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces-1.0.0-py3.10.egg-info/SOURCES.txt
+[1.535s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces-1.0.0-py3.10.egg-info/dependency_links.txt
+[1.535s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces-1.0.0-py3.10.egg-info/top_level.txt
+[1.536s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/__init__.py
+[1.536s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/_amr_interfaces_s.ep.rosidl_typesupport_c.c
+[1.536s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/_amr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.536s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/_amr_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[1.536s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/amr_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.536s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/amr_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.536s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/amr_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.536s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/libamr_interfaces__rosidl_generator_py.so
+[1.536s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/__init__.py
+[1.536s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/_delete_location.py
+[1.537s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/_delete_location_s.c
+[1.537s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/_get_locations.py
+[1.537s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/_get_locations_s.c
+[1.537s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/_get_maps.py
+[1.537s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/_get_maps_s.c
+[1.537s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/_load_map.py
+[1.537s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/_load_map_s.c
+[1.537s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/_navigate_to_location.py
+[1.537s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/_navigate_to_location_s.c
+[1.537s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/_save_location.py
+[1.537s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/_save_location_s.c
+[1.538s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/_save_map.py
+[1.538s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/_save_map_s.c
+[1.538s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/_set_mode.py
+[1.538s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv/_set_mode_s.c
+[1.538s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/amr_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.538s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/amr_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.538s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/amr_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.539s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/ament_index/resource_index/rust_packages/amr_interfaces
+[1.539s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/rust/Cargo.toml
+[1.539s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/rust/build.rs
+[1.539s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/rust/src/lib.rs
+[1.539s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/rust/src/srv.rs
+[1.539s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/rust/src/srv/rmw.rs
+[1.539s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/SetMode.idl
+[1.539s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/SaveMap.idl
+[1.540s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/LoadMap.idl
+[1.540s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/SaveLocation.idl
+[1.540s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/DeleteLocation.idl
+[1.540s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/NavigateToLocation.idl
+[1.540s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/GetLocations.idl
+[1.540s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/GetMaps.idl
+[1.540s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/SetMode.srv
+[1.540s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/SetMode_Request.msg
+[1.540s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/SetMode_Response.msg
+[1.541s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/SaveMap.srv
+[1.541s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/SaveMap_Request.msg
+[1.541s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/SaveMap_Response.msg
+[1.541s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/LoadMap.srv
+[1.541s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/LoadMap_Request.msg
+[1.541s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/LoadMap_Response.msg
+[1.541s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/SaveLocation.srv
+[1.541s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/SaveLocation_Request.msg
+[1.541s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/SaveLocation_Response.msg
+[1.542s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/DeleteLocation.srv
+[1.542s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/DeleteLocation_Request.msg
+[1.542s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/DeleteLocation_Response.msg
+[1.542s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/NavigateToLocation.srv
+[1.542s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/NavigateToLocation_Request.msg
+[1.542s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/NavigateToLocation_Response.msg
+[1.542s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/GetLocations.srv
+[1.542s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/GetLocations_Request.msg
+[1.542s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/GetLocations_Response.msg
+[1.542s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/GetMaps.srv
+[1.542s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/GetMaps_Request.msg
+[1.543s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/srv/GetMaps_Response.msg
+[1.543s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/ament_index/resource_index/package_run_dependencies/amr_interfaces
+[1.543s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/ament_index/resource_index/parent_prefix_path/amr_interfaces
+[1.543s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/environment/ament_prefix_path.sh
+[1.543s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/environment/ament_prefix_path.dsv
+[1.543s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/environment/path.sh
+[1.543s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/environment/path.dsv
+[1.543s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/local_setup.bash
+[1.543s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/local_setup.sh
+[1.543s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/local_setup.zsh
+[1.543s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/local_setup.dsv
+[1.543s] -- Symlinking: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/package.dsv
+[1.550s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/ament_index/resource_index/packages/amr_interfaces
+[1.550s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/rosidl_cmake-extras.cmake
+[1.550s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.550s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.550s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[1.550s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[1.550s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.550s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.550s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[1.551s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/amr_interfacesConfig.cmake
+[1.551s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/amr_interfacesConfig-version.cmake
+[1.551s] -- Up-to-date symlink: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/package.xml
+[1.551s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/lib/libamr_interfaces__rosidl_generator_c.so
+[1.551s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/lib/libamr_interfaces__rosidl_typesupport_fastrtps_c.so
+[1.551s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/lib/libamr_interfaces__rosidl_typesupport_introspection_c.so
+[1.552s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/lib/libamr_interfaces__rosidl_typesupport_c.so
+[1.552s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/lib/libamr_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[1.552s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/lib/libamr_interfaces__rosidl_typesupport_introspection_cpp.so
+[1.552s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/lib/libamr_interfaces__rosidl_typesupport_cpp.so
+[1.578s] Listing '/home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces'...
+[1.578s] Compiling '/home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/__init__.py'...
+[1.578s] Listing '/home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages/amr_interfaces/srv'...
+[1.581s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/lib/libamr_interfaces__rosidl_generator_py.so
+[1.581s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/export_amr_interfaces__rosidl_generator_cExport.cmake
+[1.581s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/export_amr_interfaces__rosidl_generator_cExport-noconfig.cmake
+[1.581s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/export_amr_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[1.581s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/export_amr_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.582s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/amr_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[1.582s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/amr_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.582s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/amr_interfaces__rosidl_typesupport_cExport.cmake
+[1.582s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/amr_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[1.582s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/export_amr_interfaces__rosidl_generator_cppExport.cmake
+[1.582s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/export_amr_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.582s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/export_amr_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.582s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/amr_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[1.582s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/amr_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.582s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/amr_interfaces__rosidl_typesupport_cppExport.cmake
+[1.582s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/amr_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[1.582s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/export_amr_interfaces__rosidl_generator_pyExport.cmake
+[1.582s] -- Up-to-date: /home/dk/bumbleb_ws/install/amr_interfaces/share/amr_interfaces/cmake/export_amr_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[1.584s] Invoked command in '/home/dk/bumbleb_ws/build/amr_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dk/bumbleb_ws/build/amr_interfaces

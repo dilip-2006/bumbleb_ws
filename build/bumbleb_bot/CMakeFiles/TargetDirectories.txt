@@ -1,0 +1,10 @@
+/home/dk/bumbleb_ws/build/bumbleb_bot/CMakeFiles/uninstall.dir
+/home/dk/bumbleb_ws/build/bumbleb_bot/CMakeFiles/bumbleb_bot_uninstall.dir
+/home/dk/bumbleb_ws/build/bumbleb_bot/CMakeFiles/bumbleb_drivetrain_node.dir
+/home/dk/bumbleb_ws/build/bumbleb_bot/CMakeFiles/test.dir
+/home/dk/bumbleb_ws/build/bumbleb_bot/CMakeFiles/edit_cache.dir
+/home/dk/bumbleb_ws/build/bumbleb_bot/CMakeFiles/rebuild_cache.dir
+/home/dk/bumbleb_ws/build/bumbleb_bot/CMakeFiles/list_install_components.dir
+/home/dk/bumbleb_ws/build/bumbleb_bot/CMakeFiles/install.dir
+/home/dk/bumbleb_ws/build/bumbleb_bot/CMakeFiles/install/local.dir
+/home/dk/bumbleb_ws/build/bumbleb_bot/CMakeFiles/install/strip.dir

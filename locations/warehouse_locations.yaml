@@ -1,0 +1,8 @@
+locations:
+  shelf_1:
+    name: Shelf 1
+    type: shelf
+    x: 0.9
+    y: -0.126
+    yaw: -2.6552
+    map: warehouse_main

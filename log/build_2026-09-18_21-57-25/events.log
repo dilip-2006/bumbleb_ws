@@ -1,0 +1,836 @@
+[0.000000] (-) TimerEvent: {}
+[0.000426] (zlac_drive) JobQueued: {'identifier': 'zlac_drive', 'dependencies': OrderedDict()}
+[0.000616] (bumbleb_bot) JobQueued: {'identifier': 'bumbleb_bot', 'dependencies': OrderedDict([('zlac_drive', '/home/dk/bumbleb_ws/install/zlac_drive')])}
+[0.000643] (zlac_drive) JobStarted: {'identifier': 'zlac_drive'}
+[0.008550] (zlac_drive) JobProgress: {'identifier': 'zlac_drive', 'progress': 'cmake'}
+[0.008949] (zlac_drive) Command: {'cmd': ['/usr/bin/cmake', '/home/dk/bumbleb_ws/src/zlac_drive', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/zlac_drive'], 'cwd': '/home/dk/bumbleb_ws/build/zlac_drive', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CODEX_CI', '1'), ('LANGUAGE', 'en_IN:en'), ('USER', 'dk'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dk/rosbridge_ws/install/rosbridge_test_msgs/lib:/home/dk/rosbridge_ws/install/rosbridge_msgs/lib:/home/dk/rosbridge_ws/install/rosapi_msgs/lib:/home/dk/bumbleb_ws/install/zlac_drive/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/dk'), ('OLDPWD', '/home/dk'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2091'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/dk/rosbridge_ws/install:/home/dk/bumbleb_ws/install'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dk'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dk'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/dk/.codex/packages/standalone/releases/0.154.0-x86_64-unknown-linux-musl/codex-path:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/bin:/home/dk/.codex/tmp/arg0/codex-arg0zuTLE4:/home/dk/.codex/packages/standalone/releases/0.154.0-x86_64-unknown-linux-musl/codex-path:/opt/ros/humble/bin:/home/dk/.npm-global/bin:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dk-LOQ-15IRX9:@/tmp/.ICE-unix/2064,unix/dk-LOQ-15IRX9:/tmp/.ICE-unix/2064'), ('CODEX_VERSION', '0.154.0'), ('CODEX_SESSION_ID', '01a0b537-9d59-7bf2-99e4-f53690f4ef16'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8ccfab18_7848_4e8e_8035_8b377c103c62'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.98'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/home/dk/bumbleb_ws/install/zlac_drive:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '01a0b537-9d59-7bf2-99e4-f53690f4ef16'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dk/bumbleb_ws/build/zlac_drive'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/dk/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dk/rosbridge_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_server/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_msgs/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosapi/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/home/dk/bumbleb_ws/install/zlac_drive:/opt/ros/humble')]), 'shell': False}
+[0.099622] (-) TimerEvent: {}
+[0.111446] (zlac_drive) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.165242] (zlac_drive) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.173201] (zlac_drive) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199745] (-) TimerEvent: {}
+[0.238919] (zlac_drive) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.246869] (zlac_drive) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.247414] (zlac_drive) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.250900] (zlac_drive) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.254073] (zlac_drive) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.299853] (-) TimerEvent: {}
+[0.328390] (zlac_drive) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.336323] (zlac_drive) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.336611] (zlac_drive) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.337069] (zlac_drive) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.341027] (zlac_drive) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.400035] (-) TimerEvent: {}
+[0.500290] (-) TimerEvent: {}
+[0.505567] (zlac_drive) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.561281] (zlac_drive) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.594453] (zlac_drive) StdoutLine: {'line': b'-- Found hardware_interface: 2.54.2 (/opt/ros/humble/share/hardware_interface/cmake)\n'}
+[0.600374] (-) TimerEvent: {}
+[0.635853] (zlac_drive) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.641354] (zlac_drive) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.649899] (zlac_drive) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.661564] (zlac_drive) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.677183] (zlac_drive) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.700554] (-) TimerEvent: {}
+[0.800832] (-) TimerEvent: {}
+[0.866132] (zlac_drive) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.869185] (zlac_drive) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.894217] (zlac_drive) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[0.900939] (-) TimerEvent: {}
+[0.942641] (zlac_drive) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.944975] (zlac_drive) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[0.960680] (zlac_drive) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.964027] (zlac_drive) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[0.972425] (zlac_drive) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[0.981993] (zlac_drive) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.991620] (zlac_drive) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.001062] (-) TimerEvent: {}
+[1.056884] (zlac_drive) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.057106] (zlac_drive) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.101239] (-) TimerEvent: {}
+[1.123162] (zlac_drive) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.124256] (zlac_drive) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.172247] (zlac_drive) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.14 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[1.175175] (zlac_drive) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[1.201316] (-) TimerEvent: {}
+[1.242211] (zlac_drive) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.266959] (zlac_drive) StdoutLine: {'line': b'-- Generating done\n'}
+[1.277252] (zlac_drive) StdoutLine: {'line': b'-- Build files have been written to: /home/dk/bumbleb_ws/build/zlac_drive\n'}
+[1.286226] (zlac_drive) CommandEnded: {'returncode': 0}
+[1.287864] (zlac_drive) JobProgress: {'identifier': 'zlac_drive', 'progress': 'build'}
+[1.287928] (zlac_drive) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dk/bumbleb_ws/build/zlac_drive', '--', '-j16', '-l16'], 'cwd': '/home/dk/bumbleb_ws/build/zlac_drive', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CODEX_CI', '1'), ('LANGUAGE', 'en_IN:en'), ('USER', 'dk'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dk/rosbridge_ws/install/rosbridge_test_msgs/lib:/home/dk/rosbridge_ws/install/rosbridge_msgs/lib:/home/dk/rosbridge_ws/install/rosapi_msgs/lib:/home/dk/bumbleb_ws/install/zlac_drive/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/dk'), ('OLDPWD', '/home/dk'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2091'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/dk/rosbridge_ws/install:/home/dk/bumbleb_ws/install'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dk'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dk'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/dk/.codex/packages/standalone/releases/0.154.0-x86_64-unknown-linux-musl/codex-path:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/bin:/home/dk/.codex/tmp/arg0/codex-arg0zuTLE4:/home/dk/.codex/packages/standalone/releases/0.154.0-x86_64-unknown-linux-musl/codex-path:/opt/ros/humble/bin:/home/dk/.npm-global/bin:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dk-LOQ-15IRX9:@/tmp/.ICE-unix/2064,unix/dk-LOQ-15IRX9:/tmp/.ICE-unix/2064'), ('CODEX_VERSION', '0.154.0'), ('CODEX_SESSION_ID', '01a0b537-9d59-7bf2-99e4-f53690f4ef16'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8ccfab18_7848_4e8e_8035_8b377c103c62'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.98'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/home/dk/bumbleb_ws/install/zlac_drive:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '01a0b537-9d59-7bf2-99e4-f53690f4ef16'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dk/bumbleb_ws/build/zlac_drive'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/dk/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dk/rosbridge_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_server/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_msgs/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosapi/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/home/dk/bumbleb_ws/install/zlac_drive:/opt/ros/humble')]), 'shell': False}
+[1.301395] (-) TimerEvent: {}
+[1.325978] (zlac_drive) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target gtest_main\n'}
+[1.327015] (zlac_drive) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target gtest\n'}
+[1.329314] (zlac_drive) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target zlac_drive\n'}
+[1.336935] (zlac_drive) StdoutLine: {'line': b'[ 11%] Built target gtest_main\n'}
+[1.337864] (zlac_drive) StdoutLine: {'line': b'[ 22%] Built target gtest\n'}
+[1.340829] (zlac_drive) StdoutLine: {'line': b'[ 55%] Built target zlac_drive\n'}
+[1.351601] (zlac_drive) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target test_hardware_interface\n'}
+[1.351762] (zlac_drive) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target test_motor\n'}
+[1.352413] (zlac_drive) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target test_modbus_client\n'}
+[1.352834] (zlac_drive) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target test_driver\n'}
+[1.361924] (zlac_drive) StdoutLine: {'line': b'[ 66%] Built target test_hardware_interface\n'}
+[1.362143] (zlac_drive) StdoutLine: {'line': b'[ 77%] Built target test_modbus_client\n'}
+[1.363356] (zlac_drive) StdoutLine: {'line': b'[ 88%] Built target test_motor\n'}
+[1.364265] (zlac_drive) StdoutLine: {'line': b'[100%] Built target test_driver\n'}
+[1.374714] (zlac_drive) CommandEnded: {'returncode': 0}
+[1.375631] (zlac_drive) JobProgress: {'identifier': 'zlac_drive', 'progress': 'install'}
+[1.384066] (zlac_drive) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dk/bumbleb_ws/build/zlac_drive'], 'cwd': '/home/dk/bumbleb_ws/build/zlac_drive', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CODEX_CI', '1'), ('LANGUAGE', 'en_IN:en'), ('USER', 'dk'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dk/rosbridge_ws/install/rosbridge_test_msgs/lib:/home/dk/rosbridge_ws/install/rosbridge_msgs/lib:/home/dk/rosbridge_ws/install/rosapi_msgs/lib:/home/dk/bumbleb_ws/install/zlac_drive/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/dk'), ('OLDPWD', '/home/dk'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2091'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/dk/rosbridge_ws/install:/home/dk/bumbleb_ws/install'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dk'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dk'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/dk/.codex/packages/standalone/releases/0.154.0-x86_64-unknown-linux-musl/codex-path:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/bin:/home/dk/.codex/tmp/arg0/codex-arg0zuTLE4:/home/dk/.codex/packages/standalone/releases/0.154.0-x86_64-unknown-linux-musl/codex-path:/opt/ros/humble/bin:/home/dk/.npm-global/bin:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dk-LOQ-15IRX9:@/tmp/.ICE-unix/2064,unix/dk-LOQ-15IRX9:/tmp/.ICE-unix/2064'), ('CODEX_VERSION', '0.154.0'), ('CODEX_SESSION_ID', '01a0b537-9d59-7bf2-99e4-f53690f4ef16'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8ccfab18_7848_4e8e_8035_8b377c103c62'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.98'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/home/dk/bumbleb_ws/install/zlac_drive:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '01a0b537-9d59-7bf2-99e4-f53690f4ef16'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dk/bumbleb_ws/build/zlac_drive'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/dk/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dk/rosbridge_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_server/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_msgs/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosapi/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/home/dk/bumbleb_ws/install/zlac_drive:/opt/ros/humble')]), 'shell': False}
+[1.390770] (zlac_drive) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.391260] (zlac_drive) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.391445] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive//zlac_drive_hardware_plugin.xml\n'}
+[1.391657] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/lib/libzlac_drive.so\n'}
+[1.392072] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/config/hardware_parameters.hpp\n'}
+[1.392292] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/diagnostics/driver_diagnostics.hpp\n'}
+[1.392430] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/driver/driver_state.hpp\n'}
+[1.392500] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/driver/motor.hpp\n'}
+[1.392567] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/driver/zlac_drive_driver.hpp\n'}
+[1.392683] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/hardware/zlac_system_hardware.hpp\n'}
+[1.392752] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/modbus/modbus_client.hpp\n'}
+[1.392864] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/modbus/modbus_exception.hpp\n'}
+[1.392931] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/modbus/modbus_types.hpp\n'}
+[1.392998] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/include/zlac_drive/registers.hpp\n'}
+[1.393110] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/zlac_drive_hardware_plugin.xml\n'}
+[1.393184] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/environment/library_path.sh\n'}
+[1.393246] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/environment/library_path.dsv\n'}
+[1.393347] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/ament_index/resource_index/package_run_dependencies/zlac_drive\n'}
+[1.393457] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/ament_index/resource_index/parent_prefix_path/zlac_drive\n'}
+[1.393563] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/environment/ament_prefix_path.sh\n'}
+[1.393666] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/environment/ament_prefix_path.dsv\n'}
+[1.393768] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/environment/path.sh\n'}
+[1.393865] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/environment/path.dsv\n'}
+[1.393964] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/local_setup.bash\n'}
+[1.394061] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/local_setup.sh\n'}
+[1.394160] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/local_setup.zsh\n'}
+[1.394272] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/local_setup.dsv\n'}
+[1.394369] (zlac_drive) StdoutLine: {'line': b'-- Symlinking: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/package.dsv\n'}
+[1.401374] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/ament_index/resource_index/packages/zlac_drive\n'}
+[1.401511] (-) TimerEvent: {}
+[1.401530] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/zlac_drive\n'}
+[1.401631] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.401734] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.401837] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.401937] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/cmake/zlac_driveConfig.cmake\n'}
+[1.402037] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/cmake/zlac_driveConfig-version.cmake\n'}
+[1.402139] (zlac_drive) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/zlac_drive/share/zlac_drive/package.xml\n'}
+[1.403346] (zlac_drive) CommandEnded: {'returncode': 0}
+[1.418674] (zlac_drive) JobEnded: {'identifier': 'zlac_drive', 'rc': 0}
+[1.419145] (bumbleb_bot) JobStarted: {'identifier': 'bumbleb_bot'}
+[1.427050] (bumbleb_bot) JobProgress: {'identifier': 'bumbleb_bot', 'progress': 'cmake'}
+[1.427364] (bumbleb_bot) Command: {'cmd': ['/usr/bin/cmake', '/home/dk/bumbleb_ws/src/bumbleb_bot', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/bumbleb_bot'], 'cwd': '/home/dk/bumbleb_ws/build/bumbleb_bot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CODEX_CI', '1'), ('LANGUAGE', 'en_IN:en'), ('USER', 'dk'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dk/bumbleb_ws/install/zlac_drive/lib:/home/dk/rosbridge_ws/install/rosbridge_test_msgs/lib:/home/dk/rosbridge_ws/install/rosbridge_msgs/lib:/home/dk/rosbridge_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins'), ('HOME', '/home/dk'), ('OLDPWD', '/home/dk'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2091'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/dk/rosbridge_ws/install:/home/dk/bumbleb_ws/install'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dk'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dk'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/dk/.codex/packages/standalone/releases/0.154.0-x86_64-unknown-linux-musl/codex-path:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/bin:/home/dk/.codex/tmp/arg0/codex-arg0zuTLE4:/home/dk/.codex/packages/standalone/releases/0.154.0-x86_64-unknown-linux-musl/codex-path:/opt/ros/humble/bin:/home/dk/.npm-global/bin:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dk-LOQ-15IRX9:@/tmp/.ICE-unix/2064,unix/dk-LOQ-15IRX9:/tmp/.ICE-unix/2064'), ('CODEX_VERSION', '0.154.0'), ('CODEX_SESSION_ID', '01a0b537-9d59-7bf2-99e4-f53690f4ef16'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8ccfab18_7848_4e8e_8035_8b377c103c62'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.98'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/home/dk/bumbleb_ws/install/zlac_drive:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '01a0b537-9d59-7bf2-99e4-f53690f4ef16'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dk/bumbleb_ws/build/bumbleb_bot'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/dk/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dk/rosbridge_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_server/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_msgs/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosapi/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/opt/ros/humble')]), 'shell': False}
+[1.480271] (bumbleb_bot) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.501711] (-) TimerEvent: {}
+[1.527716] (bumbleb_bot) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.533954] (bumbleb_bot) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.596049] (bumbleb_bot) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.601894] (-) TimerEvent: {}
+[1.603126] (bumbleb_bot) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.603373] (bumbleb_bot) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.603686] (bumbleb_bot) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.606149] (bumbleb_bot) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.673740] (bumbleb_bot) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.681689] (bumbleb_bot) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.681932] (bumbleb_bot) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.682099] (bumbleb_bot) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.684889] (bumbleb_bot) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.702082] (-) TimerEvent: {}
+[1.802315] (-) TimerEvent: {}
+[1.832775] (bumbleb_bot) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.897339] (bumbleb_bot) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.902466] (-) TimerEvent: {}
+[1.931826] (bumbleb_bot) StdoutLine: {'line': b'-- Found rclcpp: 16.0.21 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.984181] (bumbleb_bot) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.990626] (bumbleb_bot) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.000705] (bumbleb_bot) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[2.002542] (-) TimerEvent: {}
+[2.014497] (bumbleb_bot) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.033081] (bumbleb_bot) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.085154] (bumbleb_bot) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[2.088763] (bumbleb_bot) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.102646] (-) TimerEvent: {}
+[2.176621] (bumbleb_bot) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[2.202799] (-) TimerEvent: {}
+[2.204081] (bumbleb_bot) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[2.248799] (bumbleb_bot) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.259811] (bumbleb_bot) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[2.302933] (-) TimerEvent: {}
+[2.325492] (bumbleb_bot) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[2.325837] (bumbleb_bot) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[2.392307] (bumbleb_bot) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[2.393470] (bumbleb_bot) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[2.403149] (-) TimerEvent: {}
+[2.452051] (bumbleb_bot) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.2 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[2.466161] (bumbleb_bot) StdoutLine: {'line': b'-- Found nav_msgs: 4.9.2 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[2.484343] (bumbleb_bot) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.2 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[2.503229] (bumbleb_bot) StdoutLine: {'line': b'-- Found tf2: 0.25.23 (/opt/ros/humble/share/tf2/cmake)\n'}
+[2.503391] (-) TimerEvent: {}
+[2.515883] (bumbleb_bot) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.23 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[2.603603] (-) TimerEvent: {}
+[2.618164] (bumbleb_bot) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.703784] (-) TimerEvent: {}
+[2.804029] (-) TimerEvent: {}
+[2.904196] (-) TimerEvent: {}
+[3.004357] (-) TimerEvent: {}
+[3.104607] (-) TimerEvent: {}
+[3.204867] (-) TimerEvent: {}
+[3.302592] (bumbleb_bot) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[3.305009] (-) TimerEvent: {}
+[3.305315] (bumbleb_bot) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[3.305415] (bumbleb_bot) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/dk/bumbleb_ws/src/bumbleb_bot/include\n'}
+[3.305484] (bumbleb_bot) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[3.307879] (bumbleb_bot) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[3.308031] (bumbleb_bot) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[3.308594] (bumbleb_bot) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[3.309526] (bumbleb_bot) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.310307] (bumbleb_bot) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[3.312473] (bumbleb_bot) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[3.312627] (bumbleb_bot) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[3.313199] (bumbleb_bot) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.314492] (bumbleb_bot) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.324917] (bumbleb_bot) StdoutLine: {'line': b'-- Generating done\n'}
+[3.328860] (bumbleb_bot) StdoutLine: {'line': b'-- Build files have been written to: /home/dk/bumbleb_ws/build/bumbleb_bot\n'}
+[3.405279] (-) TimerEvent: {}
+[3.505684] (-) TimerEvent: {}
+[3.606072] (-) TimerEvent: {}
+[3.706491] (-) TimerEvent: {}
+[3.807016] (-) TimerEvent: {}
+[3.907527] (-) TimerEvent: {}
+[4.008009] (-) TimerEvent: {}
+[4.108445] (-) TimerEvent: {}
+[4.208839] (-) TimerEvent: {}
+[4.309408] (-) TimerEvent: {}
+[4.409810] (-) TimerEvent: {}
+[4.510331] (-) TimerEvent: {}
+[4.610672] (-) TimerEvent: {}
+[4.711039] (-) TimerEvent: {}
+[4.811514] (-) TimerEvent: {}
+[4.911901] (-) TimerEvent: {}
+[5.012325] (-) TimerEvent: {}
+[5.112649] (-) TimerEvent: {}
+[5.212941] (-) TimerEvent: {}
+[5.313249] (-) TimerEvent: {}
+[5.413559] (-) TimerEvent: {}
+[5.513897] (-) TimerEvent: {}
+[5.614224] (-) TimerEvent: {}
+[5.714497] (-) TimerEvent: {}
+[5.814787] (-) TimerEvent: {}
+[5.915107] (-) TimerEvent: {}
+[6.015550] (-) TimerEvent: {}
+[6.115842] (-) TimerEvent: {}
+[6.216138] (-) TimerEvent: {}
+[6.316537] (-) TimerEvent: {}
+[6.416911] (-) TimerEvent: {}
+[6.517346] (-) TimerEvent: {}
+[6.617671] (-) TimerEvent: {}
+[6.718062] (-) TimerEvent: {}
+[6.818459] (-) TimerEvent: {}
+[6.918885] (-) TimerEvent: {}
+[7.019305] (-) TimerEvent: {}
+[7.119734] (-) TimerEvent: {}
+[7.220134] (-) TimerEvent: {}
+[7.320426] (-) TimerEvent: {}
+[7.420814] (-) TimerEvent: {}
+[7.521247] (-) TimerEvent: {}
+[7.621691] (-) TimerEvent: {}
+[7.722147] (-) TimerEvent: {}
+[7.822554] (-) TimerEvent: {}
+[7.922935] (-) TimerEvent: {}
+[8.023243] (-) TimerEvent: {}
+[8.123544] (-) TimerEvent: {}
+[8.223981] (-) TimerEvent: {}
+[8.324432] (-) TimerEvent: {}
+[8.424757] (-) TimerEvent: {}
+[8.525171] (-) TimerEvent: {}
+[8.625563] (-) TimerEvent: {}
+[8.725919] (-) TimerEvent: {}
+[8.826329] (-) TimerEvent: {}
+[8.926701] (-) TimerEvent: {}
+[9.027098] (-) TimerEvent: {}
+[9.127504] (-) TimerEvent: {}
+[9.228025] (-) TimerEvent: {}
+[9.328383] (-) TimerEvent: {}
+[9.428803] (-) TimerEvent: {}
+[9.529300] (-) TimerEvent: {}
+[9.629919] (-) TimerEvent: {}
+[9.730415] (-) TimerEvent: {}
+[9.830856] (-) TimerEvent: {}
+[9.931313] (-) TimerEvent: {}
+[10.031680] (-) TimerEvent: {}
+[10.132055] (-) TimerEvent: {}
+[10.232351] (-) TimerEvent: {}
+[10.332621] (-) TimerEvent: {}
+[10.433032] (-) TimerEvent: {}
+[10.533466] (-) TimerEvent: {}
+[10.633832] (-) TimerEvent: {}
+[10.734235] (-) TimerEvent: {}
+[10.834621] (-) TimerEvent: {}
+[10.935051] (-) TimerEvent: {}
+[11.035358] (-) TimerEvent: {}
+[11.135684] (-) TimerEvent: {}
+[11.236044] (-) TimerEvent: {}
+[11.336390] (-) TimerEvent: {}
+[11.436755] (-) TimerEvent: {}
+[11.537295] (-) TimerEvent: {}
+[11.637736] (-) TimerEvent: {}
+[11.738094] (-) TimerEvent: {}
+[11.838410] (-) TimerEvent: {}
+[11.938821] (-) TimerEvent: {}
+[12.039274] (-) TimerEvent: {}
+[12.139695] (-) TimerEvent: {}
+[12.240099] (-) TimerEvent: {}
+[12.340531] (-) TimerEvent: {}
+[12.440843] (-) TimerEvent: {}
+[12.541158] (-) TimerEvent: {}
+[12.641560] (-) TimerEvent: {}
+[12.741960] (-) TimerEvent: {}
+[12.842309] (-) TimerEvent: {}
+[12.942732] (-) TimerEvent: {}
+[13.043130] (-) TimerEvent: {}
+[13.143537] (-) TimerEvent: {}
+[13.244020] (-) TimerEvent: {}
+[13.344503] (-) TimerEvent: {}
+[13.444819] (-) TimerEvent: {}
+[13.545218] (-) TimerEvent: {}
+[13.645609] (-) TimerEvent: {}
+[13.746012] (-) TimerEvent: {}
+[13.846438] (-) TimerEvent: {}
+[13.946846] (-) TimerEvent: {}
+[14.047246] (-) TimerEvent: {}
+[14.147682] (-) TimerEvent: {}
+[14.248149] (-) TimerEvent: {}
+[14.348484] (-) TimerEvent: {}
+[14.448796] (-) TimerEvent: {}
+[14.549232] (-) TimerEvent: {}
+[14.649591] (-) TimerEvent: {}
+[14.750067] (-) TimerEvent: {}
+[14.850433] (-) TimerEvent: {}
+[14.950792] (-) TimerEvent: {}
+[15.051226] (-) TimerEvent: {}
+[15.151532] (-) TimerEvent: {}
+[15.251866] (-) TimerEvent: {}
+[15.352350] (-) TimerEvent: {}
+[15.452826] (-) TimerEvent: {}
+[15.553296] (-) TimerEvent: {}
+[15.653767] (-) TimerEvent: {}
+[15.754264] (-) TimerEvent: {}
+[15.854797] (-) TimerEvent: {}
+[15.955435] (-) TimerEvent: {}
+[16.056020] (-) TimerEvent: {}
+[16.156571] (-) TimerEvent: {}
+[16.256994] (-) TimerEvent: {}
+[16.357402] (-) TimerEvent: {}
+[16.457838] (-) TimerEvent: {}
+[16.558230] (-) TimerEvent: {}
+[16.658693] (-) TimerEvent: {}
+[16.759185] (-) TimerEvent: {}
+[16.859623] (-) TimerEvent: {}
+[16.960164] (-) TimerEvent: {}
+[17.060821] (-) TimerEvent: {}
+[17.161318] (-) TimerEvent: {}
+[17.261739] (-) TimerEvent: {}
+[17.362180] (-) TimerEvent: {}
+[17.462623] (-) TimerEvent: {}
+[17.562999] (-) TimerEvent: {}
+[17.663450] (-) TimerEvent: {}
+[17.763914] (-) TimerEvent: {}
+[17.864372] (-) TimerEvent: {}
+[17.964858] (-) TimerEvent: {}
+[18.065155] (-) TimerEvent: {}
+[18.165493] (-) TimerEvent: {}
+[18.265763] (-) TimerEvent: {}
+[18.366186] (-) TimerEvent: {}
+[18.466541] (-) TimerEvent: {}
+[18.567007] (-) TimerEvent: {}
+[18.667533] (-) TimerEvent: {}
+[18.767974] (-) TimerEvent: {}
+[18.868310] (-) TimerEvent: {}
+[18.968704] (-) TimerEvent: {}
+[19.069005] (-) TimerEvent: {}
+[19.169528] (-) TimerEvent: {}
+[19.270038] (-) TimerEvent: {}
+[19.370585] (-) TimerEvent: {}
+[19.471017] (-) TimerEvent: {}
+[19.571352] (-) TimerEvent: {}
+[19.671804] (-) TimerEvent: {}
+[19.772210] (-) TimerEvent: {}
+[19.872709] (-) TimerEvent: {}
+[19.973110] (-) TimerEvent: {}
+[20.073564] (-) TimerEvent: {}
+[20.173938] (-) TimerEvent: {}
+[20.274382] (-) TimerEvent: {}
+[20.374894] (-) TimerEvent: {}
+[20.475298] (-) TimerEvent: {}
+[20.575734] (-) TimerEvent: {}
+[20.676186] (-) TimerEvent: {}
+[20.776656] (-) TimerEvent: {}
+[20.877100] (-) TimerEvent: {}
+[20.977537] (-) TimerEvent: {}
+[21.077811] (-) TimerEvent: {}
+[21.178219] (-) TimerEvent: {}
+[21.278609] (-) TimerEvent: {}
+[21.379009] (-) TimerEvent: {}
+[21.479447] (-) TimerEvent: {}
+[21.579748] (-) TimerEvent: {}
+[21.680191] (-) TimerEvent: {}
+[21.780676] (-) TimerEvent: {}
+[21.881223] (-) TimerEvent: {}
+[21.981664] (-) TimerEvent: {}
+[22.082191] (-) TimerEvent: {}
+[22.182684] (-) TimerEvent: {}
+[22.283230] (-) TimerEvent: {}
+[22.383783] (-) TimerEvent: {}
+[22.484259] (-) TimerEvent: {}
+[22.584717] (-) TimerEvent: {}
+[22.685106] (-) TimerEvent: {}
+[22.785538] (-) TimerEvent: {}
+[22.886009] (-) TimerEvent: {}
+[22.986426] (-) TimerEvent: {}
+[23.086734] (-) TimerEvent: {}
+[23.187255] (-) TimerEvent: {}
+[23.287721] (-) TimerEvent: {}
+[23.388178] (-) TimerEvent: {}
+[23.488569] (-) TimerEvent: {}
+[23.588991] (-) TimerEvent: {}
+[23.689482] (-) TimerEvent: {}
+[23.790002] (-) TimerEvent: {}
+[23.890505] (-) TimerEvent: {}
+[23.991018] (-) TimerEvent: {}
+[24.091432] (-) TimerEvent: {}
+[24.191970] (-) TimerEvent: {}
+[24.292334] (-) TimerEvent: {}
+[24.392794] (-) TimerEvent: {}
+[24.493251] (-) TimerEvent: {}
+[24.593817] (-) TimerEvent: {}
+[24.694225] (-) TimerEvent: {}
+[24.794530] (-) TimerEvent: {}
+[24.894876] (-) TimerEvent: {}
+[24.995239] (-) TimerEvent: {}
+[25.095584] (-) TimerEvent: {}
+[25.195862] (-) TimerEvent: {}
+[25.296122] (-) TimerEvent: {}
+[25.396389] (-) TimerEvent: {}
+[25.496749] (-) TimerEvent: {}
+[25.597045] (-) TimerEvent: {}
+[25.697424] (-) TimerEvent: {}
+[25.797756] (-) TimerEvent: {}
+[25.898192] (-) TimerEvent: {}
+[25.998522] (-) TimerEvent: {}
+[26.098893] (-) TimerEvent: {}
+[26.199236] (-) TimerEvent: {}
+[26.299561] (-) TimerEvent: {}
+[26.399989] (-) TimerEvent: {}
+[26.500421] (-) TimerEvent: {}
+[26.600797] (-) TimerEvent: {}
+[26.701102] (-) TimerEvent: {}
+[26.801456] (-) TimerEvent: {}
+[26.901899] (-) TimerEvent: {}
+[27.002303] (-) TimerEvent: {}
+[27.102671] (-) TimerEvent: {}
+[27.202977] (-) TimerEvent: {}
+[27.303291] (-) TimerEvent: {}
+[27.403554] (-) TimerEvent: {}
+[27.503833] (-) TimerEvent: {}
+[27.604124] (-) TimerEvent: {}
+[27.704338] (-) TimerEvent: {}
+[27.804696] (-) TimerEvent: {}
+[27.905249] (-) TimerEvent: {}
+[28.005810] (-) TimerEvent: {}
+[28.106306] (-) TimerEvent: {}
+[28.206726] (-) TimerEvent: {}
+[28.307139] (-) TimerEvent: {}
+[28.407497] (-) TimerEvent: {}
+[28.507996] (-) TimerEvent: {}
+[28.608588] (-) TimerEvent: {}
+[28.709072] (-) TimerEvent: {}
+[28.809446] (-) TimerEvent: {}
+[28.909702] (-) TimerEvent: {}
+[29.010214] (-) TimerEvent: {}
+[29.110762] (-) TimerEvent: {}
+[29.211325] (-) TimerEvent: {}
+[29.311768] (-) TimerEvent: {}
+[29.412175] (-) TimerEvent: {}
+[29.512534] (-) TimerEvent: {}
+[29.612880] (-) TimerEvent: {}
+[29.713322] (-) TimerEvent: {}
+[29.813891] (-) TimerEvent: {}
+[29.914338] (-) TimerEvent: {}
+[30.014764] (-) TimerEvent: {}
+[30.115207] (-) TimerEvent: {}
+[30.215585] (-) TimerEvent: {}
+[30.316030] (-) TimerEvent: {}
+[30.416547] (-) TimerEvent: {}
+[30.516968] (-) TimerEvent: {}
+[30.617386] (-) TimerEvent: {}
+[30.717810] (-) TimerEvent: {}
+[30.818163] (-) TimerEvent: {}
+[30.918609] (-) TimerEvent: {}
+[31.018849] (-) TimerEvent: {}
+[31.119248] (-) TimerEvent: {}
+[31.219696] (-) TimerEvent: {}
+[31.320291] (-) TimerEvent: {}
+[31.420711] (-) TimerEvent: {}
+[31.447162] (bumbleb_bot) CommandEnded: {'returncode': 0}
+[31.448918] (bumbleb_bot) JobProgress: {'identifier': 'bumbleb_bot', 'progress': 'build'}
+[31.449667] (bumbleb_bot) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dk/bumbleb_ws/build/bumbleb_bot', '--', '-j16', '-l16'], 'cwd': '/home/dk/bumbleb_ws/build/bumbleb_bot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CODEX_CI', '1'), ('LANGUAGE', 'en_IN:en'), ('USER', 'dk'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dk/bumbleb_ws/install/zlac_drive/lib:/home/dk/rosbridge_ws/install/rosbridge_test_msgs/lib:/home/dk/rosbridge_ws/install/rosbridge_msgs/lib:/home/dk/rosbridge_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins'), ('HOME', '/home/dk'), ('OLDPWD', '/home/dk'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2091'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/dk/rosbridge_ws/install:/home/dk/bumbleb_ws/install'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dk'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dk'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/dk/.codex/packages/standalone/releases/0.154.0-x86_64-unknown-linux-musl/codex-path:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/bin:/home/dk/.codex/tmp/arg0/codex-arg0zuTLE4:/home/dk/.codex/packages/standalone/releases/0.154.0-x86_64-unknown-linux-musl/codex-path:/opt/ros/humble/bin:/home/dk/.npm-global/bin:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dk-LOQ-15IRX9:@/tmp/.ICE-unix/2064,unix/dk-LOQ-15IRX9:/tmp/.ICE-unix/2064'), ('CODEX_VERSION', '0.154.0'), ('CODEX_SESSION_ID', '01a0b537-9d59-7bf2-99e4-f53690f4ef16'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8ccfab18_7848_4e8e_8035_8b377c103c62'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.98'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/home/dk/bumbleb_ws/install/zlac_drive:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '01a0b537-9d59-7bf2-99e4-f53690f4ef16'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dk/bumbleb_ws/build/bumbleb_bot'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/dk/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dk/rosbridge_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_server/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_msgs/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosapi/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/opt/ros/humble')]), 'shell': False}
+[31.520840] (-) TimerEvent: {}
+[31.527486] (bumbleb_bot) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target bumbleb_drivetrain_node\n'}
+[31.551442] (bumbleb_bot) StdoutLine: {'line': b'[100%] Built target bumbleb_drivetrain_node\n'}
+[31.570006] (bumbleb_bot) CommandEnded: {'returncode': 0}
+[31.571691] (bumbleb_bot) JobProgress: {'identifier': 'bumbleb_bot', 'progress': 'install'}
+[31.571800] (bumbleb_bot) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dk/bumbleb_ws/build/bumbleb_bot'], 'cwd': '/home/dk/bumbleb_ws/build/bumbleb_bot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CODEX_CI', '1'), ('LANGUAGE', 'en_IN:en'), ('USER', 'dk'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dk/bumbleb_ws/install/zlac_drive/lib:/home/dk/rosbridge_ws/install/rosbridge_test_msgs/lib:/home/dk/rosbridge_ws/install/rosbridge_msgs/lib:/home/dk/rosbridge_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins'), ('HOME', '/home/dk'), ('OLDPWD', '/home/dk'), ('DESKTOP_SESSION', 'ubuntu'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2091'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/dk/rosbridge_ws/install:/home/dk/bumbleb_ws/install'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dk'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dk'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo/../../share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/dk/.codex/packages/standalone/releases/0.154.0-x86_64-unknown-linux-musl/codex-path:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/bin:/home/dk/.codex/tmp/arg0/codex-arg0zuTLE4:/home/dk/.codex/packages/standalone/releases/0.154.0-x86_64-unknown-linux-musl/codex-path:/opt/ros/humble/bin:/home/dk/.npm-global/bin:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/.local/bin:/home/dk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dk-LOQ-15IRX9:@/tmp/.ICE-unix/2064,unix/dk-LOQ-15IRX9:/tmp/.ICE-unix/2064'), ('CODEX_VERSION', '0.154.0'), ('CODEX_SESSION_ID', '01a0b537-9d59-7bf2-99e4-f53690f4ef16'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8ccfab18_7848_4e8e_8035_8b377c103c62'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.98'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/home/dk/bumbleb_ws/install/zlac_drive:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '01a0b537-9d59-7bf2-99e4-f53690f4ef16'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo/../../share/gazebo-11:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dk/bumbleb_ws/build/bumbleb_bot'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/dk/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dk/rosbridge_ws/install/rosbridge_test_msgs/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_server/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_msgs/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosapi/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosbridge_library/local/lib/python3.10/dist-packages:/home/dk/rosbridge_ws/install/rosapi_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dk/bumbleb_ws/install/zlac_drive:/home/dk/rosbridge_ws/install/rplidar_ros:/home/dk/rosbridge_ws/install/rosbridge_test_msgs:/home/dk/rosbridge_ws/install/rosbridge_suite:/home/dk/rosbridge_ws/install/rosbridge_server:/home/dk/rosbridge_ws/install/rosbridge_msgs:/home/dk/rosbridge_ws/install/rosapi:/home/dk/rosbridge_ws/install/rosbridge_library:/home/dk/rosbridge_ws/install/rosapi_msgs:/home/dk/bumbleb_ws/install/bumbleb_bot:/opt/ros/humble')]), 'shell': False}
+[31.586003] (bumbleb_bot) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[31.587113] (bumbleb_bot) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[31.587501] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/lib/bumbleb_bot/bumbleb_drivetrain_node\n'}
+[31.588457] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/base/base.xacro\n'}
+[31.589298] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/bumbleb.urdf.xacro\n'}
+[31.589452] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/common/inertial_macros.xacro\n'}
+[31.589586] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/common/materials.xacro\n'}
+[31.590095] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/control/bumbleb.ros2_control.xacro\n'}
+[31.590528] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/control/real_hardware.xacro\n'}
+[31.590833] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/control/simulation.xacro\n'}
+[31.590936] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/sensors/lidar.xacro\n'}
+[31.591029] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/wheels/wheels.xacro\n'}
+[31.591127] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/bringup.launch.py\n'}
+[31.591221] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/lidar.launch.py\n'}
+[31.591310] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/localization.launch.py\n'}
+[31.591401] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/mapping.launch.py\n'}
+[31.591495] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/navigation.launch.py\n'}
+[31.591589] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/real_robot.launch.py\n'}
+[31.591681] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/rosbridge.launch.py\n'}
+[31.591771] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/rsp.launch.py\n'}
+[31.591861] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/simulation.launch.py\n'}
+[31.591953] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/slam.launch.py\n'}
+[31.592545] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/teleop.launch.py\n'}
+[31.592774] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/config/controllers.yaml\n'}
+[31.592877] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/config/drivetrain.yaml\n'}
+[31.592977] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/config/lidar.yaml\n'}
+[31.593072] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/config/localization.yaml\n'}
+[31.593172] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/config/nav2.yaml\n'}
+[31.593271] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/config/slam.yaml\n'}
+[31.593501] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/rviz/navigation.rviz\n'}
+[31.593595] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/rviz/robot.rviz\n'}
+[31.593686] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/rviz/simulation.rviz\n'}
+[31.593780] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/rviz/slam.rviz\n'}
+[31.593872] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/worlds/obstacle.world\n'}
+[31.593966] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/maps/.gitkeep\n'}
+[31.594226] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/maps/warehouse_main.pgm\n'}
+[31.594329] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/maps/warehouse_main.yaml\n'}
+[31.594424] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/lib/bumbleb_bot/system_manager_node.py\n'}
+[31.594672] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/lib/bumbleb_bot/location_manager_node.py\n'}
+[31.594764] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/ament_index/resource_index/package_run_dependencies/bumbleb_bot\n'}
+[31.594944] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/ament_index/resource_index/parent_prefix_path/bumbleb_bot\n'}
+[31.595181] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/environment/ament_prefix_path.sh\n'}
+[31.595410] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/environment/ament_prefix_path.dsv\n'}
+[31.595639] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/environment/path.sh\n'}
+[31.595860] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/environment/path.dsv\n'}
+[31.596073] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/local_setup.bash\n'}
+[31.596292] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/local_setup.sh\n'}
+[31.596500] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/local_setup.zsh\n'}
+[31.596702] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/local_setup.dsv\n'}
+[31.596876] (bumbleb_bot) StdoutLine: {'line': b'-- Symlinking: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/package.dsv\n'}
+[31.614658] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/ament_index/resource_index/packages/bumbleb_bot\n'}
+[31.615104] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/cmake/bumbleb_botConfig.cmake\n'}
+[31.615250] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/cmake/bumbleb_botConfig-version.cmake\n'}
+[31.615594] (bumbleb_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/package.xml\n'}
+[31.620953] (-) TimerEvent: {}
+[31.721308] (-) TimerEvent: {}
+[31.821713] (-) TimerEvent: {}
+[31.922199] (-) TimerEvent: {}
+[32.022630] (-) TimerEvent: {}
+[32.123038] (-) TimerEvent: {}
+[32.223500] (-) TimerEvent: {}
+[32.324069] (-) TimerEvent: {}
+[32.424562] (-) TimerEvent: {}
+[32.525027] (-) TimerEvent: {}
+[32.625393] (-) TimerEvent: {}
+[32.725667] (-) TimerEvent: {}
+[32.825937] (-) TimerEvent: {}
+[32.926292] (-) TimerEvent: {}
+[33.026706] (-) TimerEvent: {}
+[33.127077] (-) TimerEvent: {}
+[33.227520] (-) TimerEvent: {}
+[33.327902] (-) TimerEvent: {}
+[33.428320] (-) TimerEvent: {}
+[33.528718] (-) TimerEvent: {}
+[33.628998] (-) TimerEvent: {}
+[33.729297] (-) TimerEvent: {}
+[33.829619] (-) TimerEvent: {}
+[33.930068] (-) TimerEvent: {}
+[34.030442] (-) TimerEvent: {}
+[34.130767] (-) TimerEvent: {}
+[34.231072] (-) TimerEvent: {}
+[34.331396] (-) TimerEvent: {}
+[34.431700] (-) TimerEvent: {}
+[34.532167] (-) TimerEvent: {}
+[34.632472] (-) TimerEvent: {}
+[34.732765] (-) TimerEvent: {}
+[34.833078] (-) TimerEvent: {}
+[34.933477] (-) TimerEvent: {}
+[35.033951] (-) TimerEvent: {}
+[35.134447] (-) TimerEvent: {}
+[35.234883] (-) TimerEvent: {}
+[35.335340] (-) TimerEvent: {}
+[35.435763] (-) TimerEvent: {}
+[35.536195] (-) TimerEvent: {}
+[35.636632] (-) TimerEvent: {}
+[35.736997] (-) TimerEvent: {}
+[35.837294] (-) TimerEvent: {}
+[35.937563] (-) TimerEvent: {}
+[36.037925] (-) TimerEvent: {}
+[36.138217] (-) TimerEvent: {}
+[36.238427] (-) TimerEvent: {}
+[36.338634] (-) TimerEvent: {}
+[36.438900] (-) TimerEvent: {}
+[36.539386] (-) TimerEvent: {}
+[36.639715] (-) TimerEvent: {}
+[36.739997] (-) TimerEvent: {}
+[36.840419] (-) TimerEvent: {}
+[36.940899] (-) TimerEvent: {}
+[37.041336] (-) TimerEvent: {}
+[37.141656] (-) TimerEvent: {}
+[37.242200] (-) TimerEvent: {}
+[37.342521] (-) TimerEvent: {}
+[37.442782] (-) TimerEvent: {}
+[37.543030] (-) TimerEvent: {}
+[37.643320] (-) TimerEvent: {}
+[37.743625] (-) TimerEvent: {}
+[37.844002] (-) TimerEvent: {}
+[37.944461] (-) TimerEvent: {}
+[38.044904] (-) TimerEvent: {}
+[38.145359] (-) TimerEvent: {}
+[38.245733] (-) TimerEvent: {}
+[38.346242] (-) TimerEvent: {}
+[38.446673] (-) TimerEvent: {}
+[38.547059] (-) TimerEvent: {}
+[38.647364] (-) TimerEvent: {}
+[38.747651] (-) TimerEvent: {}
+[38.848045] (-) TimerEvent: {}
+[38.948338] (-) TimerEvent: {}
+[39.048655] (-) TimerEvent: {}
+[39.148978] (-) TimerEvent: {}
+[39.249273] (-) TimerEvent: {}
+[39.349600] (-) TimerEvent: {}
+[39.449958] (-) TimerEvent: {}
+[39.550385] (-) TimerEvent: {}
+[39.650822] (-) TimerEvent: {}
+[39.751260] (-) TimerEvent: {}
+[39.851854] (-) TimerEvent: {}
+[39.952308] (-) TimerEvent: {}
+[40.052793] (-) TimerEvent: {}
+[40.153192] (-) TimerEvent: {}
+[40.253623] (-) TimerEvent: {}
+[40.353990] (-) TimerEvent: {}
+[40.454433] (-) TimerEvent: {}
+[40.554817] (-) TimerEvent: {}
+[40.655314] (-) TimerEvent: {}
+[40.755695] (-) TimerEvent: {}
+[40.856083] (-) TimerEvent: {}
+[40.956341] (-) TimerEvent: {}
+[41.056596] (-) TimerEvent: {}
+[41.157096] (-) TimerEvent: {}
+[41.257586] (-) TimerEvent: {}
+[41.357957] (-) TimerEvent: {}
+[41.458477] (-) TimerEvent: {}
+[41.558825] (-) TimerEvent: {}
+[41.659321] (-) TimerEvent: {}
+[41.759746] (-) TimerEvent: {}
+[41.860204] (-) TimerEvent: {}
+[41.960759] (-) TimerEvent: {}
+[42.061235] (-) TimerEvent: {}
+[42.161686] (-) TimerEvent: {}
+[42.262169] (-) TimerEvent: {}
+[42.362629] (-) TimerEvent: {}
+[42.463040] (-) TimerEvent: {}
+[42.563548] (-) TimerEvent: {}
+[42.663868] (-) TimerEvent: {}
+[42.764375] (-) TimerEvent: {}
+[42.864762] (-) TimerEvent: {}
+[42.965260] (-) TimerEvent: {}
+[43.065575] (-) TimerEvent: {}
+[43.165875] (-) TimerEvent: {}
+[43.266441] (-) TimerEvent: {}
+[43.366983] (-) TimerEvent: {}
+[43.467356] (-) TimerEvent: {}
+[43.567828] (-) TimerEvent: {}
+[43.668340] (-) TimerEvent: {}
+[43.768838] (-) TimerEvent: {}
+[43.869320] (-) TimerEvent: {}
+[43.969645] (-) TimerEvent: {}
+[44.070083] (-) TimerEvent: {}
+[44.170481] (-) TimerEvent: {}
+[44.270823] (-) TimerEvent: {}
+[44.371203] (-) TimerEvent: {}
+[44.471529] (-) TimerEvent: {}
+[44.571922] (-) TimerEvent: {}
+[44.672386] (-) TimerEvent: {}
+[44.772725] (-) TimerEvent: {}
+[44.873227] (-) TimerEvent: {}
+[44.973693] (-) TimerEvent: {}
+[45.074001] (-) TimerEvent: {}
+[45.174173] (-) TimerEvent: {}
+[45.274345] (-) TimerEvent: {}
+[45.374465] (-) TimerEvent: {}
+[45.474564] (-) TimerEvent: {}
+[45.574673] (-) TimerEvent: {}
+[45.674822] (-) TimerEvent: {}
+[45.774974] (-) TimerEvent: {}
+[45.875122] (-) TimerEvent: {}
+[45.975246] (-) TimerEvent: {}
+[46.075356] (-) TimerEvent: {}
+[46.175500] (-) TimerEvent: {}
+[46.275774] (-) TimerEvent: {}
+[46.376147] (-) TimerEvent: {}
+[46.476601] (-) TimerEvent: {}
+[46.577008] (-) TimerEvent: {}
+[46.677413] (-) TimerEvent: {}
+[46.777711] (-) TimerEvent: {}
+[46.877935] (-) TimerEvent: {}
+[46.978294] (-) TimerEvent: {}
+[47.078750] (-) TimerEvent: {}
+[47.179290] (-) TimerEvent: {}
+[47.279800] (-) TimerEvent: {}
+[47.380259] (-) TimerEvent: {}
+[47.480581] (-) TimerEvent: {}
+[47.580958] (-) TimerEvent: {}
+[47.681277] (-) TimerEvent: {}
+[47.781559] (-) TimerEvent: {}
+[47.881738] (-) TimerEvent: {}
+[47.981884] (-) TimerEvent: {}
+[48.082169] (-) TimerEvent: {}
+[48.182397] (-) TimerEvent: {}
+[48.282664] (-) TimerEvent: {}
+[48.382913] (-) TimerEvent: {}
+[48.483295] (-) TimerEvent: {}
+[48.583704] (-) TimerEvent: {}
+[48.684083] (-) TimerEvent: {}
+[48.784319] (-) TimerEvent: {}
+[48.884481] (-) TimerEvent: {}
+[48.984728] (-) TimerEvent: {}
+[49.084986] (-) TimerEvent: {}
+[49.185425] (-) TimerEvent: {}
+[49.285850] (-) TimerEvent: {}
+[49.386243] (-) TimerEvent: {}
+[49.486617] (-) TimerEvent: {}
+[49.587033] (-) TimerEvent: {}
+[49.687486] (-) TimerEvent: {}
+[49.787889] (-) TimerEvent: {}
+[49.888272] (-) TimerEvent: {}
+[49.988680] (-) TimerEvent: {}
+[50.089166] (-) TimerEvent: {}
+[50.189454] (-) TimerEvent: {}
+[50.289765] (-) TimerEvent: {}
+[50.390276] (-) TimerEvent: {}
+[50.490629] (-) TimerEvent: {}
+[50.591220] (-) TimerEvent: {}
+[50.691615] (-) TimerEvent: {}
+[50.792024] (-) TimerEvent: {}
+[50.892559] (-) TimerEvent: {}
+[50.993051] (-) TimerEvent: {}
+[51.093510] (-) TimerEvent: {}
+[51.193998] (-) TimerEvent: {}
+[51.294442] (-) TimerEvent: {}
+[51.394929] (-) TimerEvent: {}
+[51.495394] (-) TimerEvent: {}
+[51.595857] (-) TimerEvent: {}
+[51.696254] (-) TimerEvent: {}
+[51.796694] (-) TimerEvent: {}
+[51.897021] (-) TimerEvent: {}
+[51.997380] (-) TimerEvent: {}
+[52.097758] (-) TimerEvent: {}
+[52.198034] (-) TimerEvent: {}
+[52.298517] (-) TimerEvent: {}
+[52.398828] (-) TimerEvent: {}
+[52.499186] (-) TimerEvent: {}
+[52.599547] (-) TimerEvent: {}
+[52.699881] (-) TimerEvent: {}
+[52.800071] (-) TimerEvent: {}
+[52.900287] (-) TimerEvent: {}
+[53.000531] (-) TimerEvent: {}
+[53.100772] (-) TimerEvent: {}
+[53.201100] (-) TimerEvent: {}
+[53.301325] (-) TimerEvent: {}
+[53.401537] (-) TimerEvent: {}
+[53.501850] (-) TimerEvent: {}
+[53.602160] (-) TimerEvent: {}
+[53.702376] (-) TimerEvent: {}
+[53.802592] (-) TimerEvent: {}
+[53.902950] (-) TimerEvent: {}
+[54.003293] (-) TimerEvent: {}
+[54.103672] (-) TimerEvent: {}
+[54.204040] (-) TimerEvent: {}
+[54.304327] (-) TimerEvent: {}
+[54.404717] (-) TimerEvent: {}
+[54.505193] (-) TimerEvent: {}
+[54.605537] (-) TimerEvent: {}
+[54.705906] (-) TimerEvent: {}
+[54.806212] (-) TimerEvent: {}
+[54.906581] (-) TimerEvent: {}
+[55.007004] (-) TimerEvent: {}
+[55.107435] (-) TimerEvent: {}
+[55.207815] (-) TimerEvent: {}
+[55.308165] (-) TimerEvent: {}
+[55.408492] (-) TimerEvent: {}
+[55.508789] (-) TimerEvent: {}
+[55.609141] (-) TimerEvent: {}
+[55.709432] (-) TimerEvent: {}
+[55.809777] (-) TimerEvent: {}
+[55.910174] (-) TimerEvent: {}
+[56.010580] (-) TimerEvent: {}
+[56.111013] (-) TimerEvent: {}
+[56.211500] (-) TimerEvent: {}
+[56.311958] (-) TimerEvent: {}
+[56.412458] (-) TimerEvent: {}
+[56.512821] (-) TimerEvent: {}
+[56.613183] (-) TimerEvent: {}
+[56.713608] (-) TimerEvent: {}
+[56.814164] (-) TimerEvent: {}
+[56.914562] (-) TimerEvent: {}
+[57.014943] (-) TimerEvent: {}
+[57.115274] (-) TimerEvent: {}
+[57.215598] (-) TimerEvent: {}
+[57.315960] (-) TimerEvent: {}
+[57.416347] (-) TimerEvent: {}
+[57.516759] (-) TimerEvent: {}
+[57.617198] (-) TimerEvent: {}
+[57.717575] (-) TimerEvent: {}
+[57.817928] (-) TimerEvent: {}
+[57.918347] (-) TimerEvent: {}
+[58.018723] (-) TimerEvent: {}
+[58.119053] (-) TimerEvent: {}
+[58.219450] (-) TimerEvent: {}
+[58.319813] (-) TimerEvent: {}
+[58.420230] (-) TimerEvent: {}
+[58.520603] (-) TimerEvent: {}
+[58.620941] (-) TimerEvent: {}
+[58.721401] (-) TimerEvent: {}
+[58.821875] (-) TimerEvent: {}
+[58.922280] (-) TimerEvent: {}
+[59.022665] (-) TimerEvent: {}
+[59.123075] (-) TimerEvent: {}
+[59.223514] (-) TimerEvent: {}
+[59.324020] (-) TimerEvent: {}
+[59.424526] (-) TimerEvent: {}
+[59.524980] (-) TimerEvent: {}
+[59.625486] (-) TimerEvent: {}
+[59.725944] (-) TimerEvent: {}
+[59.826450] (-) TimerEvent: {}
+[59.926874] (-) TimerEvent: {}
+[60.027310] (-) TimerEvent: {}
+[60.127676] (-) TimerEvent: {}
+[60.227960] (-) TimerEvent: {}
+[60.328286] (-) TimerEvent: {}
+[60.428643] (-) TimerEvent: {}
+[60.528967] (-) TimerEvent: {}
+[60.629240] (-) TimerEvent: {}
+[60.729617] (-) TimerEvent: {}
+[60.830110] (-) TimerEvent: {}
+[60.930760] (-) TimerEvent: {}
+[61.031238] (-) TimerEvent: {}
+[61.131683] (-) TimerEvent: {}
+[61.232075] (-) TimerEvent: {}
+[61.332490] (-) TimerEvent: {}
+[61.433009] (-) TimerEvent: {}
+[61.462404] (bumbleb_bot) CommandEnded: {'returncode': 0}
+[61.481459] (bumbleb_bot) JobEnded: {'identifier': 'bumbleb_bot', 'rc': 0}
+[61.482096] (-) EventReactorShutdown: {}

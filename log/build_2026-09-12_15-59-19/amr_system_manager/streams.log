@@ -1,0 +1,27 @@
+[0.880s] Invoking command in '/home/dk/bumbleb_ws/build/amr_system_manager': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/amr_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/amr_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/amr_interfaces/lib:/home/dk/bumbleb_ws/install/zlac_drive/lib:/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosbridge_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/build/amr_system_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dk/bumbleb_ws/install/amr_system_manager/lib/python3.10/site-packages:/home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/dk/bumbleb_ws/build/amr_system_manager/build --no-deps symlink_data
+[1.073s] running develop
+[1.177s] running egg_info
+[1.177s] creating amr_system_manager.egg-info
+[1.177s] writing amr_system_manager.egg-info/PKG-INFO
+[1.177s] writing dependency_links to amr_system_manager.egg-info/dependency_links.txt
+[1.177s] writing entry points to amr_system_manager.egg-info/entry_points.txt
+[1.177s] writing requirements to amr_system_manager.egg-info/requires.txt
+[1.177s] writing top-level names to amr_system_manager.egg-info/top_level.txt
+[1.177s] writing manifest file 'amr_system_manager.egg-info/SOURCES.txt'
+[1.178s] reading manifest file 'amr_system_manager.egg-info/SOURCES.txt'
+[1.178s] writing manifest file 'amr_system_manager.egg-info/SOURCES.txt'
+[1.179s] running build_ext
+[1.179s] Creating /home/dk/bumbleb_ws/install/amr_system_manager/lib/python3.10/site-packages/amr-system-manager.egg-link (link to .)
+[1.180s] Installing system_manager_node script to /home/dk/bumbleb_ws/install/amr_system_manager/lib/amr_system_manager
+[1.180s] 
+[1.180s] Installed /home/dk/bumbleb_ws/build/amr_system_manager
+[1.180s] running symlink_data
+[1.180s] creating /home/dk/bumbleb_ws/install/amr_system_manager/share/ament_index
+[1.180s] creating /home/dk/bumbleb_ws/install/amr_system_manager/share/ament_index/resource_index
+[1.180s] creating /home/dk/bumbleb_ws/install/amr_system_manager/share/ament_index/resource_index/packages
+[1.180s] symbolically linking /home/dk/bumbleb_ws/build/amr_system_manager/resource/amr_system_manager -> /home/dk/bumbleb_ws/install/amr_system_manager/share/ament_index/resource_index/packages
+[1.181s] symbolically linking /home/dk/bumbleb_ws/build/amr_system_manager/package.xml -> /home/dk/bumbleb_ws/install/amr_system_manager/share/amr_system_manager
+[1.181s] creating /home/dk/bumbleb_ws/install/amr_system_manager/share/amr_system_manager/launch
+[1.181s] symbolically linking /home/dk/bumbleb_ws/build/amr_system_manager/launch/system_manager.launch.py -> /home/dk/bumbleb_ws/install/amr_system_manager/share/amr_system_manager/launch
+[1.181s] creating /home/dk/bumbleb_ws/install/amr_system_manager/share/amr_system_manager/config
+[1.199s] Invoked command in '/home/dk/bumbleb_ws/build/amr_system_manager' returned '0': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/amr_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/amr_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/amr_interfaces/lib:/home/dk/bumbleb_ws/install/zlac_drive/lib:/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosbridge_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/build/amr_system_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dk/bumbleb_ws/install/amr_system_manager/lib/python3.10/site-packages:/home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/dk/bumbleb_ws/build/amr_system_manager/build --no-deps symlink_data

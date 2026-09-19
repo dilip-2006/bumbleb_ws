@@ -1,0 +1,12 @@
+-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/src/bumbleb_bot':
+ - /opt/ros/humble/bin/ament_uncrustify --xunit-file /home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/uncrustify.xunit.xml
+
+No code style divergence in file 'include/bumbleb_bot/drivetrain_node.hpp'
+
+No code style divergence in file 'src/drivetrain_node.cpp'
+
+No problems found
+
+
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/uncrustify.xunit.xml'

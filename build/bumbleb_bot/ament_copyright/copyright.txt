@@ -1,0 +1,25 @@
+-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/src/bumbleb_bot':
+ - /opt/ros/humble/bin/ament_copyright --xunit-file /home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/copyright.xunit.xml
+
+include/bumbleb_bot/drivetrain_node.hpp: could not find copyright notice
+launch/bringup.launch.py: could not find copyright notice
+launch/lidar.launch.py: could not find copyright notice
+launch/localization.launch.py: could not find copyright notice
+launch/mapping.launch.py: could not find copyright notice
+launch/navigation.launch.py: could not find copyright notice
+launch/real_robot.launch.py: could not find copyright notice
+launch/rosbridge.launch.py: could not find copyright notice
+launch/rsp.launch.py: could not find copyright notice
+launch/simulation.launch.py: could not find copyright notice
+launch/slam.launch.py: could not find copyright notice
+launch/teleop.launch.py: could not find copyright notice
+scripts/location_manager_node.py: could not find copyright notice
+scripts/system_manager_node.py: could not find copyright notice
+src/drivetrain_node.cpp: could not find copyright notice
+test/test_launch.py: could not find copyright notice
+test/test_urdf.py: could not find copyright notice
+17 errors, checked 17 files
+
+
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/bumbleb_bot/test_results/bumbleb_bot/copyright.xunit.xml'

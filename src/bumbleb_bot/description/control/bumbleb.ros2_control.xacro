@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!--
+    Generic BumbleB ros2_control definition.
+
+    Hardware-specific parameters are supplied by:
+      - real_hardware.xacro
+      - simulation.xacro
+
+    This file must not duplicate robot geometry.
+  -->
+
+  <ros2_control
+    name="BumbleBSystem"
+    type="system">
+
+    <hardware>
+
+      <plugin>zlac_drive/ZlacSystemHardware</plugin>
+
+      <!-- Serial / Modbus configuration -->
+      <param name="serial_port">
+        ${serial_port}
+      </param>
+
+      <param name="baud_rate">
+        ${baud_rate}
+      </param>
+
+      <param name="slave_id">
+        ${slave_id}
+      </param>
+
+      <param name="encoder_cpr">
+        ${encoder_cpr}
+      </param>
+
+      <!--
+        CRITICAL: encoder_cpr_verified must be explicitly "true" for
+        position feedback to be used. Supplying encoder_cpr alone is
+        NOT sufficient - see zlac_drive/registers.hpp and
+        zlac_drive/README.md for the calibration procedure.
+      -->
+      <param name="encoder_cpr_verified">
+        ${encoder_cpr_verified}
+      </param>
+
+      <param name="gear_ratio">
+        ${gear_ratio}
+      </param>
+
+      <!-- Communication timeout, milliseconds -->
+      <param name="timeout_ms">
+        ${timeout_ms}
+      </param>
+
+      <!-- Enforced safety limit: must not exceed motor peak RPM (350) -->
+      <param name="max_velocity_rpm">
+        ${max_velocity_rpm}
+      </param>
+
+      <!-- Explicit direction mapping - confirm on real hardware -->
+      <param name="left_motor_inverted">
+        ${left_motor_inverted}
+      </param>
+
+      <param name="right_motor_inverted">
+        ${right_motor_inverted}
+      </param>
+
+    </hardware>
+
+
+    <!-- LEFT DRIVE WHEEL -->
+
+    <joint name="left_joint">
+
+      <command_interface name="velocity"/>
+
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+
+    </joint>
+
+
+    <!-- RIGHT DRIVE WHEEL -->
+
+    <joint name="right_joint">
+
+      <command_interface name="velocity"/>
+
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+
+    </joint>
+
+  </ros2_control>
+
+</robot>

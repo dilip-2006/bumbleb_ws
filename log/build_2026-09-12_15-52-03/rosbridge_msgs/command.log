@@ -1,0 +1,6 @@
+Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_msgs -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/rosbridge_msgs
+Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dk/bumbleb_ws/src/rosbridge_suite/rosbridge_msgs -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dk/bumbleb_ws/install/rosbridge_msgs
+Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dk/bumbleb_ws/build/rosbridge_msgs -- -j16 -l16
+Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dk/bumbleb_ws/build/rosbridge_msgs -- -j16 -l16
+Invoking command in '/home/dk/bumbleb_ws/build/rosbridge_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dk/bumbleb_ws/build/rosbridge_msgs
+Invoked command in '/home/dk/bumbleb_ws/build/rosbridge_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dk/bumbleb_ws/build/rosbridge_msgs

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite
+  name="bumbleb_bot.pep257"
+  tests="48"
+  errors="0"
+  failures="40"
+  time="0.198"
+>
+  <testcase
+    name="./launch/bringup.launch.py"
+    classname="bumbleb_bot.pep257"/>
+  <testcase
+    name="D202 (./launch/lidar.launch.py:8)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D202: No blank lines allowed after function docstring (found 1)"/>
+  </testcase>
+  <testcase
+    name="D205 (./launch/lidar.launch.py:8)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D205: 1 blank line required between summary line and description (found 0)"/>
+  </testcase>
+  <testcase
+    name="D209 (./launch/lidar.launch.py:8)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D209: Multi-line docstring closing quotes should be on a separate line"/>
+  </testcase>
+  <testcase
+    name="D213 (./launch/lidar.launch.py:8)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D213: Multi-line docstring summary should start at the second line"/>
+  </testcase>
+  <testcase
+    name="D400 (./launch/lidar.launch.py:8)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D400: First line should end with a period (not 'n')"/>
+  </testcase>
+  <testcase
+    name="D415 (./launch/lidar.launch.py:8)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D415: First line should end with a period, question mark, or exclamation point (not 'n')"/>
+  </testcase>
+  <testcase
+    name="./launch/localization.launch.py"
+    classname="bumbleb_bot.pep257"/>
+  <testcase
+    name="./launch/mapping.launch.py"
+    classname="bumbleb_bot.pep257"/>
+  <testcase
+    name="./launch/navigation.launch.py"
+    classname="bumbleb_bot.pep257"/>
+  <testcase
+    name="D202 (./launch/real_robot.launch.py:15)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D202: No blank lines allowed after function docstring (found 1)"/>
+  </testcase>
+  <testcase
+    name="D205 (./launch/real_robot.launch.py:15)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D205: 1 blank line required between summary line and description (found 0)"/>
+  </testcase>
+  <testcase
+    name="D209 (./launch/real_robot.launch.py:15)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D209: Multi-line docstring closing quotes should be on a separate line"/>
+  </testcase>
+  <testcase
+    name="D213 (./launch/real_robot.launch.py:15)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D213: Multi-line docstring summary should start at the second line"/>
+  </testcase>
+  <testcase
+    name="D400 (./launch/real_robot.launch.py:15)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D400: First line should end with a period (not 'e')"/>
+  </testcase>
+  <testcase
+    name="D415 (./launch/real_robot.launch.py:15)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D415: First line should end with a period, question mark, or exclamation point (not 'e')"/>
+  </testcase>
+  <testcase
+    name="./launch/rosbridge.launch.py"
+    classname="bumbleb_bot.pep257"/>
+  <testcase
+    name="D202 (./launch/rsp.launch.py:14)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D202: No blank lines allowed after function docstring (found 1)"/>
+  </testcase>
+  <testcase
+    name="D205 (./launch/rsp.launch.py:14)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D205: 1 blank line required between summary line and description (found 0)"/>
+  </testcase>
+  <testcase
+    name="D209 (./launch/rsp.launch.py:14)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D209: Multi-line docstring closing quotes should be on a separate line"/>
+  </testcase>
+  <testcase
+    name="D213 (./launch/rsp.launch.py:14)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D213: Multi-line docstring summary should start at the second line"/>
+  </testcase>
+  <testcase
+    name="D400 (./launch/rsp.launch.py:14)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D400: First line should end with a period (not 'F')"/>
+  </testcase>
+  <testcase
+    name="D415 (./launch/rsp.launch.py:14)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D415: First line should end with a period, question mark, or exclamation point (not 'F')"/>
+  </testcase>
+  <testcase
+    name="D202 (./launch/simulation.launch.py:18)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D202: No blank lines allowed after function docstring (found 1)"/>
+  </testcase>
+  <testcase
+    name="D205 (./launch/simulation.launch.py:18)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D205: 1 blank line required between summary line and description (found 0)"/>
+  </testcase>
+  <testcase
+    name="D209 (./launch/simulation.launch.py:18)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D209: Multi-line docstring closing quotes should be on a separate line"/>
+  </testcase>
+  <testcase
+    name="D213 (./launch/simulation.launch.py:18)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D213: Multi-line docstring summary should start at the second line"/>
+  </testcase>
+  <testcase
+    name="D400 (./launch/simulation.launch.py:18)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D400: First line should end with a period (not 'e')"/>
+  </testcase>
+  <testcase
+    name="D415 (./launch/simulation.launch.py:18)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D415: First line should end with a period, question mark, or exclamation point (not 'e')"/>
+  </testcase>
+  <testcase
+    name="./launch/slam.launch.py"
+    classname="bumbleb_bot.pep257"/>
+  <testcase
+    name="./launch/teleop.launch.py"
+    classname="bumbleb_bot.pep257"/>
+  <testcase
+    name="D205 (./scripts/location_manager_node.py:2)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D205: 1 blank line required between summary line and description (found 0)"/>
+  </testcase>
+  <testcase
+    name="D400 (./scripts/location_manager_node.py:2)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D400: First line should end with a period (not 'e')"/>
+  </testcase>
+  <testcase
+    name="D415 (./scripts/location_manager_node.py:2)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D415: First line should end with a period, question mark, or exclamation point (not 'e')"/>
+  </testcase>
+  <testcase
+    name="D205 (./scripts/system_manager_node.py:2)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D205: 1 blank line required between summary line and description (found 0)"/>
+  </testcase>
+  <testcase
+    name="D400 (./scripts/system_manager_node.py:2)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D400: First line should end with a period (not 'e')"/>
+  </testcase>
+  <testcase
+    name="D415 (./scripts/system_manager_node.py:2)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D415: First line should end with a period, question mark, or exclamation point (not 'e')"/>
+  </testcase>
+  <testcase
+    name="D205 (./test/test_launch.py:20)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D205: 1 blank line required between summary line and description (found 0)"/>
+  </testcase>
+  <testcase
+    name="D209 (./test/test_launch.py:20)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D209: Multi-line docstring closing quotes should be on a separate line"/>
+  </testcase>
+  <testcase
+    name="D213 (./test/test_launch.py:20)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D213: Multi-line docstring summary should start at the second line"/>
+  </testcase>
+  <testcase
+    name="D400 (./test/test_launch.py:20)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D400: First line should end with a period (not 'l')"/>
+  </testcase>
+  <testcase
+    name="D415 (./test/test_launch.py:20)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D415: First line should end with a period, question mark, or exclamation point (not 'l')"/>
+  </testcase>
+  <testcase
+    name="D205 (./test/test_launch.py:39)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D205: 1 blank line required between summary line and description (found 0)"/>
+  </testcase>
+  <testcase
+    name="D209 (./test/test_launch.py:39)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D209: Multi-line docstring closing quotes should be on a separate line"/>
+  </testcase>
+  <testcase
+    name="D213 (./test/test_launch.py:39)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D213: Multi-line docstring summary should start at the second line"/>
+  </testcase>
+  <testcase
+    name="D400 (./test/test_launch.py:39)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D400: First line should end with a period (not 'e')"/>
+  </testcase>
+  <testcase
+    name="D415 (./test/test_launch.py:39)"
+    classname="bumbleb_bot.pep257"
+  >
+      <failure message="D415: First line should end with a period, question mark, or exclamation point (not 'e')"/>
+  </testcase>
+  <testcase
+    name="./test/test_urdf.py"
+    classname="bumbleb_bot.pep257"/>
+  <system-out>Checked files:
+* ./launch/bringup.launch.py
+* ./launch/lidar.launch.py
+* ./launch/localization.launch.py
+* ./launch/mapping.launch.py
+* ./launch/navigation.launch.py
+* ./launch/real_robot.launch.py
+* ./launch/rosbridge.launch.py
+* ./launch/rsp.launch.py
+* ./launch/simulation.launch.py
+* ./launch/slam.launch.py
+* ./launch/teleop.launch.py
+* ./scripts/location_manager_node.py
+* ./scripts/system_manager_node.py
+* ./test/test_launch.py
+* ./test/test_urdf.py</system-out>
+</testsuite>

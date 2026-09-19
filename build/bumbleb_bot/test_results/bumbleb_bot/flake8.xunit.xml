@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite
+  name="bumbleb_bot.flake8"
+  tests="63"
+  errors="0"
+  failures="63"
+  time="0.519"
+>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:49:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (123 &gt; 99 characters):&#10;        AMRState.OFF: [AMRState.BOOTING, AMRState.READY, AMRState.MAPPING, AMRState.LOCALIZATION, AMRState.EMERGENCY_STOP],&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:51:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (142 &gt; 99 characters):&#10;        AMRState.READY: [AMRState.MAPPING, AMRState.LOCALIZATION, AMRState.NAVIGATION, AMRState.OFF, AMRState.ERROR, AMRState.EMERGENCY_STOP],&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:52:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (119 &gt; 99 characters):&#10;        AMRState.MAPPING: [AMRState.MAP_SAVING, AMRState.READY, AMRState.OFF, AMRState.ERROR, AMRState.EMERGENCY_STOP],&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:53:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (119 &gt; 99 characters):&#10;        AMRState.MAP_SAVING: [AMRState.MAPPING, AMRState.READY, AMRState.OFF, AMRState.ERROR, AMRState.EMERGENCY_STOP],&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:54:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (142 &gt; 99 characters):&#10;        AMRState.LOCALIZATION: [AMRState.NAVIGATION, AMRState.MAPPING, AMRState.READY, AMRState.OFF, AMRState.ERROR, AMRState.EMERGENCY_STOP],&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:55:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (142 &gt; 99 characters):&#10;        AMRState.NAVIGATION: [AMRState.LOCALIZATION, AMRState.MAPPING, AMRState.READY, AMRState.OFF, AMRState.ERROR, AMRState.EMERGENCY_STOP],&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:95:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (112 &gt; 99 characters):&#10;                   f"Allowed targets: {[s.value for s in self.VALID_TRANSITIONS.get(self._current_state, [])]}")&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:105:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (101 &gt; 99 characters):&#10;        return True, f"Transitioned from {self._previous_state.value} to {self._current_state.value}"&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:107:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (108 &gt; 99 characters):&#10;    def trigger_emergency_stop(self, reason: str = "Operator Triggered Emergency Stop") -&gt; tuple[bool, str]:&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:277:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (123 &gt; 99 characters):&#10;        self.get_logger().info(f"AMR System Manager starting (use_sim_time={self.use_sim_time}, maps_dir={self.maps_dir})")&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:297:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (118 &gt; 99 characters):&#10;        self.sub_scan = self.create_subscription(LaserScan, "/scan", self._scan_cb, rclpy.qos.qos_profile_sensor_data)&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:300:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (119 &gt; 99 characters):&#10;        self.sub_map = self.create_subscription(OccupancyGrid, "/map", self._map_cb, rclpy.qos.qos_profile_sensor_data)&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:311:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (102 &gt; 99 characters):&#10;        self.srv_start_robot = self.create_service(Trigger, '/amr/start_robot', self._srv_start_robot)&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:313:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (108 &gt; 99 characters):&#10;        self.srv_start_mapping = self.create_service(Trigger, '/amr/start_mapping', self._srv_start_mapping)&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:314:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (105 &gt; 99 characters):&#10;        self.srv_stop_mapping = self.create_service(Trigger, '/amr/stop_mapping', self._srv_stop_mapping)&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:315:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (123 &gt; 99 characters):&#10;        self.srv_start_localization = self.create_service(Trigger, '/amr/start_localization', self._srv_start_localization)&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:316:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (120 &gt; 99 characters):&#10;        self.srv_stop_localization = self.create_service(Trigger, '/amr/stop_localization', self._srv_stop_localization)&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:317:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (117 &gt; 99 characters):&#10;        self.srv_start_navigation = self.create_service(Trigger, '/amr/start_navigation', self._srv_start_navigation)&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:318:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (114 &gt; 99 characters):&#10;        self.srv_stop_navigation = self.create_service(Trigger, '/amr/stop_navigation', self._srv_stop_navigation)&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:319:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (102 &gt; 99 characters):&#10;        self.srv_estop = self.create_service(Trigger, '/amr/emergency_stop', self._srv_emergency_stop)&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:320:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (120 &gt; 99 characters):&#10;        self.srv_reset_estop = self.create_service(Trigger, '/amr/reset_emergency_stop', self._srv_reset_emergency_stop)&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:321:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (105 &gt; 99 characters):&#10;        self.srv_system_reset = self.create_service(Trigger, '/amr/system_reset', self._srv_system_reset)&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:355:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (116 &gt; 99 characters):&#10;            can_tf = self.tf_buffer.can_transform(target_frame, source_frame, Time(), timeout=Duration(seconds=0.1))&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:398:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (106 &gt; 99 characters):&#10;            return False, "Invalid map name. Only letters, numbers, underscores, and hyphens are allowed."&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:422:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (110 &gt; 99 characters):&#10;                err_msg = proc.stderr.strip() or proc.stdout.strip() or "map_saver_cli returned non-zero code"&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:454:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (126 &gt; 99 characters):&#10;            "status": HealthStatus.OK if lidar_dt &lt; 1.5 else (HealthStatus.WARNING if lidar_dt &lt; 5.0 else HealthStatus.ERROR),&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:455:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (115 &gt; 99 characters):&#10;            "message": "LiDAR publishing normally (~10Hz)" if lidar_dt &lt; 1.5 else f"Delayed ({lidar_dt:.1f}s ago)",&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:462:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (124 &gt; 99 characters):&#10;            "status": HealthStatus.OK if odom_dt &lt; 1.0 else (HealthStatus.WARNING if odom_dt &lt; 4.0 else HealthStatus.ERROR),&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:463:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (108 &gt; 99 characters):&#10;            "message": "Odometry publishing normally" if odom_dt &lt; 1.0 else f"Delayed ({odom_dt:.1f}s ago)",&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:480:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (141 &gt; 99 characters):&#10;            "message": "Base TF tree valid" if (tf_odom_base and tf_base_lidar) else (msg_odom_base if not tf_odom_base else msg_base_lidar),&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:488:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (138 &gt; 99 characters):&#10;                HealthStatus.WARNING if self.state_machine.current_state in (AMRState.MAPPING, AMRState.LOCALIZATION) else HealthStatus.OK&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:490:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (102 &gt; 99 characters):&#10;            "message": "Occupancy grid available" if (self.map_received and map_dt &lt; 5.0) else "Idle",&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:501:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (105 &gt; 99 characters):&#10;            "status": HealthStatus.OK if self.supervisor.is_running("localization") else HealthStatus.OK,&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:506:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (105 &gt; 99 characters):&#10;            "status": HealthStatus.OK if self.supervisor.is_running("localization") else HealthStatus.OK,&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:511:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (103 &gt; 99 characters):&#10;            "status": HealthStatus.OK if self.supervisor.is_running("navigation") else HealthStatus.OK,&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:516:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (129 &gt; 99 characters):&#10;        has_error = any(v.get("status") == HealthStatus.ERROR for k, v in components.items() if k in ("lidar", "odometry", "tf"))&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:520:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (116 &gt; 99 characters):&#10;            "overall": HealthStatus.ERROR if has_error else (HealthStatus.WARNING if has_warn else HealthStatus.OK),&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:564:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (101 &gt; 99 characters):&#10;            elif action == "load_map" or action == "set_mode" and data.get("mode") == "LOCALIZATION":&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/system_manager_node.py:591:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (102 &gt; 99 characters):&#10;        if self.state_machine.current_state == AMRState.EMERGENCY_STOP and target != "EMERGENCY_STOP":&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/location_manager_node.py:77:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (106 &gt; 99 characters):&#10;                if isinstance(data, dict) and "locations" in data and isinstance(data["locations"], dict):&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/location_manager_node.py:114:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (126 &gt; 99 characters):&#10;    def save_location(self, name: str, loc_type: str, x: float, y: float, yaw: float, map_name: str = "") -&gt; tuple[bool, str]:&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/location_manager_node.py:198:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (108 &gt; 99 characters):&#10;        self.sub_amcl = self.create_subscription(PoseWithCovarianceStamped, '/amcl_pose', self._amcl_cb, 10)&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/location_manager_node.py:199:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (102 &gt; 99 characters):&#10;        self.sub_cmd = self.create_subscription(String, '/amr/location_command', self._command_cb, 10)&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/location_manager_node.py:200:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (105 &gt; 99 characters):&#10;        self.sub_state = self.create_subscription(String, '/amr/system_state', self._system_state_cb, 10)&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/location_manager_node.py:208:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (109 &gt; 99 characters):&#10;        self.srv_cancel_nav = self.create_service(Trigger, '/amr/cancel_navigation', self._handle_cancel_nav)&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/location_manager_node.py:339:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (112 &gt; 99 characters):&#10;            return False, "Nav2 action server /navigate_to_pose unavailable. Verify Navigation mode is running."&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/location_manager_node.py:358:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (111 &gt; 99 characters):&#10;        send_future = self.nav_action_client.send_goal_async(goal_msg, feedback_callback=self._nav_feedback_cb)&#10;"/>
+  </testcase>
+  <testcase
+    name="E302 (./launch/navigation.launch.py:8:1)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="expected 2 blank lines, found 1:&#10;def generate_launch_description():&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./launch/navigation.launch.py:13:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (104 &gt; 99 characters):&#10;        DeclareLaunchArgument("use_sim_time", default_value="true", description="Use simulation clock"),&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./launch/navigation.launch.py:15:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (102 &gt; 99 characters):&#10;            PythonLaunchDescriptionSource(os.path.join(nav2_share, "launch", "navigation_launch.py")),&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./launch/navigation.launch.py:16:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (114 &gt; 99 characters):&#10;            launch_arguments={"use_sim_time": LaunchConfiguration("use_sim_time"), "params_file": params}.items(),&#10;'/>
+  </testcase>
+  <testcase
+    name="E302 (./launch/rosbridge.launch.py:6:1)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="expected 2 blank lines, found 1:&#10;def generate_launch_description():&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./launch/simulation.launch.py:6:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="line too long (109 &gt; 99 characters):&#10;from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, RegisterEventHandler, TimerAction&#10;"/>
+  </testcase>
+  <testcase
+    name="E302 (./launch/bringup.launch.py:10:1)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="expected 2 blank lines, found 1:&#10;def generate_launch_description():&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./launch/bringup.launch.py:73:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (106 &gt; 99 characters):&#10;                PythonLaunchDescriptionSource(os.path.join(pkg_bumbleb, "launch", "real_robot.launch.py"))&#10;'/>
+  </testcase>
+  <testcase
+    name="E501 (./launch/bringup.launch.py:76:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (101 &gt; 99 characters):&#10;                PythonLaunchDescriptionSource(os.path.join(pkg_bumbleb, "launch", "lidar.launch.py"))&#10;'/>
+  </testcase>
+  <testcase
+    name="E302 (./launch/mapping.launch.py:8:1)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="expected 2 blank lines, found 1:&#10;def generate_launch_description():&#10;"/>
+  </testcase>
+  <testcase
+    name="E302 (./launch/slam.launch.py:8:1)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="expected 2 blank lines, found 1:&#10;def generate_launch_description():&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./launch/slam.launch.py:12:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (104 &gt; 99 characters):&#10;        DeclareLaunchArgument("use_sim_time", default_value="true", description="Use simulation clock"),&#10;'/>
+  </testcase>
+  <testcase
+    name="E302 (./launch/localization.launch.py:8:1)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="expected 2 blank lines, found 1:&#10;def generate_launch_description():&#10;"/>
+  </testcase>
+  <testcase
+    name="W293 (./launch/localization.launch.py:11:1)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="blank line contains whitespace:&#10;    &#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./launch/localization.launch.py:47:100)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message='line too long (112 &gt; 99 characters):&#10;            parameters=[{"autostart": True, "node_names": ["map_server", "amcl"], "use_sim_time": use_sim_time}]&#10;'/>
+  </testcase>
+  <testcase
+    name="W292 (./launch/rsp.launch.py:99:7)"
+    classname="bumbleb_bot.flake8"
+  >
+      <failure message="no newline at end of file:&#10;    ])"/>
+  </testcase>
+  <system-out>Checked files:
+* ./scripts/system_manager_node.py
+* ./scripts/location_manager_node.py
+* ./test/test_launch.py
+* ./test/test_urdf.py
+* ./launch/navigation.launch.py
+* ./launch/rosbridge.launch.py
+* ./launch/lidar.launch.py
+* ./launch/simulation.launch.py
+* ./launch/bringup.launch.py
+* ./launch/mapping.launch.py
+* ./launch/slam.launch.py
+* ./launch/teleop.launch.py
+* ./launch/localization.launch.py
+* ./launch/real_robot.launch.py
+* ./launch/rsp.launch.py</system-out>
+</testsuite>

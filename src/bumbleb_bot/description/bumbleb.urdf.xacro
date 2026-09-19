@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<robot
+  name="bumbleb"
+  xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ========================================================= -->
+  <!-- Common definitions                                        -->
+  <!-- ========================================================= -->
+
+  <xacro:include
+    filename="common/materials.xacro"/>
+
+  <xacro:include
+    filename="common/inertial_macros.xacro"/>
+
+
+  <!-- ========================================================= -->
+  <!-- Robot structure                                           -->
+  <!-- ========================================================= -->
+
+  <xacro:include
+    filename="base/base.xacro"/>
+
+  <xacro:include
+    filename="wheels/wheels.xacro"/>
+
+
+  <!-- ========================================================= -->
+  <!-- Sensors                                                   -->
+  <!-- ========================================================= -->
+
+  <xacro:include
+    filename="sensors/lidar.xacro"/>
+
+
+  <!-- ========================================================= -->
+  <!-- Hardware selection                                        -->
+  <!-- ========================================================= -->
+
+  <xacro:arg
+    name="use_sim"
+    default="false"/>
+
+  <xacro:if value="$(arg use_sim)">
+
+    <xacro:include
+      filename="control/simulation.xacro"/>
+
+  </xacro:if>
+
+  <xacro:unless value="$(arg use_sim)">
+
+    <xacro:include
+      filename="control/real_hardware.xacro"/>
+
+  </xacro:unless>
+
+</robot>

@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <ros2_control
+    name="BumbleBSimulationSystem"
+    type="system">
+
+    <hardware>
+      <!-- Gazebo Classic plugin supplied by ros-humble-gazebo-ros2-control. -->
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+
+    <joint name="left_joint">
+
+      <command_interface name="velocity"/>
+
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+
+    </joint>
+
+    <joint name="right_joint">
+
+      <command_interface name="velocity"/>
+
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+
+    </joint>
+
+  </ros2_control>
+
+  <!--
+    gazebo_ros2_control creates the controller_manager inside gzserver.
+    The controller YAML is loaded there rather than by a separate
+    ros2_control_node process.
+  -->
+  <gazebo>
+    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+      <parameters>$(find bumbleb_bot)/config/controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+  <!--
+    Gazebo Classic 2-D lidar. It is deliberately simulation-only: the real
+    robot's lidar is started by lidar.launch.py and must not be replaced by a
+    Gazebo sensor outside this launch.
+  -->
+  <gazebo reference="lidar_link">
+    <sensor name="bumbleb_lidar" type="ray">
+      <always_on>true</always_on>
+      <!-- Draw the scan fan in the Gazebo client for simulation debugging. -->
+      <visualize>true</visualize>
+      <update_rate>10</update_rate>
+      <!-- Gazebo ray-sensor +X is scan angle 0; base_link +X is forward. -->
+      <pose>0 0 0 0 0 0</pose>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14159265359</min_angle>
+            <max_angle>3.14159265359</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.12</min>
+          <max>12.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise type="gaussian">
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin filename="libgazebo_ros_ray_sensor.so" name="bumbleb_lidar_plugin">
+        <ros>
+          <remapping>~/out:=/scan</remapping>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>lidar_link</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+</robot>

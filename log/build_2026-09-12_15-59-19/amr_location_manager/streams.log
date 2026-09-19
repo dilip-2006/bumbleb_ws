@@ -1,0 +1,27 @@
+[0.894s] Invoking command in '/home/dk/bumbleb_ws/build/amr_location_manager': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/amr_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/amr_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/amr_interfaces/lib:/home/dk/bumbleb_ws/install/zlac_drive/lib:/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosbridge_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/build/amr_location_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dk/bumbleb_ws/install/amr_location_manager/lib/python3.10/site-packages:/home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/dk/bumbleb_ws/build/amr_location_manager/build --no-deps symlink_data
+[1.096s] running develop
+[1.224s] running egg_info
+[1.225s] creating amr_location_manager.egg-info
+[1.225s] writing amr_location_manager.egg-info/PKG-INFO
+[1.225s] writing dependency_links to amr_location_manager.egg-info/dependency_links.txt
+[1.225s] writing entry points to amr_location_manager.egg-info/entry_points.txt
+[1.225s] writing requirements to amr_location_manager.egg-info/requires.txt
+[1.225s] writing top-level names to amr_location_manager.egg-info/top_level.txt
+[1.225s] writing manifest file 'amr_location_manager.egg-info/SOURCES.txt'
+[1.226s] reading manifest file 'amr_location_manager.egg-info/SOURCES.txt'
+[1.227s] writing manifest file 'amr_location_manager.egg-info/SOURCES.txt'
+[1.230s] running build_ext
+[1.230s] Creating /home/dk/bumbleb_ws/install/amr_location_manager/lib/python3.10/site-packages/amr-location-manager.egg-link (link to .)
+[1.230s] Installing location_manager_node script to /home/dk/bumbleb_ws/install/amr_location_manager/lib/amr_location_manager
+[1.230s] 
+[1.230s] Installed /home/dk/bumbleb_ws/build/amr_location_manager
+[1.230s] running symlink_data
+[1.230s] creating /home/dk/bumbleb_ws/install/amr_location_manager/share/ament_index
+[1.231s] creating /home/dk/bumbleb_ws/install/amr_location_manager/share/ament_index/resource_index
+[1.231s] creating /home/dk/bumbleb_ws/install/amr_location_manager/share/ament_index/resource_index/packages
+[1.231s] symbolically linking /home/dk/bumbleb_ws/build/amr_location_manager/resource/amr_location_manager -> /home/dk/bumbleb_ws/install/amr_location_manager/share/ament_index/resource_index/packages
+[1.231s] symbolically linking /home/dk/bumbleb_ws/build/amr_location_manager/package.xml -> /home/dk/bumbleb_ws/install/amr_location_manager/share/amr_location_manager
+[1.231s] creating /home/dk/bumbleb_ws/install/amr_location_manager/share/amr_location_manager/launch
+[1.231s] symbolically linking /home/dk/bumbleb_ws/build/amr_location_manager/launch/location_manager.launch.py -> /home/dk/bumbleb_ws/install/amr_location_manager/share/amr_location_manager/launch
+[1.231s] creating /home/dk/bumbleb_ws/install/amr_location_manager/share/amr_location_manager/config
+[1.251s] Invoked command in '/home/dk/bumbleb_ws/build/amr_location_manager' returned '0': AMENT_PREFIX_PATH=/home/dk/bumbleb_ws/install/amr_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dk/bumbleb_ws/install/amr_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/dk/bumbleb_ws/install/amr_interfaces/lib:/home/dk/bumbleb_ws/install/zlac_drive/lib:/home/dk/bumbleb_ws/install/rosbridge_test_msgs/lib:/home/dk/bumbleb_ws/install/rosbridge_msgs/lib:/home/dk/bumbleb_ws/install/rosapi_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/dk/bumbleb_ws/build/amr_location_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dk/bumbleb_ws/install/amr_location_manager/lib/python3.10/site-packages:/home/dk/bumbleb_ws/install/amr_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/dk/bumbleb_ws/build/amr_location_manager/build --no-deps symlink_data

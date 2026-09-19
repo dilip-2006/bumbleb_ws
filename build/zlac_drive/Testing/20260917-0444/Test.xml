@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20260917-0444-Experimental"
+	Name="dk-LOQ-15IRX9"
+	Generator="ctest-3.22.1"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="11.4.0"
+	OSName="Linux"
+	Hostname="dk-LOQ-15IRX9"
+	OSRelease="6.8.0-138-generic"
+	OSVersion="#138~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Aug  7 13:43:15 UTC "
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="183"
+	ProcessorCacheSize="20480"
+	NumberOfLogicalCPU="16"
+	NumberOfPhysicalCPU="10"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="23806"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="1205.92"
+	>
+	<Testing>
+		<StartDateTime>Sep 17 10:14 IST</StartDateTime>
+		<StartTestTime>1789620254</StartTestTime>
+		<TestList>
+			<Test>./test_modbus_client</Test>
+			<Test>./test_motor</Test>
+			<Test>./test_driver</Test>
+			<Test>./test_hardware_interface</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>test_modbus_client</Name>
+			<Path>.</Path>
+			<FullName>./test_modbus_client</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_modbus_client.gtest.xml" "--package-name" "zlac_drive" "--output-file" "/home/dk/bumbleb_ws/build/zlac_drive/ament_cmake_gtest/test_modbus_client.txt" "--command" "/home/dk/bumbleb_ws/build/zlac_drive/test_modbus_client" "--gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_modbus_client.gtest.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.164808</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_modbus_client.gtest.xml" "--package-name" "zlac_drive" "--output-file" "/home/dk/bumbleb_ws/build/zlac_drive/ament_cmake_gtest/test_modbus_client.txt" "--command" "/home/dk/bumbleb_ws/build/zlac_drive/test_modbus_client" "--gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_modbus_client.gtest.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/build/zlac_drive':
+ - /home/dk/bumbleb_ws/build/zlac_drive/test_modbus_client --gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_modbus_client.gtest.xml
+Running main() from /opt/ros/humble/src/gtest_vendor/src/gtest_main.cc
+[==========] Running 7 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 6 tests from ModbusClientTest
+[ RUN      ] ModbusClientTest.CalculatesKnownModbusCrc
+[       OK ] ModbusClientTest.CalculatesKnownModbusCrc (0 ms)
+[ RUN      ] ModbusClientTest.StartsDisconnected
+[       OK ] ModbusClientTest.StartsDisconnected (0 ms)
+[ RUN      ] ModbusClientTest.RejectsEmptySerialDevice
+[       OK ] ModbusClientTest.RejectsEmptySerialDevice (0 ms)
+[ RUN      ] ModbusClientTest.RejectsZeroRegisterRead
+[       OK ] ModbusClientTest.RejectsZeroRegisterRead (0 ms)
+[ RUN      ] ModbusClientTest.RejectsEmptyMultipleRegisterWrite
+[       OK ] ModbusClientTest.RejectsEmptyMultipleRegisterWrite (0 ms)
+[ RUN      ] ModbusClientTest.RejectsTooManyRegisters
+[       OK ] ModbusClientTest.RejectsTooManyRegisters (0 ms)
+[----------] 6 tests from ModbusClientTest (0 ms total)
+
+[----------] 1 test from ModbusTypesTest
+[ RUN      ] ModbusTypesTest.DefaultSerialConfig
+[       OK ] ModbusTypesTest.DefaultSerialConfig (0 ms)
+[----------] 1 test from ModbusTypesTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 2 test suites ran. (0 ms total)
+[  PASSED  ] 7 tests.
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_modbus_client.gtest.xml'
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_modbus_client.gtest.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>gtest</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>test_motor</Name>
+			<Path>.</Path>
+			<FullName>./test_motor</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_motor.gtest.xml" "--package-name" "zlac_drive" "--output-file" "/home/dk/bumbleb_ws/build/zlac_drive/ament_cmake_gtest/test_motor.txt" "--command" "/home/dk/bumbleb_ws/build/zlac_drive/test_motor" "--gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_motor.gtest.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.162452</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_motor.gtest.xml" "--package-name" "zlac_drive" "--output-file" "/home/dk/bumbleb_ws/build/zlac_drive/ament_cmake_gtest/test_motor.txt" "--command" "/home/dk/bumbleb_ws/build/zlac_drive/test_motor" "--gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_motor.gtest.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/build/zlac_drive':
+ - /home/dk/bumbleb_ws/build/zlac_drive/test_motor --gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_motor.gtest.xml
+Running main() from /opt/ros/humble/src/gtest_vendor/src/gtest_main.cc
+[==========] Running 9 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 9 tests from MotorTest
+[ RUN      ] MotorTest.ConvertsRpmToRadiansPerSecond
+[       OK ] MotorTest.ConvertsRpmToRadiansPerSecond (0 ms)
+[ RUN      ] MotorTest.ConvertsRadiansPerSecondToRpm
+[       OK ] MotorTest.ConvertsRadiansPerSecondToRpm (0 ms)
+[ RUN      ] MotorTest.RejectsInvalidGearRatio
+[       OK ] MotorTest.RejectsInvalidGearRatio (0 ms)
+[ RUN      ] MotorTest.RejectsNegativeGearRatio
+[       OK ] MotorTest.RejectsNegativeGearRatio (0 ms)
+[ RUN      ] MotorTest.RejectsEncoderConversionWhenUnverified
+[       OK ] MotorTest.RejectsEncoderConversionWhenUnverified (0 ms)
+[ RUN      ] MotorTest.RejectsVerifiedZeroEncoderResolution
+[       OK ] MotorTest.RejectsVerifiedZeroEncoderResolution (0 ms)
+[ RUN      ] MotorTest.ConvertsEncoderCountsToRadians
+[       OK ] MotorTest.ConvertsEncoderCountsToRadians (0 ms)
+[ RUN      ] MotorTest.ConvertsRadiansToEncoderCounts
+[       OK ] MotorTest.ConvertsRadiansToEncoderCounts (0 ms)
+[ RUN      ] MotorTest.RpmConversionRoundTrip
+[       OK ] MotorTest.RpmConversionRoundTrip (0 ms)
+[----------] 9 tests from MotorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 9 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 9 tests.
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_motor.gtest.xml'
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_motor.gtest.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>gtest</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>test_driver</Name>
+			<Path>.</Path>
+			<FullName>./test_driver</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_driver.gtest.xml" "--package-name" "zlac_drive" "--output-file" "/home/dk/bumbleb_ws/build/zlac_drive/ament_cmake_gtest/test_driver.txt" "--command" "/home/dk/bumbleb_ws/build/zlac_drive/test_driver" "--gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_driver.gtest.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.171023</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_driver.gtest.xml" "--package-name" "zlac_drive" "--output-file" "/home/dk/bumbleb_ws/build/zlac_drive/ament_cmake_gtest/test_driver.txt" "--command" "/home/dk/bumbleb_ws/build/zlac_drive/test_driver" "--gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_driver.gtest.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/build/zlac_drive':
+ - /home/dk/bumbleb_ws/build/zlac_drive/test_driver --gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_driver.gtest.xml
+Running main() from /opt/ros/humble/src/gtest_vendor/src/gtest_main.cc
+[==========] Running 14 tests from 4 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from ZlacDriveConfigTest
+[ RUN      ] ZlacDriveConfigTest.DefaultsRequireExplicitSlaveVerification
+[       OK ] ZlacDriveConfigTest.DefaultsRequireExplicitSlaveVerification (0 ms)
+[ RUN      ] ZlacDriveConfigTest.DefaultsToPeakRpmAndNoInversion
+[       OK ] ZlacDriveConfigTest.DefaultsToPeakRpmAndNoInversion (0 ms)
+[----------] 2 tests from ZlacDriveConfigTest (0 ms total)
+
+[----------] 4 tests from ZlacDriveDriverTest
+[ RUN      ] ZlacDriveDriverTest.IsNonCopyable
+[       OK ] ZlacDriveDriverTest.IsNonCopyable (0 ms)
+[ RUN      ] ZlacDriveDriverTest.RejectsMaxVelocityAboveMotorPeak
+[       OK ] ZlacDriveDriverTest.RejectsMaxVelocityAboveMotorPeak (0 ms)
+[ RUN      ] ZlacDriveDriverTest.RejectsNonPositiveMaxVelocity
+[       OK ] ZlacDriveDriverTest.RejectsNonPositiveMaxVelocity (0 ms)
+[ RUN      ] ZlacDriveDriverTest.StartsDisconnected
+[       OK ] ZlacDriveDriverTest.StartsDisconnected (0 ms)
+[----------] 4 tests from ZlacDriveDriverTest (0 ms total)
+
+[----------] 5 tests from ClampVelocityRpmTest
+[ RUN      ] ClampVelocityRpmTest.PassesValuesWithinRange
+[       OK ] ClampVelocityRpmTest.PassesValuesWithinRange (0 ms)
+[ RUN      ] ClampVelocityRpmTest.ClampsPositiveOverLimit
+[       OK ] ClampVelocityRpmTest.ClampsPositiveOverLimit (0 ms)
+[ RUN      ] ClampVelocityRpmTest.ClampsNegativeOverLimit
+[       OK ] ClampVelocityRpmTest.ClampsNegativeOverLimit (0 ms)
+[ RUN      ] ClampVelocityRpmTest.ClampsAtExactLimit
+[       OK ] ClampVelocityRpmTest.ClampsAtExactLimit (0 ms)
+[ RUN      ] ClampVelocityRpmTest.TreatsNonFiniteInputAsZero
+[       OK ] ClampVelocityRpmTest.TreatsNonFiniteInputAsZero (0 ms)
+[----------] 5 tests from ClampVelocityRpmTest (0 ms total)
+
+[----------] 3 tests from ToVelocityRegisterValueTest
+[ RUN      ] ToVelocityRegisterValueTest.RoundsToNearestInteger
+[       OK ] ToVelocityRegisterValueTest.RoundsToNearestInteger (0 ms)
+[ RUN      ] ToVelocityRegisterValueTest.HandlesMaxMotorPeakRpm
+[       OK ] ToVelocityRegisterValueTest.HandlesMaxMotorPeakRpm (0 ms)
+[ RUN      ] ToVelocityRegisterValueTest.RejectsValueOutsideInt16Range
+[       OK ] ToVelocityRegisterValueTest.RejectsValueOutsideInt16Range (0 ms)
+[----------] 3 tests from ToVelocityRegisterValueTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 14 tests from 4 test suites ran. (0 ms total)
+[  PASSED  ] 14 tests.
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_driver.gtest.xml'
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_driver.gtest.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>gtest</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>test_hardware_interface</Name>
+			<Path>.</Path>
+			<FullName>./test_hardware_interface</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_hardware_interface.gtest.xml" "--package-name" "zlac_drive" "--output-file" "/home/dk/bumbleb_ws/build/zlac_drive/ament_cmake_gtest/test_hardware_interface.txt" "--command" "/home/dk/bumbleb_ws/build/zlac_drive/test_hardware_interface" "--gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_hardware_interface.gtest.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.173378</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_hardware_interface.gtest.xml" "--package-name" "zlac_drive" "--output-file" "/home/dk/bumbleb_ws/build/zlac_drive/ament_cmake_gtest/test_hardware_interface.txt" "--command" "/home/dk/bumbleb_ws/build/zlac_drive/test_hardware_interface" "--gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_hardware_interface.gtest.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/dk/bumbleb_ws/build/zlac_drive':
+ - /home/dk/bumbleb_ws/build/zlac_drive/test_hardware_interface --gtest_output=xml:/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_hardware_interface.gtest.xml
+Running main() from /opt/ros/humble/src/gtest_vendor/src/gtest_main.cc
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from ZlacSystemHardwareTest
+[ RUN      ] ZlacSystemHardwareTest.IsDefaultConstructible
+[       OK ] ZlacSystemHardwareTest.IsDefaultConstructible (0 ms)
+[ RUN      ] ZlacSystemHardwareTest.RejectsHardwareInfoWithoutTwoJoints
+[ERROR] [1789620254.989545745] [ZlacSystemHardware]: Expected exactly 2 wheel joints, got 0
+[       OK ] ZlacSystemHardwareTest.RejectsHardwareInfoWithoutTwoJoints (0 ms)
+[----------] 2 tests from ZlacSystemHardwareTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 2 tests.
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_hardware_interface.gtest.xml'
+-- run_test.py: verify result file '/home/dk/bumbleb_ws/build/zlac_drive/test_results/zlac_drive/test_hardware_interface.gtest.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>gtest</Label>
+			</Labels>
+		</Test>
+		<EndDateTime>Sep 17 10:14 IST</EndDateTime>
+		<EndTestTime>1789620255</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

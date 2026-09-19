@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="14" failures="0" disabled="0" errors="0" time="0" timestamp="2026-09-17T10:14:14" name="AllTests">
+  <testsuite name="ZlacDriveConfigTest" tests="2" failures="0" disabled="0" errors="0" time="0" timestamp="2026-09-17T10:14:14">
+    <testcase name="DefaultsRequireExplicitSlaveVerification" status="run" result="completed" time="0" timestamp="2026-09-17T10:14:14" classname="zlac_drive.ZlacDriveConfigTest" />
+    <testcase name="DefaultsToPeakRpmAndNoInversion" status="run" result="completed" time="0" timestamp="2026-09-17T10:14:14" classname="zlac_drive.ZlacDriveConfigTest" />
+  </testsuite>
+  <testsuite name="ZlacDriveDriverTest" tests="4" failures="0" disabled="0" errors="0" time="0" timestamp="2026-09-17T10:14:14">
+    <testcase name="IsNonCopyable" status="run" result="completed" time="0" timestamp="2026-09-17T10:14:14" classname="zlac_drive.ZlacDriveDriverTest" />
+    <testcase name="RejectsMaxVelocityAboveMotorPeak" status="run" result="completed" time="0" timestamp="2026-09-17T10:14:14" classname="zlac_drive.ZlacDriveDriverTest" />
+    <testcase name="RejectsNonPositiveMaxVelocity" status="run" result="completed" time="0" timestamp="2026-09-17T10:14:14" classname="zlac_drive.ZlacDriveDriverTest" />
+    <testcase name="StartsDisconnected" status="run" result="completed" time="0" timestamp="2026-09-17T10:14:14" classname="zlac_drive.ZlacDriveDriverTest" />
+  </testsuite>
+  <testsuite name="ClampVelocityRpmTest" tests="5" failures="0" disabled="0" errors="0" time="0" timestamp="2026-09-17T10:14:14">
+    <testcase name="PassesValuesWithinRange" status="run" result="completed" time="0" timestamp="2026-09-17T10:14:14" classname="zlac_drive.ClampVelocityRpmTest" />
+    <testcase name="ClampsPositiveOverLimit" status="run" result="completed" time="0" timestamp="2026-09-17T10:14:14" classname="zlac_drive.ClampVelocityRpmTest" />
+    <testcase name="ClampsNegativeOverLimit" status="run" result="completed" time="0" timestamp="2026-09-17T10:14:14" classname="zlac_drive.ClampVelocityRpmTest" />
+    <testcase name="ClampsAtExactLimit" status="run" result="completed" time="0" timestamp="2026-09-17T10:14:14" classname="zlac_drive.ClampVelocityRpmTest" />
+    <testcase name="TreatsNonFiniteInputAsZero" status="run" result="completed" time="0" timestamp="2026-09-17T10:14:14" classname="zlac_drive.ClampVelocityRpmTest" />
+  </testsuite>
+  <testsuite name="ToVelocityRegisterValueTest" tests="3" failures="0" disabled="0" errors="0" time="0" timestamp="2026-09-17T10:14:14">
+    <testcase name="RoundsToNearestInteger" status="run" result="completed" time="0" timestamp="2026-09-17T10:14:14" classname="zlac_drive.ToVelocityRegisterValueTest" />
+    <testcase name="HandlesMaxMotorPeakRpm" status="run" result="completed" time="0" timestamp="2026-09-17T10:14:14" classname="zlac_drive.ToVelocityRegisterValueTest" />
+    <testcase name="RejectsValueOutsideInt16Range" status="run" result="completed" time="0" timestamp="2026-09-17T10:14:14" classname="zlac_drive.ToVelocityRegisterValueTest" />
+  </testsuite>
+</testsuites>
