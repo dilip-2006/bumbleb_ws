@@ -11,8 +11,8 @@ def generate_launch_description():
     )
     address_arg = DeclareLaunchArgument(
         'address',
-        default_value='0.0.0.0',
-        description='Address for websocket server'
+        default_value='',
+        description='Address for websocket server (empty string binds to all IPv4 and IPv6 interfaces)'
     )
 
     rosbridge_node = Node(
