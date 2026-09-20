@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, GroupAction
@@ -43,7 +44,7 @@ def generate_launch_description():
     )
     maps_dir_arg = DeclareLaunchArgument(
         "maps_dir",
-        default_value="/home/dk/bumbleb_ws/maps",
+        default_value=str(Path.home() / "bumbleb_data" / "maps"),
         description="Path to maps directory"
     )
 
@@ -105,7 +106,7 @@ def generate_launch_description():
         name="amr_location_manager",
         output="screen",
         parameters=[{
-            "locations_file": "/home/dk/bumbleb_ws/locations/warehouse_locations.yaml",
+            "locations_file": str(Path.home() / "bumbleb_data" / "locations" / "warehouse_locations.yaml"),
             "use_sim_time": use_sim_time,
             "map_frame": "map",
             "base_frame": "base_link"

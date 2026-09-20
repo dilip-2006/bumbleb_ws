@@ -5,6 +5,7 @@ Tracks robot pose, maintains warehouse locations, and dispatches Nav2 navigation
 """
 
 import os
+from pathlib import Path
 import re
 import json
 import math
@@ -60,7 +61,7 @@ def quaternion_from_euler(roll, pitch, yaw):
 class LocationStorage:
     KEY_REGEX = re.compile(r'[^a-zA-Z0-9_]')
 
-    def __init__(self, filepath: str = "/home/dk/bumbleb_ws/locations/warehouse_locations.yaml"):
+    def __init__(self, filepath: str = str(Path.home() / "bumbleb_data" / "locations" / "warehouse_locations.yaml")):
         self.filepath = filepath
         os.makedirs(os.path.dirname(self.filepath), exist_ok=True)
         if not os.path.exists(self.filepath):
@@ -162,7 +163,7 @@ class AMRLocationManager(Node):
 
         for param_name, default_val in [
             ('use_sim_time', True),
-            ('locations_file', '/home/dk/bumbleb_ws/locations/warehouse_locations.yaml'),
+            ('locations_file', str(Path.home() / 'bumbleb_data' / 'locations' / 'warehouse_locations.yaml')),
             ('map_frame', 'map'),
             ('base_frame', 'base_link'),
         ]:

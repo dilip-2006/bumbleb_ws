@@ -6,6 +6,7 @@ and emergency stop safety protocols for the BumbleB autonomous mobile robot.
 """
 
 import os
+from pathlib import Path
 import re
 import json
 import time
@@ -18,6 +19,7 @@ from rclpy.node import Node
 from rclpy.duration import Duration
 from rclpy.time import Time
 import tf2_ros
+from ament_index_python.packages import get_package_share_directory
 
 from std_msgs.msg import String
 from std_srvs.srv import Trigger
@@ -260,7 +262,7 @@ class AMRSystemManager(Node):
 
         for param_name, default_val in [
             ('use_sim_time', True),
-            ('maps_dir', '/home/dk/bumbleb_ws/maps'),
+            ('maps_dir', str(Path.home() / 'bumbleb_data' / 'maps')),
             ('auto_ready', True),
         ]:
             if not self.has_parameter(param_name):
@@ -271,8 +273,9 @@ class AMRSystemManager(Node):
         auto_ready = self.get_parameter('auto_ready').get_parameter_value().bool_value
 
         os.makedirs(self.maps_dir, exist_ok=True)
-        self.pkg_maps_dir = "/home/dk/bumbleb_ws/src/bumbleb_bot/maps"
-        os.makedirs(self.pkg_maps_dir, exist_ok=True)
+        self.pkg_maps_dir = os.path.join(
+            get_package_share_directory('bumbleb_bot'), 'maps'
+        )
 
         self.get_logger().info(f"AMR System Manager starting (use_sim_time={self.use_sim_time}, maps_dir={self.maps_dir})")
 
@@ -408,15 +411,6 @@ class AMRSystemManager(Node):
             ]
             proc = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
             if proc.returncode == 0:
-                pkg_target = os.path.join(self.pkg_maps_dir, f"{name}.yaml")
-                if not os.path.exists(pkg_target) and os.path.exists(f"{target_base}.yaml"):
-                    try:
-                        import shutil
-                        shutil.copy(f"{target_base}.yaml", f"{self.pkg_maps_dir}/")
-                        if os.path.exists(f"{target_base}.pgm"):
-                            shutil.copy(f"{target_base}.pgm", f"{self.pkg_maps_dir}/")
-                    except Exception:
-                        pass
                 return True, f"Map '{name}' saved successfully"
             else:
                 err_msg = proc.stderr.strip() or proc.stdout.strip() or "map_saver_cli returned non-zero code"
