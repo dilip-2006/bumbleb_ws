@@ -96,3 +96,9 @@ def test_simulation_urdf_uses_gazebo_hardware_not_zlac_drive():
     lidar_plugin = lidar_sensor.find("plugin")
     assert lidar_plugin is not None
     assert lidar_plugin.get("filename") == "libgazebo_ros_ray_sensor.so"
+
+    horizontal_scan = lidar_sensor.find("ray/scan/horizontal")
+    assert horizontal_scan is not None
+    assert horizontal_scan.findtext("samples") == "180"
+    assert horizontal_scan.findtext("min_angle") == "-1.57079632679"
+    assert horizontal_scan.findtext("max_angle") == "1.57079632679"

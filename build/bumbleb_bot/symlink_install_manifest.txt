@@ -8,6 +8,8 @@
 /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/control/simulation.xacro
 /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/sensors/lidar.xacro
 /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/description/wheels/wheels.xacro
+/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/__pycache__/bringup.launch.cpython-310.pyc
+/home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/__pycache__/lidar.launch.cpython-310.pyc
 /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/bringup.launch.py
 /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/lidar.launch.py
 /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/launch/localization.launch.py
@@ -36,6 +38,7 @@
 /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/maps/warehouse_main.yaml
 /home/dk/bumbleb_ws/install/bumbleb_bot/lib/bumbleb_bot/system_manager_node.py
 /home/dk/bumbleb_ws/install/bumbleb_bot/lib/bumbleb_bot/location_manager_node.py
+/home/dk/bumbleb_ws/install/bumbleb_bot/lib/bumbleb_bot/front_scan_filter.py
 /home/dk/bumbleb_ws/install/bumbleb_bot/share/ament_index/resource_index/package_run_dependencies/bumbleb_bot
 /home/dk/bumbleb_ws/install/bumbleb_bot/share/ament_index/resource_index/parent_prefix_path/bumbleb_bot
 /home/dk/bumbleb_ws/install/bumbleb_bot/share/bumbleb_bot/environment/ament_prefix_path.sh

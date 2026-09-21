@@ -88,6 +88,7 @@ install(
   PROGRAMS
     scripts/system_manager_node.py
     scripts/location_manager_node.py
+    scripts/front_scan_filter.py
   DESTINATION
     lib/${PROJECT_NAME}
 )

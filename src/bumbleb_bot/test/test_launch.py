@@ -16,6 +16,15 @@ def test_required_launch_files_exist():
         assert (root / name).is_file()
 
 
+def test_real_lidar_uses_front_scan_filter():
+    launch_file = (
+        Path(__file__).resolve().parents[1] / "launch" / "lidar.launch.py"
+    )
+    text = launch_file.read_text(encoding="utf-8")
+    assert '("scan", "/scan_raw")' in text
+    assert 'executable="front_scan_filter.py"' in text
+
+
 def test_no_articubot_package_dependency():
     """Regression guard: articubot_one was used only as an architectural
     *reference* while building this workspace (design ideas, not code).

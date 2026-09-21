@@ -321,8 +321,8 @@ include("/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_symlink_install_targe
 # install(DIRECTORY "description" "launch" "config" "rviz" "worlds" "maps" "meshes" "DESTINATION" "share/bumbleb_bot")
 ament_cmake_symlink_install_directory("/home/dk/bumbleb_ws/src/bumbleb_bot" DIRECTORY "description" "launch" "config" "rviz" "worlds" "maps" "meshes" "DESTINATION" "share/bumbleb_bot")
 
-# install(PROGRAMS "scripts/system_manager_node.py" "scripts/location_manager_node.py" "DESTINATION" "lib/bumbleb_bot")
-ament_cmake_symlink_install_programs("/home/dk/bumbleb_ws/src/bumbleb_bot" PROGRAMS "scripts/system_manager_node.py" "scripts/location_manager_node.py" "DESTINATION" "lib/bumbleb_bot")
+# install(PROGRAMS "scripts/system_manager_node.py" "scripts/location_manager_node.py" "scripts/front_scan_filter.py" "DESTINATION" "lib/bumbleb_bot")
+ament_cmake_symlink_install_programs("/home/dk/bumbleb_ws/src/bumbleb_bot" PROGRAMS "scripts/system_manager_node.py" "scripts/location_manager_node.py" "scripts/front_scan_filter.py" "DESTINATION" "lib/bumbleb_bot")
 
 # install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/bumbleb_bot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/bumbleb_bot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

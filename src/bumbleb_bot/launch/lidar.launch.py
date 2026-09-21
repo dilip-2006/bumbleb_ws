@@ -8,9 +8,8 @@ def generate_launch_description():
     """Launch the RPLIDAR A1 node directly against BumbleB's own
     config/lidar.yaml, which is the single source of truth for serial
     port, baud rate, and frame_id (see description/sensors/lidar.xacro
-    for the matching TF frame). Delegating to rplidar_ros's own launch
-    file would leave lidar.yaml unused, which is exactly what this
-    avoids."""
+    for the matching TF frame). The raw full scan is cropped to the
+    robot-forward 180-degree field before being published as /scan."""
 
     share = get_package_share_directory("bumbleb_bot")
     lidar_params = os.path.join(share, "config", "lidar.yaml")
@@ -22,5 +21,12 @@ def generate_launch_description():
             name="rplidar_node",
             output="screen",
             parameters=[lidar_params],
+            remappings=[("scan", "/scan_raw")],
+        ),
+        Node(
+            package="bumbleb_bot",
+            executable="front_scan_filter.py",
+            name="front_scan_filter",
+            output="screen",
         ),
     ])

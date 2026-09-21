@@ -16,7 +16,7 @@ gazebo_ros (gzserver + gzclient)
   │     ├── joint_state_broadcaster
   │     └── bumbleb_wheel_velocity_controller (forward_command_controller)
   └── Sensors:
-        └── Ray Sensor Plugin -> /scan (10 Hz, 360 beams, 12m max range)
+        └── Ray Sensor Plugin -> /scan (10 Hz, 180 front-facing beams, 12m max range)
 ```
 
 ---

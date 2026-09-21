@@ -57,10 +57,11 @@
       <ray>
         <scan>
           <horizontal>
-            <samples>360</samples>
+            <!-- Front-facing 180-degree field of view, centered on +X. -->
+            <samples>180</samples>
             <resolution>1</resolution>
-            <min_angle>-3.14159265359</min_angle>
-            <max_angle>3.14159265359</max_angle>
+            <min_angle>-1.57079632679</min_angle>
+            <max_angle>1.57079632679</max_angle>
           </horizontal>
         </scan>
         <range>
