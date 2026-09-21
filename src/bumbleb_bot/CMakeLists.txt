@@ -75,7 +75,6 @@ install(
     rviz
     worlds
     maps
-    meshes
   DESTINATION
     share/${PROJECT_NAME}
 )
