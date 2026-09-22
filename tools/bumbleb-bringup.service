@@ -1,0 +1,19 @@
+[Unit]
+Description=BumbleB AMR Unified Physical Robot Bringup (Drivetrain, RPLIDAR, rosbridge, System Manager)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=dk
+WorkingDirectory=/home/dk/bumbleb_ws
+Environment="HOME=/home/dk"
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=/bin/bash -c "source /opt/ros/humble/setup.bash && source /home/dk/bumbleb_ws/install/setup.bash && exec ros2 launch bumbleb_bot bringup.launch.py"
+Restart=on-failure
+RestartSec=5s
+KillMode=mixed
+TimeoutStopSec=10s
+
+[Install]
+WantedBy=multi-user.target

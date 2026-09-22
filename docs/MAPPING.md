@@ -2,7 +2,7 @@
 
 ## Overview
 
-Mapping uses **SLAM Toolbox** (`sync_slam_toolbox_node`) configured in `bumbleb_bot/config/slam.yaml` to generate high-resolution occupancy grids from simulated or real LiDAR and odometry.
+Mapping uses **SLAM Toolbox** (`async_slam_toolbox_node`) configured in `bumbleb_bot/config/slam.yaml` to generate high-resolution occupancy grids from simulated or real LiDAR and odometry. The asynchronous mapper keeps scan processing responsive while the robot is moving.
 
 ---
 
@@ -31,6 +31,10 @@ Click [ SAVE MAP ]
        ↓
 Map saved to maps/<name>.yaml and maps/<name>.pgm
        ↓
+Click [ SERIALIZE GRAPH ]
+       ↓
+SLAM pose graph saved as maps/<name>.posegraph and maps/<name>.data
+       ↓
 Click [ STOP MAPPING ]
 ```
 
@@ -56,6 +60,9 @@ Maps are stored in the isolated directory `/home/dk/bumbleb_ws/maps/`.
 From the Web Dashboard:
 - Enter a name in **Map Management** (e.g. `warehouse_zone_1`).
 - Click **[ SAVE MAP ]**.
+- Click **[ SERIALIZE GRAPH ]** to persist the SLAM Toolbox pose graph for later mapping continuation.
+
+To resume a serialized map, select the map and click **[ RESUME MAPPING ]**. This starts asynchronous SLAM and requests pose-graph deserialization.
 - The system executes `map_saver_cli` with proper timeouts, producing both `<name>.yaml` and `<name>.pgm`.
 
 From the Command Line (for debugging):

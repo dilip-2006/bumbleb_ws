@@ -1,6 +1,8 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
 
@@ -15,12 +17,13 @@ def generate_launch_description():
     lidar_params = os.path.join(share, "config", "lidar.yaml")
 
     return LaunchDescription([
+        DeclareLaunchArgument("lidar_frame", default_value="lidar_link"),
         Node(
             package="rplidar_ros",
             executable="rplidar_node",
             name="rplidar_node",
             output="screen",
-            parameters=[lidar_params],
+            parameters=[lidar_params, {"frame_id": LaunchConfiguration("lidar_frame")}],
             remappings=[("scan", "/scan_raw")],
         ),
         Node(

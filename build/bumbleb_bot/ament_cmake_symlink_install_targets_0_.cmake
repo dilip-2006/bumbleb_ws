@@ -1,1 +1,1 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/dk/bumbleb_ws/build/bumbleb_bot/bumbleb_drivetrain_node" "TARGETS" "bumbleb_drivetrain_node" "DESTINATION" "lib/bumbleb_bot")
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_generator_py/bumbleb_bot/bumbleb_bot_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" "TARGETS" "bumbleb_bot__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/bumbleb_bot")

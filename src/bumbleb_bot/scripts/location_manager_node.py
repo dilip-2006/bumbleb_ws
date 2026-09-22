@@ -13,6 +13,7 @@ import time
 import yaml
 
 import rclpy
+from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 from rclpy.action import ActionClient
 from rclpy.duration import Duration
@@ -22,6 +23,7 @@ import tf2_ros
 from geometry_msgs.msg import PoseStamped, PoseWithCovarianceStamped
 from std_msgs.msg import String
 from std_srvs.srv import Trigger
+from bumbleb_bot.srv import NavigateToPose as NavigateToPoseService, SetInitialPose
 from nav2_msgs.action import NavigateToPose
 
 
@@ -165,6 +167,7 @@ class AMRLocationManager(Node):
             ('use_sim_time', True),
             ('locations_file', str(Path.home() / 'bumbleb_data' / 'locations' / 'warehouse_locations.yaml')),
             ('map_frame', 'map'),
+            ('odom_frame', 'odom'),
             ('base_frame', 'base_link'),
         ]:
             if not self.has_parameter(param_name):
@@ -172,6 +175,7 @@ class AMRLocationManager(Node):
 
         filepath = self.get_parameter('locations_file').get_parameter_value().string_value
         self.map_frame = self.get_parameter('map_frame').get_parameter_value().string_value
+        self.odom_frame = self.get_parameter('odom_frame').get_parameter_value().string_value
         self.base_frame = self.get_parameter('base_frame').get_parameter_value().string_value
 
         self.storage = LocationStorage(filepath=filepath)
@@ -198,15 +202,21 @@ class AMRLocationManager(Node):
         # Subscriptions
         self.sub_amcl = self.create_subscription(PoseWithCovarianceStamped, '/amcl_pose', self._amcl_cb, 10)
         self.sub_cmd = self.create_subscription(String, '/amr/location_command', self._command_cb, 10)
+        self.sub_system_cmd = self.create_subscription(String, '/amr/command', self._system_command_cb, 10)
         self.sub_state = self.create_subscription(String, '/amr/system_state', self._system_state_cb, 10)
 
         # Publishers
         self.locations_pub = self.create_publisher(String, '/amr/locations', 10)
         self.pose_pub = self.create_publisher(PoseStamped, '/amr/robot_pose', 10)
         self.nav_status_pub = self.create_publisher(String, '/amr/navigation_status', 10)
+        self.initial_pose_pub = self.create_publisher(PoseWithCovarianceStamped, '/initialpose', 10)
 
         # Services
         self.srv_cancel_nav = self.create_service(Trigger, '/amr/cancel_navigation', self._handle_cancel_nav)
+        self.srv_navigate_to_pose = self.create_service(
+            NavigateToPoseService, '/amr/navigate_to_pose', self._handle_navigate_to_pose)
+        self.srv_initial_pose = self.create_service(
+            SetInitialPose, '/amr/set_initial_pose', self._handle_initial_pose)
 
         # Timers
         self.pose_timer = self.create_timer(0.1, self._update_pose_loop)
@@ -237,7 +247,7 @@ class AMRLocationManager(Node):
         self.pose_valid = True
 
     def _update_pose_loop(self):
-        for target_frame in [self.map_frame, 'odom']:
+        for target_frame in [self.map_frame, self.odom_frame]:
             try:
                 transform = self.tf_buffer.lookup_transform(
                     target_frame,
@@ -325,10 +335,37 @@ class AMRLocationManager(Node):
         except Exception as e:
             self.get_logger().error(f"Error handling location command: {e}")
 
+    def _system_command_cb(self, msg: String):
+        """Handle dashboard commands that are not location-file operations."""
+        try:
+            cmd = json.loads(msg.data)
+            action = cmd.get("action", "").lower()
+            if action == "navigate_to_pose":
+                self._dispatch_pose_goal(float(cmd.get("x", 0.0)), float(cmd.get("y", 0.0)),
+                                         float(cmd.get("yaw", 0.0)), "dashboard goal")
+            elif action == "cancel_navigation":
+                self._cancel_goal()
+            elif action == "set_initial_pose":
+                self._publish_initial_pose(float(cmd.get("x", 0.0)), float(cmd.get("y", 0.0)),
+                                           float(cmd.get("yaw", 0.0)))
+        except Exception as exc:
+            self.get_logger().error(f"Error handling dashboard navigation command: {exc}")
+
     def _handle_cancel_nav(self, request, response):
         ok, msg = self._cancel_goal()
         response.success = ok
         response.message = msg
+        return response
+
+    def _handle_navigate_to_pose(self, request, response):
+        response.success, response.message = self._dispatch_pose_goal(
+            request.x, request.y, request.yaw, "dashboard goal")
+        return response
+
+    def _handle_initial_pose(self, request, response):
+        self._publish_initial_pose(request.x, request.y, request.yaw)
+        response.success = True
+        response.message = "Initial AMCL pose published."
         return response
 
     def _dispatch_goal(self, name_or_id: str) -> tuple[bool, str]:
@@ -339,26 +376,46 @@ class AMRLocationManager(Node):
         if not self.nav_action_client.wait_for_server(timeout_sec=2.0):
             return False, "Nav2 action server /navigate_to_pose unavailable. Verify Navigation mode is running."
 
+        return self._dispatch_pose_goal(float(loc["x"]), float(loc["y"]), float(loc["yaw"]), loc["name"])
+
+    def _dispatch_pose_goal(self, x: float, y: float, yaw: float, target_name: str) -> tuple[bool, str]:
+        if not self.nav_action_client.wait_for_server(timeout_sec=2.0):
+            return False, "Nav2 action server /navigate_to_pose unavailable. Start Navigation mode first."
         goal_msg = NavigateToPose.Goal()
         goal_msg.pose.header.frame_id = self.map_frame
         goal_msg.pose.header.stamp = self.get_clock().now().to_msg()
-        goal_msg.pose.pose.position.x = float(loc["x"])
-        goal_msg.pose.pose.position.y = float(loc["y"])
+        goal_msg.pose.pose.position.x = x
+        goal_msg.pose.pose.position.y = y
         goal_msg.pose.pose.position.z = 0.0
 
-        q = quaternion_from_euler(0.0, 0.0, float(loc["yaw"]))
+        q = quaternion_from_euler(0.0, 0.0, yaw)
         goal_msg.pose.pose.orientation.x = q[0]
         goal_msg.pose.pose.orientation.y = q[1]
         goal_msg.pose.pose.orientation.z = q[2]
         goal_msg.pose.pose.orientation.w = q[3]
 
-        self.get_logger().info(f"Dispatching goal to '{loc['name']}' at ({loc['x']}, {loc['y']})")
+        self.get_logger().info(f"Dispatching goal to '{target_name}' at ({x}, {y})")
         self.nav_status = "PLANNING"
-        self.active_target_name = loc["name"]
+        self.active_target_name = target_name
 
         send_future = self.nav_action_client.send_goal_async(goal_msg, feedback_callback=self._nav_feedback_cb)
         send_future.add_done_callback(self._goal_response_cb)
-        return True, f"Goal dispatched to location '{loc['name']}'"
+        return True, f"Goal dispatched to '{target_name}'"
+
+    def _publish_initial_pose(self, x: float, y: float, yaw: float):
+        msg = PoseWithCovarianceStamped()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.header.frame_id = self.map_frame
+        msg.pose.pose.position.x = x
+        msg.pose.pose.position.y = y
+        q = quaternion_from_euler(0.0, 0.0, yaw)
+        msg.pose.pose.orientation.x, msg.pose.pose.orientation.y = q[0], q[1]
+        msg.pose.pose.orientation.z, msg.pose.pose.orientation.w = q[2], q[3]
+        msg.pose.covariance[0] = 0.25
+        msg.pose.covariance[7] = 0.25
+        msg.pose.covariance[35] = 0.068
+        self.initial_pose_pub.publish(msg)
+        self.get_logger().info(f"Published initial pose ({x}, {y}, {yaw})")
 
     def _goal_response_cb(self, future):
         goal_handle = future.result()
@@ -409,11 +466,12 @@ def main(args=None):
     node = AMRLocationManager()
     try:
         rclpy.spin(node)
-    except KeyboardInterrupt:
+    except (KeyboardInterrupt, ExternalShutdownException):
         pass
     finally:
         node.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 
 if __name__ == '__main__':

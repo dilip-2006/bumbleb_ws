@@ -15,6 +15,8 @@ import subprocess
 from enum import Enum
 
 import rclpy
+from rclpy.executors import ExternalShutdownException
+from rclpy.qos import QoSProfile, DurabilityPolicy
 from rclpy.node import Node
 from rclpy.duration import Duration
 from rclpy.time import Time
@@ -23,7 +25,9 @@ from ament_index_python.packages import get_package_share_directory
 
 from std_msgs.msg import String
 from std_srvs.srv import Trigger
-from geometry_msgs.msg import Twist
+from slam_toolbox.srv import SerializePoseGraph, DeserializePoseGraph
+from bumbleb_bot.srv import MapOperation, SetMode
+from geometry_msgs.msg import Twist, PoseWithCovarianceStamped
 from sensor_msgs.msg import LaserScan, JointState, BatteryState
 from nav_msgs.msg import Odometry, OccupancyGrid
 
@@ -122,9 +126,15 @@ class AMRStateMachine:
 
 
 class AMRProcessSupervisor:
-    def __init__(self, node: Node, use_sim_time: bool = True):
+    def __init__(self, node: Node, use_sim_time: bool = True,
+                 map_frame: str = "map", odom_frame: str = "odom",
+                 base_frame: str = "base_link", lidar_frame: str = "lidar_link"):
         self.node = node
         self.use_sim_time = use_sim_time
+        self.map_frame = map_frame
+        self.odom_frame = odom_frame
+        self.base_frame = base_frame
+        self.lidar_frame = lidar_frame
         self.processes: dict[str, subprocess.Popen] = {}
 
     def is_running(self, name: str) -> bool:
@@ -132,6 +142,20 @@ class AMRProcessSupervisor:
         if proc is None:
             return False
         return proc.poll() is None
+
+    def _wait_for_nodes(self, process_name: str, node_names: list[str], timeout: float = 10.0) -> tuple[bool, str]:
+        deadline = time.monotonic() + timeout
+        wanted = set(node_names)
+        while time.monotonic() < deadline:
+            proc = self.processes.get(process_name)
+            if proc is None or proc.poll() is not None:
+                return False, f"Managed process '{process_name}' exited while starting."
+            active = set(self.node.get_node_names())
+            if wanted.issubset(active):
+                return True, f"{process_name} nodes are ready."
+            time.sleep(0.2)
+        missing = sorted(wanted - set(self.node.get_node_names()))
+        return False, f"Timed out waiting for {process_name} nodes: {', '.join(missing)}."
 
     def start_slam(self) -> tuple[bool, str]:
         if self.is_running("slam"):
@@ -141,19 +165,29 @@ class AMRProcessSupervisor:
         self.stop_localization()
 
         cmd = [
-            "ros2", "launch", "bumbleb_bot", "slam.launch.py",
-            f"use_sim_time:={'true' if self.use_sim_time else 'false'}"
+            "ros2", "launch", "bumbleb_bot", "mapping.launch.py",
+            f"use_sim_time:={'true' if self.use_sim_time else 'false'}",
+            f"map_frame:={self.map_frame}", f"odom_frame:={self.odom_frame}",
+            f"base_frame:={self.base_frame}", f"scan_topic:=/scan"
         ]
         self.node.get_logger().info(f"Starting SLAM: {' '.join(cmd)}")
         try:
             proc = subprocess.Popen(
                 cmd,
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.PIPE,
+                # Inherit the unified bringup terminal.  Feature launches
+                # must keep their hardware, lifecycle, and TF diagnostics
+                # visible to the operator; piping without a reader can also
+                # deadlock a long-running ros2 launch process.
+                stdout=None,
+                stderr=None,
                 preexec_fn=os.setsid
             )
             self.processes["slam"] = proc
-            return True, "SLAM Toolbox process launched"
+            ready, ready_msg = self._wait_for_nodes("slam", ["slam_toolbox"])
+            if not ready:
+                self._stop_process("slam")
+                return False, ready_msg
+            return True, "SLAM Toolbox process launched and ready"
         except Exception as e:
             return False, f"Failed to start SLAM: {str(e)}"
 
@@ -171,18 +205,24 @@ class AMRProcessSupervisor:
         cmd = [
             "ros2", "launch", "bumbleb_bot", "localization.launch.py",
             f"map:={map_yaml_path}",
-            f"use_sim_time:={'true' if self.use_sim_time else 'false'}"
+            f"use_sim_time:={'true' if self.use_sim_time else 'false'}",
+            f"map_frame:={self.map_frame}", f"odom_frame:={self.odom_frame}",
+            f"base_frame:={self.base_frame}", f"scan_topic:=/scan"
         ]
         self.node.get_logger().info(f"Starting Localization: {' '.join(cmd)}")
         try:
             proc = subprocess.Popen(
                 cmd,
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.PIPE,
+                stdout=None,
+                stderr=None,
                 preexec_fn=os.setsid
             )
             self.processes["localization"] = proc
-            return True, "Localization (Map Server + AMCL) process launched"
+            ready, ready_msg = self._wait_for_nodes("localization", ["map_server", "amcl"])
+            if not ready:
+                self._stop_process("localization")
+                return False, ready_msg
+            return True, "Localization (Map Server + AMCL) process launched and ready"
         except Exception as e:
             return False, f"Failed to start localization: {str(e)}"
 
@@ -205,12 +245,23 @@ class AMRProcessSupervisor:
         try:
             proc = subprocess.Popen(
                 cmd,
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.PIPE,
+                stdout=None,
+                stderr=None,
                 preexec_fn=os.setsid
             )
             self.processes["navigation"] = proc
-            return True, "Nav2 navigation stack process launched"
+            ready, ready_msg = self._wait_for_nodes(
+                "navigation",
+                [
+                    "controller_server",
+                    "planner_server",
+                    "bt_navigator",
+                    "lifecycle_manager_navigation",
+                ])
+            if not ready:
+                self._stop_process("navigation")
+                return False, ready_msg
+            return True, "Nav2 navigation stack process launched and ready"
         except Exception as e:
             return False, f"Failed to start navigation: {str(e)}"
 
@@ -264,12 +315,20 @@ class AMRSystemManager(Node):
             ('use_sim_time', True),
             ('maps_dir', str(Path.home() / 'bumbleb_data' / 'maps')),
             ('auto_ready', True),
+            ('map_frame', 'map'),
+            ('odom_frame', 'odom'),
+            ('base_frame', 'base_link'),
+            ('lidar_frame', 'lidar_link'),
         ]:
             if not self.has_parameter(param_name):
                 self.declare_parameter(param_name, default_val)
 
         self.use_sim_time = self.get_parameter('use_sim_time').get_parameter_value().bool_value
         self.maps_dir = self.get_parameter('maps_dir').get_parameter_value().string_value
+        self.map_frame = self.get_parameter('map_frame').get_parameter_value().string_value
+        self.odom_frame = self.get_parameter('odom_frame').get_parameter_value().string_value
+        self.base_frame = self.get_parameter('base_frame').get_parameter_value().string_value
+        self.lidar_frame = self.get_parameter('lidar_frame').get_parameter_value().string_value
         auto_ready = self.get_parameter('auto_ready').get_parameter_value().bool_value
 
         os.makedirs(self.maps_dir, exist_ok=True)
@@ -285,7 +344,10 @@ class AMRSystemManager(Node):
 
         # Components
         self.state_machine = AMRStateMachine(AMRState.OFF)
-        self.supervisor = AMRProcessSupervisor(self, use_sim_time=self.use_sim_time)
+        self.supervisor = AMRProcessSupervisor(
+            self, use_sim_time=self.use_sim_time,
+            map_frame=self.map_frame, odom_frame=self.odom_frame,
+            base_frame=self.base_frame, lidar_frame=self.lidar_frame)
 
         # Telemetry tracking
         self.last_scan_time = 0.0
@@ -293,6 +355,8 @@ class AMRSystemManager(Node):
         self.last_joint_states_time = 0.0
         self.last_map_time = 0.0
         self.map_received = False
+        self.amcl_pose_received = False
+        self.last_amcl_time = 0.0
         self.battery_pct = 95.0
         self.battery_voltage = 25.4
 
@@ -301,6 +365,7 @@ class AMRSystemManager(Node):
         self.sub_odom = self.create_subscription(Odometry, "/odom", self._odom_cb, 10)
         self.sub_joints = self.create_subscription(JointState, "/joint_states", self._joint_cb, 10)
         self.sub_map = self.create_subscription(OccupancyGrid, "/map", self._map_cb, rclpy.qos.qos_profile_sensor_data)
+        self.sub_amcl = self.create_subscription(PoseWithCovarianceStamped, "/amcl_pose", self._amcl_cb, 10)
         self.cmd_sub = self.create_subscription(String, '/amr/command', self._command_callback, 10)
 
         # Publishers
@@ -308,7 +373,12 @@ class AMRSystemManager(Node):
         self.state_pub = self.create_publisher(String, '/amr/system_state', 10)
         self.health_pub = self.create_publisher(String, '/amr/system_health', 10)
         self.maps_pub = self.create_publisher(String, '/amr/maps', 10)
+        operation_qos = QoSProfile(depth=10)
+        operation_qos.durability = DurabilityPolicy.TRANSIENT_LOCAL
+        self.operation_pub = self.create_publisher(String, '/amr/map_operation_result', operation_qos)
         self.battery_pub = self.create_publisher(BatteryState, '/amr/battery_state', 10)
+        self.serialize_client = self.create_client(SerializePoseGraph, '/slam_toolbox/serialize_map')
+        self.deserialize_client = self.create_client(DeserializePoseGraph, '/slam_toolbox/deserialize_map')
 
         # Standard Trigger Services for ROS and Dashboard
         self.srv_start_robot = self.create_service(Trigger, '/amr/start_robot', self._srv_start_robot)
@@ -322,6 +392,8 @@ class AMRSystemManager(Node):
         self.srv_estop = self.create_service(Trigger, '/amr/emergency_stop', self._srv_emergency_stop)
         self.srv_reset_estop = self.create_service(Trigger, '/amr/reset_emergency_stop', self._srv_reset_emergency_stop)
         self.srv_system_reset = self.create_service(Trigger, '/amr/system_reset', self._srv_system_reset)
+        self.srv_map_operation = self.create_service(MapOperation, '/amr/map_operation', self._srv_map_operation)
+        self.srv_set_mode = self.create_service(SetMode, '/amr/set_mode', self._srv_set_mode)
 
         # Timers
         self.state_timer = self.create_timer(0.2, self._publish_state)
@@ -329,6 +401,7 @@ class AMRSystemManager(Node):
         self.maps_timer = self.create_timer(2.0, self._publish_maps)
         self.battery_timer = self.create_timer(1.0, self._publish_battery)
         self.estop_watchdog = self.create_timer(0.05, self._estop_safety_loop)
+        self.process_monitor_timer = self.create_timer(1.0, self._monitor_processes)
 
         # Initialize to READY
         if auto_ready:
@@ -349,9 +422,26 @@ class AMRSystemManager(Node):
         self.last_map_time = time.time()
         self.map_received = True
 
+    def _amcl_cb(self, msg: PoseWithCovarianceStamped):
+        self.last_amcl_time = time.time()
+        self.amcl_pose_received = True
+
     def _estop_safety_loop(self):
         if self.state_machine.current_state == AMRState.EMERGENCY_STOP:
             self.cmd_vel_pub.publish(Twist())
+
+    def _monitor_processes(self):
+        """Convert unexpected feature-process exits into a visible ERROR state."""
+        for name, proc in list(self.supervisor.processes.items()):
+            return_code = proc.poll()
+            if return_code is None:
+                continue
+            del self.supervisor.processes[name]
+            message = f"Managed process '{name}' exited unexpectedly with code {return_code}."
+            self.get_logger().error(message)
+            if self.state_machine.current_state in (
+                    AMRState.MAPPING, AMRState.LOCALIZATION, AMRState.NAVIGATION):
+                self.state_machine.transition_to(AMRState.ERROR, message)
 
     def check_tf(self, target_frame: str, source_frame: str) -> tuple[bool, str]:
         try:
@@ -368,10 +458,10 @@ class AMRSystemManager(Node):
             return False, "Pre-flight failed: LiDAR topic /scan is not actively publishing"
         if self.last_odom_time == 0 or (now - self.last_odom_time) > 2.0:
             return False, "Pre-flight failed: Odometry topic /odom is not actively publishing"
-        ok_tf, tf_msg = self.check_tf("odom", "base_link")
+        ok_tf, tf_msg = self.check_tf(self.odom_frame, self.base_frame)
         if not ok_tf:
             return False, f"Pre-flight failed: {tf_msg}"
-        ok_lidar, lidar_msg = self.check_tf("base_link", "lidar_link")
+        ok_lidar, lidar_msg = self.check_tf(self.base_frame, self.lidar_frame)
         if not ok_lidar:
             return False, f"Pre-flight failed: {lidar_msg}"
         return True, "All mapping prerequisites satisfied."
@@ -387,6 +477,8 @@ class AMRSystemManager(Node):
 
     def get_map_path(self, map_name: str) -> str | None:
         name = map_name.strip()
+        if not self.VALID_MAP_PATTERN.match(name):
+            return None
         p1 = os.path.join(self.maps_dir, f"{name}.yaml")
         if os.path.exists(p1):
             return p1
@@ -409,7 +501,7 @@ class AMRSystemManager(Node):
                 "--ros-args", "-p", f"use_sim_time:={str(self.use_sim_time).lower()}",
                 "-p", "save_map_timeout:=10.0"
             ]
-            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
+            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=20)
             if proc.returncode == 0:
                 return True, f"Map '{name}' saved successfully"
             else:
@@ -419,6 +511,71 @@ class AMRSystemManager(Node):
             return False, "Map saving timed out after 10s. Verify /map topic is active."
         except Exception as e:
             return False, f"Error saving map: {str(e)}"
+
+    def _publish_operation(self, operation: str, success: bool, message: str, **extra):
+        payload = {"operation": operation, "success": success, "message": message,
+                   "timestamp": time.time(), **extra}
+        msg = String()
+        msg.data = json.dumps(payload)
+        self.operation_pub.publish(msg)
+
+    def serialize_pose_graph(self, map_name: str) -> tuple[bool, str]:
+        """Ask async SLAM Toolbox to persist its graph beside the occupancy map."""
+        name = map_name.strip()
+        if not name or not self.VALID_MAP_PATTERN.match(name):
+            return False, "Invalid map name. Only letters, numbers, underscores, and hyphens are allowed."
+        if not self.supervisor.is_running("slam"):
+            return False, "SLAM Toolbox is not running; start mapping before serializing the graph."
+        if not self.serialize_client.wait_for_service(timeout_sec=10.0):
+            return False, "SLAM Toolbox serialize service is unavailable."
+        filename = os.path.join(self.maps_dir, name)
+        request = SerializePoseGraph.Request()
+        request.filename = filename
+        future = self.serialize_client.call_async(request)
+        future.add_done_callback(lambda f: self._serialize_done(f, name, filename))
+        return True, f"Pose-graph serialization requested for '{name}'."
+
+    def _serialize_done(self, future, name: str, filename: str):
+        try:
+            result = future.result()
+            success = result.result == SerializePoseGraph.Response.RESULT_SUCCESS
+            message = (f"Pose graph '{name}' serialized successfully."
+                       if success else f"Pose graph serialization failed (result {result.result}).")
+        except Exception as exc:
+            success = False
+            message = f"Pose graph serialization failed: {exc}"
+        self._publish_operation("serialize_pose_graph", success, message,
+                                map_name=name, filename=filename)
+
+    def deserialize_pose_graph(self, map_name: str) -> tuple[bool, str]:
+        name = map_name.strip()
+        if not name or not self.VALID_MAP_PATTERN.match(name):
+            return False, "Invalid map name."
+        filename = os.path.join(self.maps_dir, name)
+        if not os.path.exists(filename + ".posegraph"):
+            return False, f"Serialized pose graph not found: {filename}.posegraph"
+        if not self.supervisor.is_running("slam"):
+            return False, "SLAM Toolbox is not running; start mapping before deserializing."
+        if not self.deserialize_client.wait_for_service(timeout_sec=10.0):
+            return False, "SLAM Toolbox deserialize service is unavailable."
+        request = DeserializePoseGraph.Request()
+        request.filename = filename
+        request.match_type = DeserializePoseGraph.Request.START_AT_FIRST_NODE
+        future = self.deserialize_client.call_async(request)
+        future.add_done_callback(lambda f: self._deserialize_done(f, name, filename))
+        return True, f"Pose-graph deserialization requested for '{name}'."
+
+    def _deserialize_done(self, future, name: str, filename: str):
+        try:
+            result = future.result()
+            success = result.result == 0
+            message = (f"Pose graph '{name}' loaded successfully."
+                       if success else f"Pose graph '{name}' failed to load.")
+        except Exception as exc:
+            success = False
+            message = f"Pose graph deserialization failed: {exc}"
+        self._publish_operation("deserialize_pose_graph", success, message,
+                                map_name=name, filename=filename)
 
     def _publish_state(self):
         data = {
@@ -431,7 +588,8 @@ class AMRSystemManager(Node):
             "active_processes": {
                 "slam": self.supervisor.is_running("slam"),
                 "localization": self.supervisor.is_running("localization"),
-                "navigation": self.supervisor.is_running("navigation")
+                "navigation": self.supervisor.is_running("navigation"),
+                "amcl_pose_received": self.amcl_pose_received
             }
         }
         msg = String()
@@ -467,8 +625,8 @@ class AMRSystemManager(Node):
         }
 
         # TF
-        tf_odom_base, msg_odom_base = self.check_tf("odom", "base_link")
-        tf_base_lidar, msg_base_lidar = self.check_tf("base_link", "lidar_link")
+        tf_odom_base, msg_odom_base = self.check_tf(self.odom_frame, self.base_frame)
+        tf_base_lidar, msg_base_lidar = self.check_tf(self.base_frame, self.lidar_frame)
         components["tf"] = {
             "status": HealthStatus.OK if (tf_odom_base and tf_base_lidar) else HealthStatus.ERROR,
             "message": "Base TF tree valid" if (tf_odom_base and tf_base_lidar) else (msg_odom_base if not tf_odom_base else msg_base_lidar),
@@ -497,9 +655,12 @@ class AMRSystemManager(Node):
             "message": "Running" if self.supervisor.is_running("localization") else "Stopped"
         }
         components["amcl"] = {
-            "status": HealthStatus.OK if self.supervisor.is_running("localization") else HealthStatus.OK,
+            "status": (HealthStatus.OK if self.amcl_pose_received and now - self.last_amcl_time < 5.0
+                       else (HealthStatus.WARNING if self.supervisor.is_running("localization") else HealthStatus.OK)),
             "running": self.supervisor.is_running("localization"),
-            "message": "Running" if self.supervisor.is_running("localization") else "Stopped"
+            "localized": self.amcl_pose_received and now - self.last_amcl_time < 5.0,
+            "message": "Publishing AMCL pose" if self.amcl_pose_received and now - self.last_amcl_time < 5.0
+                       else ("Waiting for initial pose/convergence" if self.supervisor.is_running("localization") else "Stopped")
         }
         components["nav2"] = {
             "status": HealthStatus.OK if self.supervisor.is_running("navigation") else HealthStatus.OK,
@@ -554,7 +715,23 @@ class AMRSystemManager(Node):
                 self._srv_stop_mapping(Trigger.Request(), Trigger.Response())
             elif action == "save_map":
                 map_name = data.get("map_name", "warehouse_map")
-                self.save_map(map_name)
+                was_mapping = self.state_machine.current_state == AMRState.MAPPING
+                if was_mapping:
+                    self.state_machine.transition_to(AMRState.MAP_SAVING)
+                ok, result = self.save_map(map_name)
+                if was_mapping:
+                    self.state_machine.transition_to(AMRState.MAPPING)
+                self._publish_operation("save_map", ok, result, map_name=map_name)
+            elif action in ("serialize_map", "serialize_pose_graph"):
+                map_name = data.get("map_name", "warehouse_map")
+                ok, result = self.serialize_pose_graph(map_name)
+                self._publish_operation("serialize_pose_graph", ok, result, map_name=map_name)
+            elif action in ("deserialize_map", "deserialize_pose_graph", "resume_mapping"):
+                map_name = data.get("map_name", "warehouse_map")
+                ok, result = self._switch_mode("MAPPING", map_name)
+                if ok:
+                    ok, result = self.deserialize_pose_graph(map_name)
+                self._publish_operation("deserialize_pose_graph", ok, result, map_name=map_name)
             elif action == "load_map" or action == "set_mode" and data.get("mode") == "LOCALIZATION":
                 map_name = data.get("map_name", "")
                 self._switch_mode("LOCALIZATION", map_name)
@@ -580,6 +757,34 @@ class AMRSystemManager(Node):
         except Exception as e:
             self.get_logger().error(f"Error handling JSON command: {e}")
 
+    def _srv_map_operation(self, request, response):
+        operation = request.operation.strip().lower()
+        name = request.map_name.strip()
+        if operation == "save_map":
+            was_mapping = self.state_machine.current_state == AMRState.MAPPING
+            if was_mapping:
+                self.state_machine.transition_to(AMRState.MAP_SAVING)
+            response.success, response.message = self.save_map(name)
+            if was_mapping:
+                self.state_machine.transition_to(AMRState.MAPPING)
+            self._publish_operation(operation, response.success, response.message, map_name=name)
+        elif operation in ("serialize_map", "serialize_pose_graph"):
+            response.success, response.message = self.serialize_pose_graph(name)
+            self._publish_operation("serialize_pose_graph", response.success, response.message, map_name=name)
+        elif operation in ("deserialize_map", "deserialize_pose_graph", "resume_mapping"):
+            response.success, response.message = self._switch_mode("MAPPING", name)
+            if response.success:
+                response.success, response.message = self.deserialize_pose_graph(name)
+            self._publish_operation("deserialize_pose_graph", response.success, response.message, map_name=name)
+        else:
+            response.success = False
+            response.message = f"Unknown map operation '{request.operation}'."
+        return response
+
+    def _srv_set_mode(self, request, response):
+        response.success, response.message = self._switch_mode(request.mode, request.map_name)
+        return response
+
     def _switch_mode(self, mode: str, map_name: str = "") -> tuple[bool, str]:
         target = mode.upper()
         if self.state_machine.current_state == AMRState.EMERGENCY_STOP and target != "EMERGENCY_STOP":
@@ -597,6 +802,8 @@ class AMRSystemManager(Node):
             if not ok:
                 return False, msg
             p_ok, p_msg = self.supervisor.start_slam()
+            if not p_ok:
+                self.state_machine.transition_to(AMRState.READY)
             return p_ok, f"{msg}. {p_msg}"
 
         elif target == "LOCALIZATION":
@@ -620,6 +827,8 @@ class AMRSystemManager(Node):
             if not ok:
                 return False, msg
             p_ok, p_msg = self.supervisor.start_localization(map_path)
+            if not p_ok:
+                self.state_machine.transition_to(AMRState.READY)
             return p_ok, f"{msg}. Active map: {chosen_map}. {p_msg}"
 
         elif target == "NAVIGATION":
@@ -632,6 +841,8 @@ class AMRSystemManager(Node):
             if not ok:
                 return False, msg
             p_ok, p_msg = self.supervisor.start_navigation()
+            if not p_ok:
+                self.state_machine.transition_to(AMRState.LOCALIZATION)
             return p_ok, f"{msg}. {p_msg}"
 
         elif target == "EMERGENCY_STOP":
@@ -735,12 +946,13 @@ def main(args=None):
     node = AMRSystemManager()
     try:
         rclpy.spin(node)
-    except KeyboardInterrupt:
+    except (KeyboardInterrupt, ExternalShutdownException):
         pass
     finally:
         node.supervisor.stop_all()
         node.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 
 if __name__ == '__main__':

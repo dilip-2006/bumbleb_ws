@@ -210,84 +210,6 @@ zlac_drive/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/zlac_drive.dir/build.make CMakeFiles/zlac_drive.dir/build
 .PHONY : zlac_drive/fast
 
-#=============================================================================
-# Target rules for targets named test_modbus_client
-
-# Build rule for target.
-test_modbus_client: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_modbus_client
-.PHONY : test_modbus_client
-
-# fast build rule for target.
-test_modbus_client/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_modbus_client.dir/build.make CMakeFiles/test_modbus_client.dir/build
-.PHONY : test_modbus_client/fast
-
-#=============================================================================
-# Target rules for targets named test_motor
-
-# Build rule for target.
-test_motor: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_motor
-.PHONY : test_motor
-
-# fast build rule for target.
-test_motor/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_motor.dir/build.make CMakeFiles/test_motor.dir/build
-.PHONY : test_motor/fast
-
-#=============================================================================
-# Target rules for targets named test_driver
-
-# Build rule for target.
-test_driver: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_driver
-.PHONY : test_driver
-
-# fast build rule for target.
-test_driver/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_driver.dir/build.make CMakeFiles/test_driver.dir/build
-.PHONY : test_driver/fast
-
-#=============================================================================
-# Target rules for targets named test_hardware_interface
-
-# Build rule for target.
-test_hardware_interface: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_hardware_interface
-.PHONY : test_hardware_interface
-
-# fast build rule for target.
-test_hardware_interface/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hardware_interface.dir/build.make CMakeFiles/test_hardware_interface.dir/build
-.PHONY : test_hardware_interface/fast
-
-#=============================================================================
-# Target rules for targets named gtest
-
-# Build rule for target.
-gtest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
-.PHONY : gtest
-
-# fast build rule for target.
-gtest/fast:
-	$(MAKE) $(MAKESILENT) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
-.PHONY : gtest/fast
-
-#=============================================================================
-# Target rules for targets named gtest_main
-
-# Build rule for target.
-gtest_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
-.PHONY : gtest_main
-
-# fast build rule for target.
-gtest_main/fast:
-	$(MAKE) $(MAKESILENT) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
-.PHONY : gtest_main/fast
-
 src/diagnostics/driver_diagnostics.o: src/diagnostics/driver_diagnostics.cpp.o
 .PHONY : src/diagnostics/driver_diagnostics.o
 
@@ -408,102 +330,6 @@ src/modbus/modbus_client.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/zlac_drive.dir/build.make CMakeFiles/zlac_drive.dir/src/modbus/modbus_client.cpp.s
 .PHONY : src/modbus/modbus_client.cpp.s
 
-test/test_driver.o: test/test_driver.cpp.o
-.PHONY : test/test_driver.o
-
-# target to build an object file
-test/test_driver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_driver.dir/build.make CMakeFiles/test_driver.dir/test/test_driver.cpp.o
-.PHONY : test/test_driver.cpp.o
-
-test/test_driver.i: test/test_driver.cpp.i
-.PHONY : test/test_driver.i
-
-# target to preprocess a source file
-test/test_driver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_driver.dir/build.make CMakeFiles/test_driver.dir/test/test_driver.cpp.i
-.PHONY : test/test_driver.cpp.i
-
-test/test_driver.s: test/test_driver.cpp.s
-.PHONY : test/test_driver.s
-
-# target to generate assembly for a file
-test/test_driver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_driver.dir/build.make CMakeFiles/test_driver.dir/test/test_driver.cpp.s
-.PHONY : test/test_driver.cpp.s
-
-test/test_hardware_interface.o: test/test_hardware_interface.cpp.o
-.PHONY : test/test_hardware_interface.o
-
-# target to build an object file
-test/test_hardware_interface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hardware_interface.dir/build.make CMakeFiles/test_hardware_interface.dir/test/test_hardware_interface.cpp.o
-.PHONY : test/test_hardware_interface.cpp.o
-
-test/test_hardware_interface.i: test/test_hardware_interface.cpp.i
-.PHONY : test/test_hardware_interface.i
-
-# target to preprocess a source file
-test/test_hardware_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hardware_interface.dir/build.make CMakeFiles/test_hardware_interface.dir/test/test_hardware_interface.cpp.i
-.PHONY : test/test_hardware_interface.cpp.i
-
-test/test_hardware_interface.s: test/test_hardware_interface.cpp.s
-.PHONY : test/test_hardware_interface.s
-
-# target to generate assembly for a file
-test/test_hardware_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hardware_interface.dir/build.make CMakeFiles/test_hardware_interface.dir/test/test_hardware_interface.cpp.s
-.PHONY : test/test_hardware_interface.cpp.s
-
-test/test_modbus_client.o: test/test_modbus_client.cpp.o
-.PHONY : test/test_modbus_client.o
-
-# target to build an object file
-test/test_modbus_client.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_modbus_client.dir/build.make CMakeFiles/test_modbus_client.dir/test/test_modbus_client.cpp.o
-.PHONY : test/test_modbus_client.cpp.o
-
-test/test_modbus_client.i: test/test_modbus_client.cpp.i
-.PHONY : test/test_modbus_client.i
-
-# target to preprocess a source file
-test/test_modbus_client.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_modbus_client.dir/build.make CMakeFiles/test_modbus_client.dir/test/test_modbus_client.cpp.i
-.PHONY : test/test_modbus_client.cpp.i
-
-test/test_modbus_client.s: test/test_modbus_client.cpp.s
-.PHONY : test/test_modbus_client.s
-
-# target to generate assembly for a file
-test/test_modbus_client.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_modbus_client.dir/build.make CMakeFiles/test_modbus_client.dir/test/test_modbus_client.cpp.s
-.PHONY : test/test_modbus_client.cpp.s
-
-test/test_motor.o: test/test_motor.cpp.o
-.PHONY : test/test_motor.o
-
-# target to build an object file
-test/test_motor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_motor.dir/build.make CMakeFiles/test_motor.dir/test/test_motor.cpp.o
-.PHONY : test/test_motor.cpp.o
-
-test/test_motor.i: test/test_motor.cpp.i
-.PHONY : test/test_motor.i
-
-# target to preprocess a source file
-test/test_motor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_motor.dir/build.make CMakeFiles/test_motor.dir/test/test_motor.cpp.i
-.PHONY : test/test_motor.cpp.i
-
-test/test_motor.s: test/test_motor.cpp.s
-.PHONY : test/test_motor.s
-
-# target to generate assembly for a file
-test/test_motor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_motor.dir/build.make CMakeFiles/test_motor.dir/test/test_motor.cpp.s
-.PHONY : test/test_motor.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -519,12 +345,6 @@ help:
 	@echo "... test"
 	@echo "... uninstall"
 	@echo "... zlac_drive_uninstall"
-	@echo "... gtest"
-	@echo "... gtest_main"
-	@echo "... test_driver"
-	@echo "... test_hardware_interface"
-	@echo "... test_modbus_client"
-	@echo "... test_motor"
 	@echo "... zlac_drive"
 	@echo "... src/diagnostics/driver_diagnostics.o"
 	@echo "... src/diagnostics/driver_diagnostics.i"
@@ -541,18 +361,6 @@ help:
 	@echo "... src/modbus/modbus_client.o"
 	@echo "... src/modbus/modbus_client.i"
 	@echo "... src/modbus/modbus_client.s"
-	@echo "... test/test_driver.o"
-	@echo "... test/test_driver.i"
-	@echo "... test/test_driver.s"
-	@echo "... test/test_hardware_interface.o"
-	@echo "... test/test_hardware_interface.i"
-	@echo "... test/test_hardware_interface.s"
-	@echo "... test/test_modbus_client.o"
-	@echo "... test/test_modbus_client.i"
-	@echo "... test/test_modbus_client.s"
-	@echo "... test/test_motor.o"
-	@echo "... test/test_motor.i"
-	@echo "... test/test_motor.s"
 .PHONY : help
 
 

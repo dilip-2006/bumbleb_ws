@@ -81,10 +81,22 @@ colcon list
 
 ---
 
-## 5. Web Dashboard Setup
+## 5. Physical Robot Bringup
+
+The unified real-robot bringup starts the ZLAC hardware, fixed robot TF, RPLIDAR, rosbridge, and the dashboard/system managers:
 
 ```bash
-cd /home/dk/bumbleb_ws/web_dashboard
+ros2 launch bumbleb_bot bringup.launch.py
+```
+
+It defaults to `simulation:=false` and `use_sim_time:=false`. The dashboard then starts asynchronous SLAM, AMCL localization, and Nav2 through the corresponding launch files. For Gazebo only, explicitly use `simulation:=true use_sim_time:=true`.
+
+See [Physical Robot Operation](REAL_ROBOT_OPERATION.md) for the dashboard workflow and direct ROS/rosbridge service requests.
+
+## 6. Web Dashboard Setup
+
+```bash
+cd /home/dk/web_dashboard
 npm install
 npm run build
 ```

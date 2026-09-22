@@ -104,6 +104,10 @@ map ──[SLAM Toolbox / AMCL]──> odom ──[bumbleb_drivetrain_node]─�
 | `/amr/start_localization` | `std_srvs/Trigger` | Launches Map Server and AMCL on active map |
 | `/amr/stop_localization` | `std_srvs/Trigger` | Stops localization subsystems |
 | `/amr/start_navigation` | `std_srvs/Trigger` | Launches Nav2 planning and control stack |
+| `/amr/set_mode` | `bumbleb_bot/srv/SetMode` | Reliably switches READY/MAPPING/LOCALIZATION/NAVIGATION modes |
+| `/amr/map_operation` | `bumbleb_bot/srv/MapOperation` | Saves maps and serializes/deserializes SLAM pose graphs |
+| `/amr/navigate_to_pose` | `bumbleb_bot/srv/NavigateToPose` | Sends a dashboard coordinate goal to Nav2 |
+| `/amr/set_initial_pose` | `bumbleb_bot/srv/SetInitialPose` | Publishes the AMCL initial pose |
 | `/amr/stop_navigation` | `std_srvs/Trigger` | Stops Nav2 navigation |
 | `/amr/emergency_stop` | `std_srvs/Trigger` | Clamps velocity to 0 and latches EMERGENCY_STOP |
 | `/amr/reset_emergency_stop` | `std_srvs/Trigger` | Resets emergency latch to READY |

@@ -15,6 +15,7 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
 endif()
 
 find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
 
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
@@ -23,6 +24,13 @@ find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "srv/MapOperation.srv"
+  "srv/SetMode.srv"
+  "srv/NavigateToPose.srv"
+  "srv/SetInitialPose.srv"
+)
 
 # ============================================================
 # BumbleB differential-drive kinematics / odometry node
@@ -108,4 +116,5 @@ if(BUILD_TESTING)
 
 endif()
 
+ament_export_dependencies(rosidl_default_runtime)
 ament_package()

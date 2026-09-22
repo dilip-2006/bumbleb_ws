@@ -96,7 +96,7 @@
 - `/home/dk/bumbleb_ws/locations/`: YAML database for warehouse shelf and station coordinates.
 
 ### Web Dashboard
-- `/home/dk/bumbleb_ws/web_dashboard/`: Standalone modern React application
+- `/home/dk/web_dashboard/`: Standalone modern React application
   - `src/ros/`: ROS WebSocket client, topic subscribers, service callers, action clients.
   - `src/components/`: Header, RobotStatus, SensorStatus, ModeSelector, MapViewer (canvas occupancy grid + laser + pose + goal + locations), LocationManager, MapManager, Teleop, EmergencyStop.
   - Responsive, industrial warehouse UI design.

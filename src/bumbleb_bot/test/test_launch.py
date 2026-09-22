@@ -16,6 +16,18 @@ def test_required_launch_files_exist():
         assert (root / name).is_file()
 
 
+def test_bringup_defaults_to_physical_robot():
+    text = (Path(__file__).resolve().parents[1] / "launch" / "bringup.launch.py").read_text(encoding="utf-8")
+    assert '"simulation",\n        default_value="false"' in text
+    assert '"use_sim_time",\n        default_value="false"' in text
+
+
+def test_dashboard_backend_interfaces_exist():
+    root = Path(__file__).resolve().parents[1] / "srv"
+    for name in ("MapOperation.srv", "SetMode.srv", "NavigateToPose.srv", "SetInitialPose.srv"):
+        assert (root / name).is_file()
+
+
 def test_real_lidar_uses_front_scan_filter():
     launch_file = (
         Path(__file__).resolve().parents[1] / "launch" / "lidar.launch.py"

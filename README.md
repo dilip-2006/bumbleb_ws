@@ -63,12 +63,12 @@ The robot workspace contains strictly the robot and hardware driver packages, wi
 │   │   ├── scripts/             # system_manager_node.py, location_manager_node.py
 │   │   └── src/                 # drivetrain_node.cpp (kinematics, odometry, TF)
 │   └── zlac_drive/              # ZLAC8015D Modbus motor driver (hardware layer)
-│
-├── web_dashboard/               # Modern React + Vite control dashboard (separate folder)
 ├── maps/                        # Controlled directory for saved warehouse maps (.yaml + .pgm)
 ├── locations/                   # Warehouse locations database (warehouse_locations.yaml)
 └── docs/                        # Complete technical documentation suite
 ```
+
+*(Note: Web Dashboard frontend is located outside the workspace at `/home/dk/web_dashboard`)*
 
 ---
 
@@ -87,20 +87,22 @@ colcon build --symlink-install --cmake-args -DBUILD_TESTING=OFF
 source install/setup.bash
 ```
 
-### 2. Launch the Robot System
+### 2. Launch the Physical Robot System
 
-Start Gazebo simulation, drivetrain, rosbridge WebSocket server, system manager, and location manager with one unified command:
+Start the physical ZLAC drivetrain, robot-state publisher, RPLIDAR, rosbridge WebSocket server, system manager, and location manager with one unified command:
 
 ```bash
 ros2 launch bumbleb_bot bringup.launch.py
 ```
+
+The default is `simulation:=false` and `use_sim_time:=false`. Dashboard buttons launch and stop the dedicated SLAM, localization, and Nav2 launch files through the backend. Use `simulation:=true use_sim_time:=true` only for Gazebo testing.
 
 ### 3. Launch the Web Dashboard
 
 In a second terminal:
 
 ```bash
-cd /home/dk/bumbleb_ws/web_dashboard
+cd /home/dk/web_dashboard
 npm run dev
 ```
 
@@ -120,3 +122,4 @@ Detailed guides are available in the [`docs/`](docs/) directory:
 - [Navigation Guide](docs/NAVIGATION.md) — Nav2 stack, costmaps, planner, and click-to-nav.
 - [Web Dashboard Guide](docs/WEB_DASHBOARD.md) — Web dashboard architecture, telemetry, and teleoperation.
 - [Hardware Migration Guide](docs/HARDWARE_MIGRATION.md) — Transferring from Gazebo simulation to physical AMR.
+- [Physical Robot Operation](docs/REAL_ROBOT_OPERATION.md) — Real-robot bringup, dashboard operations, and ROS/rosbridge service requests.

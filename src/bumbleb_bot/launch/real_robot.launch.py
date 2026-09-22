@@ -128,6 +128,7 @@ def generate_launch_description():
         name="controller_manager",
         output="screen",
         parameters=[
+            controllers_file,
             {
                 "robot_description": robot_description,
                 "use_sim_time": use_sim_time,

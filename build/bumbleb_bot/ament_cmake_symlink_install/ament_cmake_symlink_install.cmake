@@ -315,11 +315,110 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "bumbleb_drivetrain_node" "DESTINATION" "lib/bumbleb_bot")
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/bumbleb_bot" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/bumbleb_bot" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
+
+# install(DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_generator_c/bumbleb_bot/" "DESTINATION" "include/bumbleb_bot/bumbleb_bot" "PATTERN" "*.h")
+ament_cmake_symlink_install_directory("/home/dk/bumbleb_ws/src/bumbleb_bot" DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_generator_c/bumbleb_bot/" "DESTINATION" "include/bumbleb_bot/bumbleb_bot" "PATTERN" "*.h")
+
+# install(FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/bumbleb_bot/environment")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/bumbleb_bot/environment")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/bumbleb_bot/environment")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/bumbleb_bot/environment")
+
+# install(DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_typesupport_fastrtps_c/bumbleb_bot/" "DESTINATION" "include/bumbleb_bot/bumbleb_bot" "PATTERN_EXCLUDE" "*.cpp")
+ament_cmake_symlink_install_directory("/home/dk/bumbleb_ws/src/bumbleb_bot" DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_typesupport_fastrtps_c/bumbleb_bot/" "DESTINATION" "include/bumbleb_bot/bumbleb_bot" "PATTERN_EXCLUDE" "*.cpp")
+
+# install(DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_typesupport_introspection_c/bumbleb_bot/" "DESTINATION" "include/bumbleb_bot/bumbleb_bot" "PATTERN" "*.h")
+ament_cmake_symlink_install_directory("/home/dk/bumbleb_ws/src/bumbleb_bot" DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_typesupport_introspection_c/bumbleb_bot/" "DESTINATION" "include/bumbleb_bot/bumbleb_bot" "PATTERN" "*.h")
+
+# install(DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_generator_cpp/bumbleb_bot/" "DESTINATION" "include/bumbleb_bot/bumbleb_bot" "PATTERN" "*.hpp")
+ament_cmake_symlink_install_directory("/home/dk/bumbleb_ws/src/bumbleb_bot" DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_generator_cpp/bumbleb_bot/" "DESTINATION" "include/bumbleb_bot/bumbleb_bot" "PATTERN" "*.hpp")
+
+# install(DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_typesupport_fastrtps_cpp/bumbleb_bot/" "DESTINATION" "include/bumbleb_bot/bumbleb_bot" "PATTERN_EXCLUDE" "*.cpp")
+ament_cmake_symlink_install_directory("/home/dk/bumbleb_ws/src/bumbleb_bot" DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_typesupport_fastrtps_cpp/bumbleb_bot/" "DESTINATION" "include/bumbleb_bot/bumbleb_bot" "PATTERN_EXCLUDE" "*.cpp")
+
+# install(DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_typesupport_introspection_cpp/bumbleb_bot/" "DESTINATION" "include/bumbleb_bot/bumbleb_bot" "PATTERN" "*.hpp")
+ament_cmake_symlink_install_directory("/home/dk/bumbleb_ws/src/bumbleb_bot" DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_typesupport_introspection_cpp/bumbleb_bot/" "DESTINATION" "include/bumbleb_bot/bumbleb_bot" "PATTERN" "*.hpp")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/bumbleb_bot/environment")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/bumbleb_bot/environment")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/bumbleb_bot/environment")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/bumbleb_bot/environment")
+
+# install(DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_python/bumbleb_bot/bumbleb_bot.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/bumbleb_bot-0.1.0-py3.10.egg-info")
+ament_cmake_symlink_install_directory("/home/dk/bumbleb_ws/src/bumbleb_bot" DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_python/bumbleb_bot/bumbleb_bot.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/bumbleb_bot-0.1.0-py3.10.egg-info")
+
+# install(DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_generator_py/bumbleb_bot/" "DESTINATION" "local/lib/python3.10/dist-packages/bumbleb_bot" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+ament_cmake_symlink_install_directory("/home/dk/bumbleb_ws/src/bumbleb_bot" DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_generator_py/bumbleb_bot/" "DESTINATION" "local/lib/python3.10/dist-packages/bumbleb_bot" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+
+# install("TARGETS" "bumbleb_bot__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/bumbleb_bot")
 include("/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(DIRECTORY "description" "launch" "config" "rviz" "worlds" "maps" "meshes" "DESTINATION" "share/bumbleb_bot")
-ament_cmake_symlink_install_directory("/home/dk/bumbleb_ws/src/bumbleb_bot" DIRECTORY "description" "launch" "config" "rviz" "worlds" "maps" "meshes" "DESTINATION" "share/bumbleb_bot")
+# install("TARGETS" "bumbleb_bot__rosidl_typesupport_introspection_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/bumbleb_bot")
+include("/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install("TARGETS" "bumbleb_bot__rosidl_typesupport_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/bumbleb_bot")
+include("/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install(DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_generator_rs/bumbleb_bot/rust" "DESTINATION" "share/bumbleb_bot")
+ament_cmake_symlink_install_directory("/home/dk/bumbleb_ws/src/bumbleb_bot" DIRECTORY "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_generator_rs/bumbleb_bot/rust" "DESTINATION" "share/bumbleb_bot")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_adapter/bumbleb_bot/srv/MapOperation.idl" "DESTINATION" "share/bumbleb_bot/srv")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_adapter/bumbleb_bot/srv/MapOperation.idl" "DESTINATION" "share/bumbleb_bot/srv")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_adapter/bumbleb_bot/srv/SetMode.idl" "DESTINATION" "share/bumbleb_bot/srv")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_adapter/bumbleb_bot/srv/SetMode.idl" "DESTINATION" "share/bumbleb_bot/srv")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_adapter/bumbleb_bot/srv/NavigateToPose.idl" "DESTINATION" "share/bumbleb_bot/srv")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_adapter/bumbleb_bot/srv/NavigateToPose.idl" "DESTINATION" "share/bumbleb_bot/srv")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_adapter/bumbleb_bot/srv/SetInitialPose.idl" "DESTINATION" "share/bumbleb_bot/srv")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_adapter/bumbleb_bot/srv/SetInitialPose.idl" "DESTINATION" "share/bumbleb_bot/srv")
+
+# install(FILES "/home/dk/bumbleb_ws/src/bumbleb_bot/srv/MapOperation.srv" "DESTINATION" "share/bumbleb_bot/srv")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/src/bumbleb_bot/srv/MapOperation.srv" "DESTINATION" "share/bumbleb_bot/srv")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/srv/MapOperation_Request.msg" "DESTINATION" "share/bumbleb_bot/srv")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/srv/MapOperation_Request.msg" "DESTINATION" "share/bumbleb_bot/srv")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/srv/MapOperation_Response.msg" "DESTINATION" "share/bumbleb_bot/srv")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/srv/MapOperation_Response.msg" "DESTINATION" "share/bumbleb_bot/srv")
+
+# install(FILES "/home/dk/bumbleb_ws/src/bumbleb_bot/srv/SetMode.srv" "DESTINATION" "share/bumbleb_bot/srv")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/src/bumbleb_bot/srv/SetMode.srv" "DESTINATION" "share/bumbleb_bot/srv")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/srv/SetMode_Request.msg" "DESTINATION" "share/bumbleb_bot/srv")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/srv/SetMode_Request.msg" "DESTINATION" "share/bumbleb_bot/srv")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/srv/SetMode_Response.msg" "DESTINATION" "share/bumbleb_bot/srv")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/srv/SetMode_Response.msg" "DESTINATION" "share/bumbleb_bot/srv")
+
+# install(FILES "/home/dk/bumbleb_ws/src/bumbleb_bot/srv/NavigateToPose.srv" "DESTINATION" "share/bumbleb_bot/srv")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/src/bumbleb_bot/srv/NavigateToPose.srv" "DESTINATION" "share/bumbleb_bot/srv")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/srv/NavigateToPose_Request.msg" "DESTINATION" "share/bumbleb_bot/srv")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/srv/NavigateToPose_Request.msg" "DESTINATION" "share/bumbleb_bot/srv")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/srv/NavigateToPose_Response.msg" "DESTINATION" "share/bumbleb_bot/srv")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/srv/NavigateToPose_Response.msg" "DESTINATION" "share/bumbleb_bot/srv")
+
+# install(FILES "/home/dk/bumbleb_ws/src/bumbleb_bot/srv/SetInitialPose.srv" "DESTINATION" "share/bumbleb_bot/srv")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/src/bumbleb_bot/srv/SetInitialPose.srv" "DESTINATION" "share/bumbleb_bot/srv")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/srv/SetInitialPose_Request.msg" "DESTINATION" "share/bumbleb_bot/srv")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/srv/SetInitialPose_Request.msg" "DESTINATION" "share/bumbleb_bot/srv")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/srv/SetInitialPose_Response.msg" "DESTINATION" "share/bumbleb_bot/srv")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/srv/SetInitialPose_Response.msg" "DESTINATION" "share/bumbleb_bot/srv")
+
+# install("TARGETS" "bumbleb_drivetrain_node" "DESTINATION" "lib/bumbleb_bot")
+include("/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_symlink_install_targets_3_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install(DIRECTORY "description" "launch" "config" "rviz" "worlds" "maps" "DESTINATION" "share/bumbleb_bot")
+ament_cmake_symlink_install_directory("/home/dk/bumbleb_ws/src/bumbleb_bot" DIRECTORY "description" "launch" "config" "rviz" "worlds" "maps" "DESTINATION" "share/bumbleb_bot")
 
 # install(PROGRAMS "scripts/system_manager_node.py" "scripts/location_manager_node.py" "scripts/front_scan_filter.py" "DESTINATION" "lib/bumbleb_bot")
 ament_cmake_symlink_install_programs("/home/dk/bumbleb_ws/src/bumbleb_bot" PROGRAMS "scripts/system_manager_node.py" "scripts/location_manager_node.py" "scripts/front_scan_filter.py" "DESTINATION" "lib/bumbleb_bot")
@@ -359,6 +458,30 @@ ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/
 
 # install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_index/share/ament_index/resource_index/packages/bumbleb_bot" "DESTINATION" "share/ament_index/resource_index/packages")
 ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_index/share/ament_index/resource_index/packages/bumbleb_bot" "DESTINATION" "share/ament_index/resource_index/packages")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
+
+# install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/rosidl_cmake_aggregate_target-extras.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
+ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/rosidl_cmake/rosidl_cmake_aggregate_target-extras.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
 
 # install(FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_core/bumbleb_botConfig.cmake" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_core/bumbleb_botConfig-version.cmake" "DESTINATION" "share/bumbleb_bot/cmake")
 ament_cmake_symlink_install_files("/home/dk/bumbleb_ws/src/bumbleb_bot" FILES "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_core/bumbleb_botConfig.cmake" "/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_core/bumbleb_botConfig-version.cmake" "DESTINATION" "share/bumbleb_bot/cmake")

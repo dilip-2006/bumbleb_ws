@@ -36,11 +36,14 @@ web_dashboard/
 
 ## 2. Key Capabilities
 
-### Real-Time Map Visualization
-- Renders occupancy grid bitmap from `/map` with zoom, pan, and centering controls.
-- Overlays laser scan points `/scan` in real time.
-- Renders robot footprint ($0.60\,\text{m}\times0.40\,\text{m}$) and heading vector.
-- Displays Nav2 planned paths and warehouse pins.
+### Mapping, Localization, and Navigation
+- Starts/stops asynchronous SLAM Toolbox mapping.
+- Saves occupancy maps and serializes/deserializes SLAM pose graphs.
+- Selects a saved map and starts map-server + AMCL localization.
+- Starts Nav2, sends direct pose goals, cancels goals, and reports navigation feedback.
+- Publishes an initial AMCL pose and displays mode, health, pose, and operation results.
+
+The dashboard uses typed ROS services for reliable button operations: `/amr/set_mode`, `/amr/map_operation`, `/amr/navigate_to_pose`, `/amr/cancel_navigation`, and `/amr/set_initial_pose`. Live status is synchronized through `/amr/system_state`, `/amr/system_health`, `/amr/maps`, `/amr/map_operation_result`, and `/amr/navigation_status`. The legacy `/amr/command` JSON topic remains available for automation compatibility.
 
 ### Interactive Goal Navigation
 - Click anywhere on the map to send goal to `/navigate_to_pose`.
@@ -65,7 +68,7 @@ web_dashboard/
 ## 3. Running the Dashboard
 
 ```bash
-cd /home/dk/bumbleb_ws/web_dashboard
+cd /home/dk/web_dashboard
 npm run dev
 ```
 

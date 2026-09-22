@@ -1,0 +1,5 @@
+string operation
+string map_name
+---
+bool success
+string message

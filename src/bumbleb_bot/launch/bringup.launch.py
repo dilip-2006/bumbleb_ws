@@ -14,13 +14,13 @@ def generate_launch_description():
     # Launch Arguments
     simulation_arg = DeclareLaunchArgument(
         "simulation",
-        default_value="true",
+        default_value="false",
         description="Launch Gazebo simulation stack if true, else real robot hardware"
     )
     use_sim_time_arg = DeclareLaunchArgument(
         "use_sim_time",
-        default_value="true",
-        description="Use simulation (Gazebo) clock"
+        default_value="false",
+        description="Use simulation (Gazebo) clock; false for the physical robot"
     )
     rviz_arg = DeclareLaunchArgument(
         "rviz",
@@ -47,6 +47,10 @@ def generate_launch_description():
         default_value=str(Path.home() / "bumbleb_data" / "maps"),
         description="Path to maps directory"
     )
+    map_frame_arg = DeclareLaunchArgument("map_frame", default_value="map")
+    odom_frame_arg = DeclareLaunchArgument("odom_frame", default_value="odom")
+    base_frame_arg = DeclareLaunchArgument("base_frame", default_value="base_link")
+    lidar_frame_arg = DeclareLaunchArgument("lidar_frame", default_value="lidar_link")
 
     simulation = LaunchConfiguration("simulation")
     use_sim_time = LaunchConfiguration("use_sim_time")
@@ -55,6 +59,10 @@ def generate_launch_description():
     use_system_manager = LaunchConfiguration("use_system_manager")
     use_location_manager = LaunchConfiguration("use_location_manager")
     maps_dir = LaunchConfiguration("maps_dir")
+    map_frame = LaunchConfiguration("map_frame")
+    odom_frame = LaunchConfiguration("odom_frame")
+    base_frame = LaunchConfiguration("base_frame")
+    lidar_frame = LaunchConfiguration("lidar_frame")
 
     # 1. Simulation Bringup
     sim_launch = IncludeLaunchDescription(
@@ -71,10 +79,12 @@ def generate_launch_description():
         condition=UnlessCondition(simulation),
         actions=[
             IncludeLaunchDescription(
-                PythonLaunchDescriptionSource(os.path.join(pkg_bumbleb, "launch", "real_robot.launch.py"))
+                PythonLaunchDescriptionSource(os.path.join(pkg_bumbleb, "launch", "real_robot.launch.py")),
+                launch_arguments={"use_sim_time": use_sim_time}.items()
             ),
             IncludeLaunchDescription(
-                PythonLaunchDescriptionSource(os.path.join(pkg_bumbleb, "launch", "lidar.launch.py"))
+                PythonLaunchDescriptionSource(os.path.join(pkg_bumbleb, "launch", "lidar.launch.py")),
+                launch_arguments={"lidar_frame": lidar_frame}.items()
             )
         ]
     )
@@ -94,7 +104,11 @@ def generate_launch_description():
         parameters=[{
             "use_sim_time": use_sim_time,
             "maps_dir": maps_dir,
-            "auto_ready": True
+            "auto_ready": True,
+            "map_frame": map_frame,
+            "odom_frame": odom_frame,
+            "base_frame": base_frame,
+            "lidar_frame": lidar_frame
         }],
         condition=IfCondition(use_system_manager)
     )
@@ -108,8 +122,9 @@ def generate_launch_description():
         parameters=[{
             "locations_file": str(Path.home() / "bumbleb_data" / "locations" / "warehouse_locations.yaml"),
             "use_sim_time": use_sim_time,
-            "map_frame": "map",
-            "base_frame": "base_link"
+            "map_frame": map_frame,
+            "base_frame": base_frame,
+            "odom_frame": odom_frame
         }],
         condition=IfCondition(use_location_manager)
     )
@@ -122,6 +137,10 @@ def generate_launch_description():
         use_system_mgr_arg,
         use_location_mgr_arg,
         maps_dir_arg,
+        map_frame_arg,
+        odom_frame_arg,
+        base_frame_arg,
+        lidar_frame_arg,
         sim_launch,
         real_robot_launch,
         rosbridge_launch,
