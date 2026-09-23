@@ -9,10 +9,11 @@
     bumbleb.ros2_control.xacro.
   -->
 
-  <!-- Verified Linux serial device -->
+  <!-- Stable udev link for the ZLAC USB-Single-Serial adapter. Using the
+       by-id path avoids ttyACM numbering changes after reconnects. -->
   <xacro:property
     name="serial_port"
-    value="/dev/ttyACM0"/>
+    value="/dev/serial/by-id/usb-1a86_USB_Single_Serial_5C65150306-if00"/>
 
   <!-- Controller communication setting.
        Keep this consistent with the actual ZLAC8015D configuration.

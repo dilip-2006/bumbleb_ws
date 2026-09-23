@@ -2,7 +2,7 @@ zlac_drive:
   ros__parameters:
     controller_model: "ZLAC8015D"
     motor_model: "ZLLG50ASM200 V2.0"
-    serial_device: "/dev/ttyACM0"
+    serial_device: "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5C65150306-if00"
     baud_rate: 115200
     data_bits: 8
     stop_bits: 1
