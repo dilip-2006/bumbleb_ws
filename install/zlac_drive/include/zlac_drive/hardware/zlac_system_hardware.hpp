@@ -1,1 +1,0 @@
-/home/dk/bumbleb_ws/src/zlac_drive/include/zlac_drive/hardware/zlac_system_hardware.hpp

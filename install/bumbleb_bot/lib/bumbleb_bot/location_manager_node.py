@@ -1,1 +1,0 @@
-/home/dk/bumbleb_ws/src/bumbleb_bot/scripts/location_manager_node.py

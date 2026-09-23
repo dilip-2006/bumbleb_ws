@@ -1,1 +1,0 @@
-/home/dk/bumbleb_ws/src/bumbleb_bot/launch/mapping.launch.py

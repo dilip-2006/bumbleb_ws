@@ -192,7 +192,13 @@ class AMRProcessSupervisor:
             return False, f"Failed to start SLAM: {str(e)}"
 
     def stop_slam(self) -> tuple[bool, str]:
-        return self._stop_process("slam")
+        ok, msg = self._stop_process("slam")
+        for pattern in ["async_slam_toolbox_node", "sync_slam_toolbox_node"]:
+            try:
+                subprocess.run(["pkill", "-f", pattern], check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            except Exception:
+                pass
+        return ok, msg
 
     def start_localization(self, map_yaml_path: str) -> tuple[bool, str]:
         if not os.path.exists(map_yaml_path):
@@ -218,9 +224,9 @@ class AMRProcessSupervisor:
                 preexec_fn=os.setsid
             )
             self.processes["localization"] = proc
-            ready, ready_msg = self._wait_for_nodes("localization", ["map_server", "amcl"])
+            ready, ready_msg = self._wait_for_nodes("localization", ["map_server", "amcl"], timeout=20.0)
             if not ready:
-                self._stop_process("localization")
+                self.stop_localization()
                 return False, ready_msg
             return True, "Localization (Map Server + AMCL) process launched and ready"
         except Exception as e:
@@ -228,7 +234,13 @@ class AMRProcessSupervisor:
 
     def stop_localization(self) -> tuple[bool, str]:
         self.stop_navigation()
-        return self._stop_process("localization")
+        ok, msg = self._stop_process("localization")
+        for pattern in ["lifecycle_manager_localization", "nav2_amcl", "nav2_map_server"]:
+            try:
+                subprocess.run(["pkill", "-f", pattern], check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            except Exception:
+                pass
+        return ok, msg
 
     def start_navigation(self) -> tuple[bool, str]:
         if self.is_running("navigation"):
@@ -254,19 +266,30 @@ class AMRProcessSupervisor:
                 "navigation",
                 [
                     "controller_server",
+                    "smoother_server",
                     "planner_server",
+                    "behavior_server",
                     "bt_navigator",
                     "lifecycle_manager_navigation",
-                ])
+                ],
+                timeout=25.0)
             if not ready:
-                self._stop_process("navigation")
+                self.stop_navigation()
                 return False, ready_msg
             return True, "Nav2 navigation stack process launched and ready"
         except Exception as e:
             return False, f"Failed to start navigation: {str(e)}"
 
     def stop_navigation(self) -> tuple[bool, str]:
-        return self._stop_process("navigation")
+        ok, msg = self._stop_process("navigation")
+        for pattern in ["lifecycle_manager_navigation", "controller_server", "smoother_server",
+                        "planner_server", "behavior_server", "bt_navigator", "waypoint_follower",
+                        "velocity_smoother"]:
+            try:
+                subprocess.run(["pkill", "-f", pattern], check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            except Exception:
+                pass
+        return ok, msg
 
     def stop_all(self):
         for name in list(self.processes.keys()):

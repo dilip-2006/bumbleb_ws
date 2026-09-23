@@ -201,6 +201,7 @@ class AMRLocationManager(Node):
 
         # Subscriptions
         self.sub_amcl = self.create_subscription(PoseWithCovarianceStamped, '/amcl_pose', self._amcl_cb, 10)
+        self.sub_goal_pose = self.create_subscription(PoseStamped, '/goal_pose', self._external_goal_pose_cb, 10)
         self.sub_cmd = self.create_subscription(String, '/amr/location_command', self._command_cb, 10)
         self.sub_system_cmd = self.create_subscription(String, '/amr/command', self._system_command_cb, 10)
         self.sub_state = self.create_subscription(String, '/amr/system_state', self._system_state_cb, 10)
@@ -222,6 +223,13 @@ class AMRLocationManager(Node):
         self.pose_timer = self.create_timer(0.1, self._update_pose_loop)
         self.broadcast_timer = self.create_timer(1.0, self._broadcast_locations)
         self.nav_pub_timer = self.create_timer(0.2, self._publish_nav_status)
+
+    def _external_goal_pose_cb(self, msg: PoseStamped):
+        x = msg.pose.position.x
+        y = msg.pose.position.y
+        self.active_target_name = f"({x:.2f}, {y:.2f})"
+        if self.nav_status != "NAVIGATING":
+            self.nav_status = "NAVIGATING"
 
     def _system_state_cb(self, msg: String):
         try:

@@ -1,1 +1,0 @@
-/home/dk/bumbleb_ws/build/bumbleb_bot/ament_cmake_core/bumbleb_botConfig.cmake
