@@ -51,6 +51,7 @@ bumbleb_drivetrain_node:
     base_frame_id: base_link
     publish_tf: true
 
-    # Humble's forward_command_controller subscribes to ~/commands,
-    # which resolves under controller_manager in this launch setup.
-    wheel_command_topic: /bumbleb_wheel_velocity_controller/commands
+    # Humble's forward_command_controller is loaded by controller_manager
+    # in this launch setup, so its private ~/commands topic resolves to
+    # /controller_manager/commands.
+    wheel_command_topic: /controller_manager/commands
