@@ -412,7 +412,11 @@ class AMRLocationManager(Node):
 
     def _publish_initial_pose(self, x: float, y: float, yaw: float):
         msg = PoseWithCovarianceStamped()
-        msg.header.stamp = self.get_clock().now().to_msg()
+        # Let AMCL resolve the pose against the latest available odom/TF.
+        # Using this node's current timestamp can be a few milliseconds ahead
+        # of the newest odom transform and causes AMCL's initial-pose lookup
+        # to fail with an extrapolation-into-the-future warning.
+        msg.header.stamp = Time().to_msg()
         msg.header.frame_id = self.map_frame
         msg.pose.pose.position.x = x
         msg.pose.pose.position.y = y
