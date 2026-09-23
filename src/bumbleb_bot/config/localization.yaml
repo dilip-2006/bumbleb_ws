@@ -15,7 +15,10 @@ amcl:
     update_min_a: 0.05
     transform_tolerance: 0.5
     laser_model_type: likelihood_field
-    set_initial_pose: true
+    # The saved map origin is map-specific; do not inject a hard-coded
+    # (0, 0) pose that may be outside the map. The dashboard/service sends
+    # the operator-selected initial pose.
+    set_initial_pose: false
     initial_pose:
       x: 0.0
       y: 0.0

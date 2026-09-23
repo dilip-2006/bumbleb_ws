@@ -16,7 +16,9 @@ amcl:
     update_min_a: 0.05
     transform_tolerance: 0.5
     laser_model_type: "likelihood_field"
-    set_initial_pose: true
+    # The saved map origin is map-specific; wait for the operator-selected
+    # initial pose instead of assuming (0, 0).
+    set_initial_pose: false
     initial_pose:
       x: 0.0
       y: 0.0

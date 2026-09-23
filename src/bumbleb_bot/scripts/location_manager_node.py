@@ -418,7 +418,7 @@ class AMRLocationManager(Node):
         # Using this node's current timestamp can be a few milliseconds ahead
         # of the newest odom transform and causes AMCL's initial-pose lookup
         # to fail with an extrapolation-into-the-future warning.
-        msg.header.stamp = Time().to_msg()
+        msg.header.stamp = (self.get_clock().now() - Duration(seconds=0.5)).to_msg()
         msg.header.frame_id = self.map_frame
         msg.pose.pose.position.x = x
         msg.pose.pose.position.y = y
