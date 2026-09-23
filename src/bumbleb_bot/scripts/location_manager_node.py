@@ -227,9 +227,11 @@ class AMRLocationManager(Node):
     def _external_goal_pose_cb(self, msg: PoseStamped):
         x = msg.pose.position.x
         y = msg.pose.position.y
-        self.active_target_name = f"({x:.2f}, {y:.2f})"
-        if self.nav_status != "NAVIGATING":
-            self.nav_status = "NAVIGATING"
+        q = msg.pose.orientation
+        _, _, yaw = euler_from_quaternion(q.x, q.y, q.z, q.w)
+        # The dashboard publishes map-click goals on /goal_pose. Forward the
+        # pose to Nav2 instead of only changing the UI status.
+        self._dispatch_pose_goal(x, y, yaw, f"({x:.2f}, {y:.2f})")
 
     def _system_state_cb(self, msg: String):
         try:
