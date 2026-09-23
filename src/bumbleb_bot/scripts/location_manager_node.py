@@ -257,36 +257,41 @@ class AMRLocationManager(Node):
         self.pose_valid = True
 
     def _update_pose_loop(self):
-        for target_frame in [self.map_frame, self.odom_frame]:
-            try:
-                transform = self.tf_buffer.lookup_transform(
-                    target_frame,
-                    self.base_frame,
-                    Time(),
-                    timeout=Duration(seconds=0.05)
-                )
-                self.current_x = transform.transform.translation.x
-                self.current_y = transform.transform.translation.y
-                _, _, yaw = euler_from_quaternion(
-                    transform.transform.rotation.x,
-                    transform.transform.rotation.y,
-                    transform.transform.rotation.z,
-                    transform.transform.rotation.w
-                )
-                self.current_yaw = yaw
-                self.pose_valid = True
+        # The dashboard map is expressed in `map`, so never fall back to
+        # odom->base_link here.  Odom coordinates are a different frame and
+        # publishing them as map coordinates makes the robot jump whenever
+        # AMCL/map->odom is temporarily unavailable.
+        try:
+            transform = self.tf_buffer.lookup_transform(
+                self.map_frame,
+                self.base_frame,
+                Time(),
+                timeout=Duration(seconds=0.05)
+            )
+        except Exception:
+            # Keep the last AMCL/map pose until localization recovers instead
+            # of replacing it with an odometry pose in the wrong frame.
+            return
 
-                p_msg = PoseStamped()
-                p_msg.header.stamp = self.get_clock().now().to_msg()
-                p_msg.header.frame_id = target_frame
-                p_msg.pose.position.x = self.current_x
-                p_msg.pose.position.y = self.current_y
-                p_msg.pose.position.z = 0.0
-                p_msg.pose.orientation = transform.transform.rotation
-                self.pose_pub.publish(p_msg)
-                break
-            except Exception:
-                continue
+        self.current_x = transform.transform.translation.x
+        self.current_y = transform.transform.translation.y
+        _, _, yaw = euler_from_quaternion(
+            transform.transform.rotation.x,
+            transform.transform.rotation.y,
+            transform.transform.rotation.z,
+            transform.transform.rotation.w
+        )
+        self.current_yaw = yaw
+        self.pose_valid = True
+
+        p_msg = PoseStamped()
+        p_msg.header.stamp = self.get_clock().now().to_msg()
+        p_msg.header.frame_id = self.map_frame
+        p_msg.pose.position.x = self.current_x
+        p_msg.pose.position.y = self.current_y
+        p_msg.pose.position.z = 0.0
+        p_msg.pose.orientation = transform.transform.rotation
+        self.pose_pub.publish(p_msg)
 
     def _broadcast_locations(self):
         locs = self.storage.list_locations()
