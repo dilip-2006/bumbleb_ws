@@ -8,4 +8,6 @@ rplidar_node:
     frame_id: lidar_link
     inverted: false
     angle_compensate: true
-    scan_mode: Standard
+    # Do not force a scan mode.  The connected A1 firmware reports health
+    # correctly but rejects the explicit Standard-mode command (80008000).
+    # Let rplidar_ros select the device's native compatible mode.
