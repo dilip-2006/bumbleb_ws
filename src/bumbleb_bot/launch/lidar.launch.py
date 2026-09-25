@@ -20,7 +20,9 @@ def generate_launch_description():
         DeclareLaunchArgument("lidar_frame", default_value="lidar_link"),
         Node(
             package="rplidar_ros",
-            executable="rplidar_node",
+            # The A1 firmware works with the composition executable on the
+            # robot; the legacy rplidar_node path fails while starting scan.
+            executable="rplidar_composition",
             name="rplidar_node",
             output="screen",
             parameters=[lidar_params, {"frame_id": LaunchConfiguration("lidar_frame")}],
