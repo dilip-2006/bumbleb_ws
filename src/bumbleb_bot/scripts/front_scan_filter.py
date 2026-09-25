@@ -26,6 +26,11 @@ class FrontScanFilter(Node):
             "scan",
             qos_profile_sensor_data,
         )
+        # Some A1 firmware modes produce several thousand samples per scan.
+        # That is useful for the driver, but unnecessarily large for Nav2 and
+        # especially for rosbridge/WebSocket clients.  Keep the ROS scan
+        # bounded while retaining enough angular resolution for SLAM/Nav2.
+        self.max_output_rays = int(self.declare_parameter("max_output_rays", 720).value)
 
     @staticmethod
     def _normalize(angle):
@@ -45,11 +50,13 @@ class FrontScanFilter(Node):
             return
 
         selected.sort(key=lambda item: item[0])
+        sample_step = max(1, math.ceil(len(selected) / self.max_output_rays))
+        selected = selected[::sample_step]
         output = LaserScan()
         output.header = scan.header
         output.angle_min = selected[0][0]
         output.angle_max = selected[-1][0]
-        output.angle_increment = scan.angle_increment
+        output.angle_increment = scan.angle_increment * sample_step
         output.time_increment = scan.time_increment
         output.scan_time = scan.scan_time
         output.range_min = scan.range_min
