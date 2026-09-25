@@ -1,7 +1,5 @@
-import os
-from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, TimerAction
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
@@ -13,21 +11,32 @@ def generate_launch_description():
     for the matching TF frame). The raw full scan is cropped to the
     robot-forward 180-degree field before being published as /scan."""
 
-    share = get_package_share_directory("bumbleb_bot")
-    lidar_params = os.path.join(share, "config", "lidar.yaml")
+    lidar_node = Node(
+        package="rplidar_ros",
+        executable="rplidar_composition",
+        name="rplidar_node",
+        output="screen",
+        # Keep these explicit here.  This is the exact parameter set that
+        # works with the A1 on the robot; do not pass a second YAML namespace
+        # to the composable executable because it can select scan-mode setup
+        # before the USB device is ready.
+        parameters=[{
+            "serial_port": "/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0",
+            "serial_baudrate": 115200,
+            "frame_id": LaunchConfiguration("lidar_frame"),
+            "inverted": False,
+        }],
+        remappings=[("scan", "/scan_raw")],
+        respawn=True,
+        respawn_delay=3.0,
+    )
 
     return LaunchDescription([
         DeclareLaunchArgument("lidar_frame", default_value="lidar_link"),
-        Node(
-            package="rplidar_ros",
-            # The A1 firmware works with the composition executable on the
-            # robot; the legacy rplidar_node path fails while starting scan.
-            executable="rplidar_composition",
-            name="rplidar_node",
-            output="screen",
-            parameters=[lidar_params, {"frame_id": LaunchConfiguration("lidar_frame")}],
-            remappings=[("scan", "/scan_raw")],
-        ),
+        # Give the USB serial adapter and ros2_control time to settle before
+        # opening the lidar port.  This also prevents a simultaneous startup
+        # command from leaving the A1 in a half-started scan state.
+        TimerAction(period=3.0, actions=[lidar_node]),
         Node(
             package="bumbleb_bot",
             executable="front_scan_filter.py",
