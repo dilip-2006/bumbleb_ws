@@ -24,6 +24,7 @@ def generate_launch_description():
             'port': LaunchConfiguration('port'),
             'address': LaunchConfiguration('address'),
             'max_message_size': 20000000,
+            'incoming_queue_size': 8192,
             'write_queue_size': 8192,
             'send_action_goals_in_new_thread': True,
             'call_services_in_new_thread': True,
