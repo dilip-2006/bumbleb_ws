@@ -24,8 +24,12 @@ def generate_launch_description():
             'port': LaunchConfiguration('port'),
             'address': LaunchConfiguration('address'),
             'max_message_size': 20000000,
-            'incoming_queue_size': 8192,
-            'write_queue_size': 8192,
+            # Keep only a small per-client backlog.  Teleop and dashboard
+            # control packets are time-sensitive; stale packets must be
+            # dropped instead of accumulating until rosbridge reports a
+            # full incoming queue.
+            'incoming_queue_size': 64,
+            'write_queue_size': 64,
             'send_action_goals_in_new_thread': True,
             'call_services_in_new_thread': True,
             'unregister_timeout': 10.0
