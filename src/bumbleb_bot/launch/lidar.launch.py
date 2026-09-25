@@ -25,9 +25,10 @@ def generate_launch_description():
             "serial_baudrate": 115200,
             "frame_id": LaunchConfiguration("lidar_frame"),
             "inverted": False,
-            # Required by this A1 firmware: enables the compatible Express
-            # scan mode selected by the device.
-            "angle_compensate": True,
+            # Leave scan-mode selection and angle compensation at the driver
+            # defaults.  This A1 firmware accepts its native Sensitivity
+            # mode, but rejects an explicit scan-mode/compensation request
+            # during some USB startups.
         }],
         remappings=[("scan", "/scan_raw")],
         respawn=True,
