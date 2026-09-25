@@ -25,6 +25,9 @@ def generate_launch_description():
             "serial_baudrate": 115200,
             "frame_id": LaunchConfiguration("lidar_frame"),
             "inverted": False,
+            # Required by this A1 firmware: enables the compatible Express
+            # scan mode selected by the device.
+            "angle_compensate": True,
         }],
         remappings=[("scan", "/scan_raw")],
         respawn=True,
