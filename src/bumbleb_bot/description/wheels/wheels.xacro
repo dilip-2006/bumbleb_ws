@@ -12,7 +12,7 @@
     launch/*.launch.py read that file and pass wheel_radius and
     wheel_separation on the xacro command line
     (e.g. "xacro bumbleb.urdf.xacro wheel_radius:=0.0655
-    wheel_separation:=0.65") so the URDF never disagrees with
+    wheel_separation:=0.265") so the URDF never disagrees with
     bumbleb_drivetrain_node's kinematics/odometry. The defaults below
     exist only so this xacro remains valid when processed standalone
     (e.g. by test_urdf.py) and MUST match drivetrain.yaml.
@@ -20,11 +20,10 @@
     wheel_radius: DERIVED from the ZLLG50ASM200 V2.0 wheel diameter
     (131 +/-2 mm, SOURCE_VERIFIED) / 2.
 
-    wheel_separation: CALIBRATION_REQUIRED - not yet confirmed against
-    the physical BumbleB chassis. See drivetrain.yaml.
+    wheel_separation is supplied by the launch file from drivetrain.yaml.
   -->
   <xacro:arg name="wheel_radius" default="0.0655"/>
-  <xacro:arg name="wheel_separation" default="0.45"/>
+  <xacro:arg name="wheel_separation" default="0.265"/>
 
   <xacro:property
     name="wheel_radius"
@@ -55,7 +54,7 @@
     <child link="left_wheel"/>
 
     <origin
-      xyz="0 -0.225 0"
+      xyz="0 ${-wheel_separation / 2.0} 0"
       rpy="1.57079632679 0 0"/>
 
     <axis xyz="0 0 1"/>
@@ -109,7 +108,7 @@
     <child link="right_wheel"/>
 
     <origin
-      xyz="0 0.225 0"
+      xyz="0 ${wheel_separation / 2.0} 0"
       rpy="1.57079632679 0 0"/>
 
     <axis xyz="0 0 1"/>

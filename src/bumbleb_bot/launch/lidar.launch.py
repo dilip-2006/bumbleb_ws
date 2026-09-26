@@ -16,9 +16,9 @@ def generate_launch_description():
         executable="rplidar_composition",
         name="rplidar_node",
         output="screen",
-        # Match the minimal command verified on the Pi.  The A1 must choose
-        # its own native scan mode; extra driver parameters can make its
-        # startup handshake fail.
+        # Keep this parameter set identical to the known-good manual command
+        # used on the robot. Some RPLIDAR A1 firmware revisions time out when
+        # optional scan-mode parameters are sent during startup.
         parameters=[{
             "serial_port": "/dev/ttyUSB0",
             "serial_baudrate": 115200,
@@ -29,7 +29,8 @@ def generate_launch_description():
 
     return LaunchDescription([
         DeclareLaunchArgument("lidar_frame", default_value="lidar_link"),
-        # Give the USB serial adapter time to settle before opening the port.
+        # Give the USB serial adapter time to settle before the first scan
+        # mode handshake, as in the known-good manual startup.
         TimerAction(period=3.0, actions=[lidar_node]),
         Node(
             package="bumbleb_bot",

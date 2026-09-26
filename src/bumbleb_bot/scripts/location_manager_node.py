@@ -220,7 +220,10 @@ class AMRLocationManager(Node):
             SetInitialPose, '/amr/set_initial_pose', self._handle_initial_pose)
 
         # Timers
-        self.pose_timer = self.create_timer(0.1, self._update_pose_loop)
+        # Publish continuously enough for the dashboard and teleoperation UI
+        # to track odom motion between lidar/AMCL updates. TF2 still supplies
+        # the authoritative map->base_link transform.
+        self.pose_timer = self.create_timer(1.0 / 30.0, self._update_pose_loop)
         self.broadcast_timer = self.create_timer(1.0, self._broadcast_locations)
         self.nav_pub_timer = self.create_timer(0.2, self._publish_nav_status)
 
@@ -257,10 +260,12 @@ class AMRLocationManager(Node):
         self.pose_valid = True
 
     def _update_pose_loop(self):
-        # The dashboard map is expressed in `map`, so never fall back to
-        # odom->base_link here.  Odom coordinates are a different frame and
-        # publishing them as map coordinates makes the robot jump whenever
-        # AMCL/map->odom is temporarily unavailable.
+        # Prefer the localized map pose. During READY/teleoperation there may
+        # be no SLAM or AMCL node running yet, so map->base_link does not
+        # exist. In that state odom->base_link is the correct live-motion
+        # source; without this fallback the dashboard remains frozen while
+        # the physical robot is moving.
+        pose_frame = self.map_frame
         try:
             transform = self.tf_buffer.lookup_transform(
                 self.map_frame,
@@ -269,9 +274,17 @@ class AMRLocationManager(Node):
                 timeout=Duration(seconds=0.05)
             )
         except Exception:
-            # Keep the last AMCL/map pose until localization recovers instead
-            # of replacing it with an odometry pose in the wrong frame.
-            return
+            try:
+                transform = self.tf_buffer.lookup_transform(
+                    self.odom_frame,
+                    self.base_frame,
+                    Time(),
+                    timeout=Duration(seconds=0.05)
+                )
+                pose_frame = self.odom_frame
+            except Exception:
+                # Neither localization nor odometry TF is available yet.
+                return
 
         self.current_x = transform.transform.translation.x
         self.current_y = transform.transform.translation.y
@@ -285,8 +298,10 @@ class AMRLocationManager(Node):
         self.pose_valid = True
 
         p_msg = PoseStamped()
-        p_msg.header.stamp = self.get_clock().now().to_msg()
-        p_msg.header.frame_id = self.map_frame
+        # Preserve the TF sample time. Stamping this with the publication time
+        # makes a delayed WebSocket consumer treat an old pose as current.
+        p_msg.header.stamp = transform.header.stamp
+        p_msg.header.frame_id = pose_frame
         p_msg.pose.position.x = self.current_x
         p_msg.pose.position.y = self.current_y
         p_msg.pose.position.z = 0.0

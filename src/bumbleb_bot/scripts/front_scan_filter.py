@@ -6,7 +6,12 @@ import math
 
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import qos_profile_sensor_data
+from rclpy.qos import (
+    QoSProfile,
+    ReliabilityPolicy,
+    DurabilityPolicy,
+    qos_profile_sensor_data,
+)
 from sensor_msgs.msg import LaserScan
 
 
@@ -24,7 +29,15 @@ class FrontScanFilter(Node):
         self.publisher = self.create_publisher(
             LaserScan,
             "scan",
-            qos_profile_sensor_data,
+            # The raw driver is consumed with sensor-data QoS, but the
+            # filtered topic is also consumed by the system manager and some
+            # Nav2 components using the default reliable QoS. A reliable
+            # publisher is compatible with both subscriber types.
+            QoSProfile(
+                depth=10,
+                reliability=ReliabilityPolicy.RELIABLE,
+                durability=DurabilityPolicy.VOLATILE,
+            ),
         )
         # Some A1 firmware modes produce several thousand samples per scan.
         # That is useful for the driver, but unnecessarily large for Nav2 and
