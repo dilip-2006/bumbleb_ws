@@ -249,6 +249,13 @@ class AMRProcessSupervisor:
         if not self.is_running("localization"):
             return False, "Cannot start navigation without active localization"
 
+        # Do not start Nav2 while AMCL is alive but still unlocalized. In
+        # that state map->odom is unavailable/unstable and every goal is
+        # likely to fail. The operator must set the initial pose first.
+        if (not self.node.amcl_pose_received or
+                (time.time() - self.node.last_amcl_time) > 5.0):
+            return False, "Cannot start Nav2: AMCL has no recent pose. Set the initial pose and wait for AMCL to converge."
+
         cmd = [
             "ros2", "launch", "bumbleb_bot", "navigation.launch.py",
             f"use_sim_time:={'true' if self.use_sim_time else 'false'}"
@@ -673,7 +680,7 @@ class AMRSystemManager(Node):
             "message": "Running" if self.supervisor.is_running("slam") else "Stopped"
         }
         components["map_server"] = {
-            "status": HealthStatus.OK if self.supervisor.is_running("localization") else HealthStatus.OK,
+            "status": HealthStatus.OK if self.supervisor.is_running("localization") else HealthStatus.WARNING,
             "running": self.supervisor.is_running("localization"),
             "message": "Running" if self.supervisor.is_running("localization") else "Stopped"
         }
@@ -686,7 +693,7 @@ class AMRSystemManager(Node):
                        else ("Waiting for initial pose/convergence" if self.supervisor.is_running("localization") else "Stopped")
         }
         components["nav2"] = {
-            "status": HealthStatus.OK if self.supervisor.is_running("navigation") else HealthStatus.OK,
+            "status": HealthStatus.OK if self.supervisor.is_running("navigation") else HealthStatus.WARNING,
             "running": self.supervisor.is_running("navigation"),
             "message": "Ready" if self.supervisor.is_running("navigation") else "Stopped"
         }

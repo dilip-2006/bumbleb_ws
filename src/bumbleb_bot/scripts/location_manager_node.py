@@ -433,22 +433,23 @@ class AMRLocationManager(Node):
         return True, f"Goal dispatched to '{target_name}'"
 
     def _publish_initial_pose(self, x: float, y: float, yaw: float):
-        msg = PoseWithCovarianceStamped()
-        # Let AMCL resolve the pose against the latest available odom/TF.
-        # Using this node's current timestamp can be a few milliseconds ahead
-        # of the newest odom transform and causes AMCL's initial-pose lookup
-        # to fail with an extrapolation-into-the-future warning.
-        msg.header.stamp = (self.get_clock().now() - Duration(seconds=0.5)).to_msg()
-        msg.header.frame_id = self.map_frame
-        msg.pose.pose.position.x = x
-        msg.pose.pose.position.y = y
         q = quaternion_from_euler(0.0, 0.0, yaw)
-        msg.pose.pose.orientation.x, msg.pose.pose.orientation.y = q[0], q[1]
-        msg.pose.pose.orientation.z, msg.pose.pose.orientation.w = q[2], q[3]
-        msg.pose.covariance[0] = 0.25
-        msg.pose.covariance[7] = 0.25
-        msg.pose.covariance[35] = 0.068
-        self.initial_pose_pub.publish(msg)
+        # AMCL can miss one message while its lifecycle node is becoming
+        # active. Publish a short burst with fresh, slightly-past timestamps
+        # so the operator's initial pose is reliably applied.
+        for _ in range(5):
+            msg = PoseWithCovarianceStamped()
+            msg.header.stamp = (self.get_clock().now() - Duration(seconds=0.2)).to_msg()
+            msg.header.frame_id = self.map_frame
+            msg.pose.pose.position.x = x
+            msg.pose.pose.position.y = y
+            msg.pose.pose.orientation.x, msg.pose.pose.orientation.y = q[0], q[1]
+            msg.pose.pose.orientation.z, msg.pose.pose.orientation.w = q[2], q[3]
+            msg.pose.covariance[0] = 0.25
+            msg.pose.covariance[7] = 0.25
+            msg.pose.covariance[35] = 0.068
+            self.initial_pose_pub.publish(msg)
+            time.sleep(0.1)
         self.get_logger().info(f"Published initial pose ({x}, {y}, {yaw})")
 
     def _goal_response_cb(self, future):
