@@ -33,9 +33,10 @@ def generate_launch_description():
 
     return LaunchDescription([
         DeclareLaunchArgument("lidar_frame", default_value="lidar_link"),
-        # Give the USB serial adapter time to settle before the first scan
-        # mode handshake, as in the known-good manual startup.
-        TimerAction(period=3.0, actions=[lidar_node]),
+        # Give the USB serial adapter and the A1 motor time to settle before
+        # the first scan-mode handshake. A rapid restart after Ctrl-C can
+        # otherwise return 80008002 even though the health check succeeds.
+        TimerAction(period=10.0, actions=[lidar_node]),
         Node(
             package="bumbleb_bot",
             executable="front_scan_filter.py",
