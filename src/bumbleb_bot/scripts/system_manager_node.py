@@ -387,6 +387,7 @@ class AMRSystemManager(Node):
         self.map_received = False
         self.amcl_pose_received = False
         self.last_amcl_time = 0.0
+        self.auto_nav_pending = False
         self.battery_pct = 95.0
         self.battery_voltage = 25.4
 
@@ -455,6 +456,13 @@ class AMRSystemManager(Node):
     def _amcl_cb(self, msg: PoseWithCovarianceStamped):
         self.last_amcl_time = time.time()
         self.amcl_pose_received = True
+        # Once AMCL has accepted an initial pose, automatically bring up
+        # Nav2 when the operator is in localization mode. The actual launch
+        # is performed by _monitor_processes so this subscription callback
+        # stays short and responsive.
+        if (self.state_machine.current_state == AMRState.LOCALIZATION and
+                not self.supervisor.is_running("navigation")):
+            self.auto_nav_pending = True
 
     def _estop_safety_loop(self):
         if self.state_machine.current_state == AMRState.EMERGENCY_STOP:
@@ -462,6 +470,20 @@ class AMRSystemManager(Node):
 
     def _monitor_processes(self):
         """Convert unexpected feature-process exits into a visible ERROR state."""
+        if (self.auto_nav_pending and
+                self.state_machine.current_state == AMRState.LOCALIZATION and
+                self.amcl_pose_received and
+                (time.time() - self.last_amcl_time) <= 5.0):
+            self.auto_nav_pending = False
+            self.get_logger().info("AMCL pose received; starting Nav2 automatically")
+            ok, message = self.supervisor.start_navigation()
+            if ok:
+                self.state_machine.transition_to(AMRState.NAVIGATION)
+                self.get_logger().info(message)
+            else:
+                self.get_logger().error(f"Automatic Nav2 startup failed: {message}")
+                self._publish_operation("start_navigation", False, message)
+
         for name, proc in list(self.supervisor.processes.items()):
             return_code = proc.poll()
             if return_code is None:
