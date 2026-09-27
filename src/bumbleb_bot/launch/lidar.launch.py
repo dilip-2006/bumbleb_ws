@@ -16,16 +16,12 @@ def generate_launch_description():
         executable="rplidar_composition",
         name="rplidar_node",
         output="screen",
-        # Keep this parameter set identical to the known-good manual command
-        # used on the robot. Some RPLIDAR A1 firmware revisions time out when
-        # optional scan-mode parameters are sent during startup.
+        # Match the known-good manual startup parameters explicitly.
         parameters=[{
             "serial_port": "/dev/ttyUSB0",
             "serial_baudrate": 115200,
             "frame_id": LaunchConfiguration("lidar_frame"),
-            # Required by this A1 firmware/driver combination. Without it,
-            # rplidar_composition attempts scan mode 80008002 and exits even
-            # though the sensor health check succeeds.
+            "inverted": False,
             "angle_compensate": True,
         }],
         remappings=[("scan", "/scan_raw")],
